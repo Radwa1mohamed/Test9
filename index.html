@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hero Mouse Effect</title>
 
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -213,14 +213,17 @@
     }
 
     .bg {
-  position: absolute;
-  inset: 0;
-  background-size: cover; /* بيخلي الصورة تغطي المساحة بالكامل */
-  background-position: center center; /* بيخلي نص الصورة دائماً هو اللي في المركز */
-  background-repeat: no-repeat;
-  transition: 1s ease;
-  transform: scale(1.05);
-}
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      /* بيخلي الصورة تغطي المساحة بالكامل */
+      background-position: center center;
+      /* بيخلي نص الصورة دائماً هو اللي في المركز */
+      background-repeat: no-repeat;
+      transition: 1s ease;
+      transform: scale(1.05);
+    }
+
     .bg1 {
       background-image: url("photo_2026-04-12_19-56-03.jpg");
       z-index: 1;
@@ -491,27 +494,43 @@
     }
 
     /* Main Card (Original Style) */
-    .main-card {
-      background: #ffffff;
-      max-width: 1100px;
-      width: calc(100% - 40px);
-      margin: 60px auto;
-      padding: 40px;
-      border-radius: 40px;
-      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
-      color: var(--dark-blue);
-      position: relative;
-      animation: floatImg 7s ease-in-out infinite;
-
-    }
+   .main-card {
+  background: #ffffff;
+  max-width: 1100px;
+  width: calc(100% - 40px);
+  margin: 20px auto; /* تقليل الهامش الخارجي */
+  padding: 40px;
+  border-radius: 40px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+  color: var(--dark-blue);
+  position: relative;
+  /* يمكنك إيقاف الأنميشن هنا إذا كنت تشعر أن الكارد "يهرب" من مكانه */
+  animation: floatImg 7s ease-in-out infinite; 
+}
 
     .section-title {
-      font-size: 2.3rem;
-      margin: 40px 0 30px;
-      text-align: center;
-      color: var(--accent-pink);
-      position: relative;
-    }
+  font-size: 2.3rem;
+margin: 10px 0 20px;  text-align: center;
+  color: var(--accent-pink);
+  position: relative;
+}
+
+.testimonials, .certificates {
+  padding: 40px 8%; /* بدلغغغغاً من 80px */
+}
+
+.view-more-container {
+  margin-top: 20px; /* تقليل المسافة فوق أزرار "عرض المزيد" */
+  margin-bottom: 10px;
+}
+@keyframes floatImg {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px); /* تقليل الحركة من 10 إلى 5 */
+  }
+}
 
     .section-title::after {
       content: "";
@@ -617,7 +636,7 @@
         display: block;
       }
 
-    
+
 
       .about-container {
         flex-direction: column;
@@ -625,17 +644,20 @@
       }
 
       .hero {
-    height: 80vh; /* تقليل الارتفاع شوية في الموبايل بيدي راحة للعين */
-  }
+        height: 80vh;
+        /* تقليل الارتفاع شوية في الموبايل بيدي راحة للعين */
+      }
 
-  h1 {
-    font-size: 28px; /* تصغير العنوان عشان ميزحمش الصورة */
-  }
+      h1 {
+        font-size: 28px;
+        /* تصغير العنوان عشان ميزحمش الصورة */
+      }
 
-  .about-image img {
-    width: 250px; /* تصغير الصورة شوية في الموبايل */
-    height: 250px;
-  }
+      .about-image img {
+        width: 250px;
+        /* تصغير الصورة شوية في الموبايل */
+        height: 250px;
+      }
     }
 
     @media (max-width: 768px) {
@@ -651,276 +673,364 @@
       } */
     }
 
-   /* ===== FOOTER BASE ===== */
-.footer {
-  width: 100%;
-  margin: 0;
-  padding: 30px 8%;
+    /* ===== FOOTER BASE ===== */
+    .footer {
+      width: 100%;
+      margin: 0;
+      padding: 30px 8%;
 
-  background: rgba(15, 51, 69, 0.85);
-  backdrop-filter: blur(10px);
+      background: rgba(15, 51, 69, 0.85);
+      backdrop-filter: blur(10px);
 
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.25);
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.25);
 
-  color: white;
-}
+      color: white;
+    }
 
-/* ===== CONTAINER ===== */
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+    /* ===== CONTAINER ===== */
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
 
-  gap: 15px;
-}
+      gap: 15px;
+    }
 
-/* ===== LOGO ===== */
-.footer-logo {
-  font-weight: bold;
-  font-size: 1.2rem;
-  color: white;
-}
+    /* ===== LOGO ===== */
+    .footer-logo {
+      font-weight: bold;
+      font-size: 1.2rem;
+      color: white;
+    }
 
-/* ===== LINKS ===== */
-.footer-links {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
+    /* ===== LINKS ===== */
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
 
-.footer-links a {
-  color: #ccc;
-  text-decoration: none;
-  font-size: 14px;
-  transition: 0.3s;
-}
+    .footer-links a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 14px;
+      transition: 0.3s;
+    }
 
-.footer-links a:hover {
-  color: white;
-  transform: translateY(-2px);
-}
+    .footer-links a:hover {
+      color: white;
+      transform: translateY(-2px);
+    }
 
-/* ===== SOCIAL ICONS ===== */
-.footer-social a {
-  color: #ccc;
-  margin: 0 8px;
-  font-size: 18px;
-  display: inline-block;
-  transition: 0.3s;
-}
+    /* ===== SOCIAL ICONS ===== */
+    .footer-social a {
+      color: #ccc;
+      margin: 0 8px;
+      font-size: 18px;
+      display: inline-block;
+      transition: 0.3s;
+    }
 
-.footer-social a:hover {
-  transform: translateY(-4px);
-}
+    .footer-social a:hover {
+      transform: translateY(-4px);
+    }
 
-/* Facebook */
-.footer-social a:hover .fa-facebook {
-  color: #1877F2;
-}
+    /* Facebook */
+    .footer-social a:hover .fa-facebook {
+      color: #1877F2;
+    }
 
-/* Instagram */
-.footer-social a:hover .fa-instagram {
-  color: #E1306C;
-}
+    /* Instagram */
+    .footer-social a:hover .fa-instagram {
+      color: #E1306C;
+    }
 
-/* LinkedIn */
-.footer-social a:hover .fa-linkedin {
-  color: #0A66C2;
-}
+    /* LinkedIn */
+    .footer-social a:hover .fa-linkedin {
+      color: #0A66C2;
+    }
 
-/* WhatsApp */
-.footer-social a:hover .fa-whatsapp {
-  color: #25D366;
-}
+    /* WhatsApp */
+    .footer-social a:hover .fa-whatsapp {
+      color: #25D366;
+    }
 
-/* ===== BOTTOM TEXT ===== */
-.footer-bottom {
-  margin-top: 15px;
-  font-size: 12px;
-  opacity: 0.7;
-  text-align: center;
-}
-.footer-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: bold;
-  font-size: 1.6rem;
-    font-weight: 700;
+    /* ===== BOTTOM TEXT ===== */
+    .footer-bottom {
+      margin-top: 15px;
+      font-size: 12px;
+      opacity: 0.7;
+      text-align: center;
+    }
 
-  color: white;
-}
-.scroll-top {
-  position: fixed;
-  bottom: 90px;
-  right: 20px;
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: bold;
+      font-size: 1.6rem;
+      font-weight: 700;
 
-  width: 50px;
-  height: 50px;
+      color: white;
+    }
 
-  border: none;
-  border-radius: 50%;
+    .scroll-top {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
 
-  background: rgba(15, 51, 69, 0.9);
-  backdrop-filter: blur(10px);
-  color: white;
+      width: 50px;
+      height: 50px;
 
-  font-size: 18px;
-  cursor: pointer;
+      border: none;
+      border-radius: 50%;
 
-  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-  z-index: 9999;
+      background: rgba(15, 51, 69, 0.9);
+      backdrop-filter: blur(10px);
+      color: white;
 
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(20px);
-  transition: 0.3s ease;
-}
+      font-size: 18px;
+      cursor: pointer;
 
-/* hover */
-.scroll-top:hover {
-  background: var(--accent-pink);
-  transform: translateY(-3px) scale(1.05);
-}
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+      z-index: 9999;
 
-/* يظهر */
-.scroll-top.show {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+      transition: 0.3s ease;
+    }
 
-/* شكل اللوجو */
-.footer-logo img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
+    /* hover */
+    .scroll-top:hover {
+      background: var(--accent-pink);
+      transform: translateY(-3px) scale(1.05);
+    }
 
-  border: 2px solid rgba(255,255,255,0.2);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  transition: 0.3s;
-}
+    /* يظهر */
+    .scroll-top.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
 
-/* hover بسيط */
-.footer-logo img:hover {
-  transform: scale(1.1) rotate(3deg);
-}
+    /* شكل اللوجو */
+    .footer-logo img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      transition: 0.3s;
+    }
+
+    /* hover بسيط */
+    .footer-logo img:hover {
+      transform: scale(1.1) rotate(3deg);
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+      }
+    }
+
+    /* ===== Screenshots Feedbacks ===== */
+    .testimonials {
+      padding: 80px 8%;
+      text-align: center;
+    }
+
+    .feedback-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .screenshot-card {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      border: 2px solid rgba(255, 255, 255, 0.1);
+      cursor: pointer;
+      transition: 0.4s ease;
+      background: rgba(255, 255, 255, 0.05);
+      height: 400px;
+      /* يمكنك التحكم في الطول حسب شكل السكرينات */
+    }
+
+    .screenshot-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      /* بيخلي الصورة تملأ الكارت بشكل مهندم */
+      transition: 0.5s ease;
+    }
+
+    .hover-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(224, 86, 160, 0.4);
+      /* لون الأكسنت بتاعك */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 30px;
+      color: white;
+      opacity: 0;
+      transition: 0.3s;
+      backdrop-filter: blur(3px);
+    }
+
+    .screenshot-card:hover .hover-overlay {
+      opacity: 1;
+    }
+
+    .screenshot-card:hover img {
+      transform: scale(1.1);
+    }
+
+    /* Modal Styling (لتكبير الصورة) */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 10001;
+      padding-top: 100px;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      backdrop-filter: blur(10px);
+    }
+
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-width: 80%;
+      max-height: 80vh;
+      border-radius: 10px;
+      animation: zoom 0.3s;
+    }
+
+    @keyframes zoom {
+      from {
+        transform: scale(0)
+      }
+
+      to {
+        transform: scale(1)
+      }
+    }
+
+    .close {
+      position: absolute;
+      top: 30px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .view-more-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+      /* مسافة بين الصور والزر */
+      margin-bottom: 20px;
+    }
+
+    /* لو حبيتي تخلي الزرار ليه تأثير مختلف أو حجم أكبر شوية */
+    .view-more-container .btn {
+      padding: 14px 35px;
+      font-size: 16px;
+      letter-spacing: 0.5px;
+      box-shadow: 0 10px 20px rgba(224, 86, 160, 0.3);
+    }
+   /* تنسيق قسم الشهادات المعدل */
+.certificates {
+    padding: 20px 8% 40px; /* قللنا الـ padding العلوي جداً */
     text-align: center;
-    gap: 20px;
-  }
 }
 
-/* ===== Screenshots Feedbacks ===== */
-.testimonials {
-  padding: 80px 8%;
-  text-align: center;
-}
-
-.feedback-grid {
+.cert-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
   margin-top: 40px;
+  align-items: stretch;
 }
 
-.screenshot-card {
-  position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-  border: 2px solid rgba(255, 255, 255, 0.1);
-  cursor: pointer;
-  transition: 0.4s ease;
-  background: rgba(255, 255, 255, 0.05);
-  height: 400px; /* يمكنك التحكم في الطول حسب شكل السكرينات */
-}
-
-.screenshot-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* بيخلي الصورة تملأ الكارت بشكل مهندم */
-  transition: 0.5s ease;
-}
-
-.hover-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(224, 86, 160, 0.4); /* لون الأكسنت بتاعك */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 30px;
-  color: white;
-  opacity: 0;
-  transition: 0.3s;
-  backdrop-filter: blur(3px);
-}
-
-.screenshot-card:hover .hover-overlay {
-  opacity: 1;
-}
-
-.screenshot-card:hover img {
-  transform: scale(1.1);
-}
-
-/* Modal Styling (لتكبير الصورة) */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 10001;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.9);
+.cert-card {
+  background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(10px);
-}
-
-.modal-content {
-  margin: auto;
-  display: block;
-  max-width: 80%;
-  max-height: 80vh;
-  border-radius: 10px;
-  animation: zoom 0.3s;
-}
-
-@keyframes zoom {
-  from {transform: scale(0)} 
-  to {transform: scale(1)}
-}
-
-.close {
-  position: absolute;
-  top: 30px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
-  font-weight: bold;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  transition: 0.4s ease;
   cursor: pointer;
-}
-.view-more-container {
   display: flex;
-  justify-content: center;
-  margin-top: 40px; /* مسافة بين الصور والزر */
-  margin-bottom: 20px;
+  flex-direction: column;
+  height: 100%;
+  opacity: 1; /* التأكد من أن الكروت العادية ظاهرة */
 }
 
-/* لو حبيتي تخلي الزرار ليه تأثير مختلف أو حجم أكبر شوية */
-.view-more-container .btn {
-  padding: 14px 35px;
-  font-size: 16px;
-  letter-spacing: 0.5px;
-  box-shadow: 0 10px 20px rgba(224, 86, 160, 0.3);
+.cert-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--accent-pink);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.cert-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* توحيد حجم الصور */
+  overflow: hidden;
+}
+
+.cert-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cert-info {
+  padding: 20px;
+  text-align: left; /* محاذاة النص الإنجليزي لليسار */
+  flex-grow: 1;
+}
+
+.cert-info h4 {
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+}
+
+.cert-info p {
+  color: var(--soft-pink);
+  font-size: 0.85rem;
+}
+
+/* خاص بالشهادات المخفية فقط */
+.hidden-cert {
+  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.hidden-cert.show {
+  display: flex;
+  opacity: 1;
+  transform: translateY(0);
 }
   </style>
 
@@ -1058,88 +1168,153 @@
   </div>
 
   <section class="testimonials" id="testimonials">
-  <h2 class="section-title">Success Stories</h2>
+    <h2 class="section-title">Success Stories</h2>
+
+    <div class="feedback-grid">
+      <div class="screenshot-card">
+        <img src="path_to_your_screenshot1.jpg" alt="Feedback 1" onclick="openModal(this.src)">
+        <div class="hover-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+      </div>
+
+      <div class="screenshot-card">
+        <img src="photo_2026-04-12_19-56-21.jpg" alt="Feedback 2" onclick="openModal(this.src)">
+        <div class="hover-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+      </div>
+
+      <div class="screenshot-card">
+        <img src="photo_2026-04-12_19-56-03.jpg" alt="Feedback 3" onclick="openModal(this.src)">
+        <div class="hover-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+      </div>
+
+      <div class="screenshot-card">
+        <img src="photo_2026-04-12_19-56-03.jpg" alt="Feedback 4" onclick="openModal(this.src)">
+        <div class="hover-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+      </div>
+    </div>
+    <div class="view-more-container">
+      <a href="رابط_صفحة_الفيدباكس_أو_لينك_واتساب" class="btn primary">View More Feedback</a>
+    </div>
+  </section>
+  <div id="imageModal" class="modal" onclick="this.style.display='none'">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="imgFull">
+  </div>
+
+<section class="certificates" id="certificates">
+  <h2 class="section-title">Certifications & Accreditations</h2>
   
-  <div class="feedback-grid">
-    <div class="screenshot-card">
-      <img src="path_to_your_screenshot1.jpg" alt="Feedback 1" onclick="openModal(this.src)">
-      <div class="hover-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+  <div class="cert-grid">
+    <div class="cert-card" onclick="openModal('photo_2026-04-12_19-56-03.jpg')">
+      <div class="cert-image">
+        <img src="photo_2026-04-12_19-56-03.jpg" alt="Digital Marketing">
+        <div class="cert-overlay">
+          <i class="fa-solid fa-eye"></i>
+          <span>View Certificate</span>
+        </div>
+      </div>
+      <div class="cert-info">
+        <h4>Digital Marketing Expert</h4>
+        <p>Google Career Certificates</p>
+      </div>
     </div>
 
-    <div class="screenshot-card">
-      <img src="photo_2026-04-12_19-56-21.jpg" alt="Feedback 2" onclick="openModal(this.src)">
-      <div class="hover-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+    <div class="cert-card" onclick="openModal('photo_2026-04-12_19-56-21.jpg')">
+      <div class="cert-image">
+        <img src="photo_2026-04-12_19-56-21.jpg" alt="Content Strategy">
+        <div class="cert-overlay">
+          <i class="fa-solid fa-eye"></i>
+          <span>View Certificate</span>
+        </div>
+      </div>
+      <div class="cert-info">
+        <h4>Content Strategy Specialist</h4>
+        <p>HubSpot Academy</p>
+      </div>
     </div>
 
-    <div class="screenshot-card">
-      <img src="photo_2026-04-12_19-56-03.jpg" alt="Feedback 3" onclick="openModal(this.src)">
-      <div class="hover-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+    <div class="cert-card" onclick="openModal('photo_2026-04-12_19-56-03.jpg')">
+      <div class="cert-image">
+        <img src="photo_2026-04-12_19-56-03.jpg" alt="Advanced Copywriting">
+        <div class="cert-overlay">
+          <i class="fa-solid fa-eye"></i>
+          <span>View Certificate</span>
+        </div>
+      </div>
+      <div class="cert-info">
+        <h4>Advanced Copywriting</h4>
+        <p>Meta / Coursera</p>
+      </div>
     </div>
 
-    <div class="screenshot-card">
-      <img src="photo_2026-04-12_19-56-03.jpg" alt="Feedback 4" onclick="openModal(this.src)">
-      <div class="hover-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+    <div class="cert-card hidden-cert" onclick="openModal('photo_2026-04-12_19-56-21.jpg')">
+      <div class="cert-image">
+        <img src="photo_2026-04-12_19-56-21.jpg" alt="SEO Expert">
+        <div class="cert-overlay">
+          <i class="fa-solid fa-eye"></i>
+          <span>View Certificate</span>
+        </div>
+      </div>
+      <div class="cert-info">
+        <h4>SEO Content Specialist</h4>
+        <p>Semrush Academy</p>
+      </div>
     </div>
   </div>
+
   <div class="view-more-container">
-  <a href="رابط_صفحة_الفيدباكس_أو_لينك_واتساب" class="btn primary">View More Feedback</a>
-</div>
-</section>
-<div id="imageModal" class="modal" onclick="this.style.display='none'">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="imgFull">
-</div>
-
-<footer class="footer">
-
-  <div class="footer-container">
-
-    <!-- Logo -->
-   <div class="footer-logo">
-  <img src="photo_2026-04-12_19-56-03.jpg" alt="logo">
-  <span>Habiba Sayed</span>
-</div>
-
-    <!-- Links -->
-    <div class="footer-links">
-      <a href="#">Home</a>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#">Contact</a>
-    </div>
-
-    <!-- Social Icons -->
-    <div class="footer-social">
-
-      <a href="#" target="_blank">
-        <i class="fa-brands fa-facebook"></i>
-      </a>
-
-      <a href="#" target="_blank">
-        <i class="fa-brands fa-instagram"></i>
-      </a>
-
-      <a href="#" target="_blank">
-        <i class="fa-brands fa-linkedin"></i>
-      </a>
-
-      <a href="https://wa.me/201234567890" target="_blank">
-        <i class="fa-brands fa-whatsapp"></i>
-      </a>
-
-    </div>
-
+    <button id="show-more-certs" class="btn secondary">View More Certificates</button>
   </div>
-  <button id="scrollTopBtn" class="scroll-top">
-  <i class="fa-solid fa-arrow-up"></i>
-</button>
+</section>
+  <footer class="footer">
 
-  <!-- Bottom Text -->
-  <p class="footer-bottom">
-    © 2026 All Rights Reserved | Made with ❤️
-  </p>
+    <div class="footer-container">
 
-</footer>
+      <!-- Logo -->
+      <div class="footer-logo">
+        <img src="photo_2026-04-12_19-56-03.jpg" alt="logo">
+        <span>Habiba Sayed</span>
+      </div>
+
+      <!-- Links -->
+      <div class="footer-links">
+        <a href="#">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#">Contact</a>
+      </div>
+
+      <!-- Social Icons -->
+      <div class="footer-social">
+
+        <a href="#" target="_blank">
+          <i class="fa-brands fa-facebook"></i>
+        </a>
+
+        <a href="#" target="_blank">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="#" target="_blank">
+          <i class="fa-brands fa-linkedin"></i>
+        </a>
+
+        <a href="https://wa.me/201234567890" target="_blank">
+          <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+      </div>
+
+    </div>
+    <button id="scrollTopBtn" class="scroll-top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Bottom Text -->
+    <p class="footer-bottom">
+      © 2026 All Rights Reserved | Made with ❤️
+    </p>
+
+  </footer>
 
 
   <script>
@@ -1183,28 +1358,51 @@
 
 
 
-  const scrollBtn = document.getElementById("scrollTopBtn");
+    const scrollBtn = document.getElementById("scrollTopBtn");
 
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      scrollBtn.classList.add("show");
-    } else {
-      scrollBtn.classList.remove("show");
-    }
-  });
-
-  scrollBtn.addEventListener("click", () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth"
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        scrollBtn.classList.add("show");
+      } else {
+        scrollBtn.classList.remove("show");
+      }
     });
-  });
 
-  function openModal(src) {
-  document.getElementById("imageModal").style.display = "block";
-  document.getElementById("imgFull").src = src;
-}
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
 
+    function openModal(src) {
+      document.getElementById("imageModal").style.display = "block";
+      document.getElementById("imgFull").src = src;
+    }
+
+
+
+document.getElementById('show-more-certs').addEventListener('click', function() {
+    const hiddenCerts = document.querySelectorAll('.hidden-cert');
+    // استخدمي trim() لضمان عدم وجود مسافات تعطل الكود
+    const isExpanding = this.innerText.trim() === "View More Certificates";
+
+    hiddenCerts.forEach((cert, index) => {
+        if (isExpanding) {
+            cert.style.display = "flex";
+            setTimeout(() => {
+                cert.classList.add('show');
+            }, index * 100);
+            this.innerText = "Show Less";
+        } else {
+            cert.classList.remove('show');
+            setTimeout(() => {
+                cert.style.display = "none";
+            }, 500);
+            this.innerText = "View More Certificates";
+        }
+    });
+});
   </script>
 
 
