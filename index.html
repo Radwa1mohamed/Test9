@@ -213,14 +213,14 @@
     }
 
     .bg {
-      position: absolute;
-      inset: 0;
-      background-size: cover;
-      background-position: center;
-      transition: 1s ease;
-      transform: scale(1.05);
-    }
-
+  position: absolute;
+  inset: 0;
+  background-size: cover; /* بيخلي الصورة تغطي المساحة بالكامل */
+  background-position: center center; /* بيخلي نص الصورة دائماً هو اللي في المركز */
+  background-repeat: no-repeat;
+  transition: 1s ease;
+  transform: scale(1.05);
+}
     .bg1 {
       background-image: url("photo_2026-04-12_19-56-03.jpg");
       z-index: 1;
@@ -617,14 +617,25 @@
         display: block;
       }
 
-      h1 {
-        font-size: 32px;
-      }
+    
 
       .about-container {
         flex-direction: column;
         text-align: center;
       }
+
+      .hero {
+    height: 80vh; /* تقليل الارتفاع شوية في الموبايل بيدي راحة للعين */
+  }
+
+  h1 {
+    font-size: 28px; /* تصغير العنوان عشان ميزحمش الصورة */
+  }
+
+  .about-image img {
+    width: 250px; /* تصغير الصورة شوية في الموبايل */
+    height: 250px;
+  }
     }
 
     @media (max-width: 768px) {
