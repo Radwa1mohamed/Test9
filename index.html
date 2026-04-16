@@ -645,6 +645,25 @@
         flex-direction: column;
       }
 
+      /* إلغاء الميل في حالة الـ Hover على الموبايل */
+  .service-card:hover {
+    transform: translateY(-5px); /* نكتفي بحركة بسيطة لفوق من غير دوران */
+  }
+
+  /* التأكد إن البوكس نفسه واخد وضعية مستقيمة */
+  .service-card {
+    transform: none !important;
+    padding: 20px; /* تقليل البادينج عشان نوفر مساحة */
+  }
+
+  /* تصغير الأيقونة شوية عشان تناسب الموبايل */
+  .icon-box {
+    width: 50px;
+    height: 45px;
+    font-size: 22px;
+  }
+
+
       /* بيخفي تأثير الماوس عشان ملوش لازمة في اللمس وبيوفر بطارية
       #fire-glow {
         display: none;
@@ -883,7 +902,7 @@
   <section class="about" id="about">
     <div class="about-container">
       <div class="about-image">
-        <img src="/photo_2026-04-12_19-56-03.jpg" alt="Habiba Sayed">
+        <img src="photo_2026-04-12_19-56-21.jpg" alt="Habiba Sayed">
       </div>
       <div class="about-text glass-card">
         <h2>About Coach Habiba</h2>
