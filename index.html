@@ -228,12 +228,12 @@
     }
 
     .bg1 {
-      background-image: url("photo_2026-04-12_19-56-03.jpg");
+      background-image: url("/imgs/photo_2026-04-12_19-56-03.jpg");
       z-index: 1;
     }
 
     .bg2 {
-      background-image: url("photo_2026-04-12_19-56-21.jpg");
+      background-image: url("/imgs/logo_Habiba.jpg");
       z-index: 0;
       opacity: 0;
     }
@@ -574,7 +574,7 @@
     }
 
     .service-card:hover {
-      transform: translateY(-15px) rotate(1deg);
+      transform: translateY(-15px);
       border-color: var(--primary-blue);
     }
 
@@ -680,6 +680,28 @@
         flex-direction: column;
       }
 
+      /* 1. لضمان توسيط الشبكة بالكامل في منتصف الشاشة */
+    .services-grid {
+        display: grid;
+        justify-content: center; /* توسيط الكروت عرضياً */
+        justify-items: center;   /* توسيط محتوى الكروت */
+    }
+
+    /* 2. إلغاء أي ميلان (Rotation) قد يكون موروثاً في الموبايل */
+    .service-card {
+        transform: rotate(0deg) !important; /* إجبار الكارد على الاستقامة */
+        margin: 0 auto; /* سنترة الكارد */
+        width: 100%;
+        max-width: 300px; /* مقاس مناسب للموبايل */
+    }
+
+    /* 3. التأكد أن الـ Hover في الموبايل لا يسبب ميلان */
+    .service-card:hover {
+        transform: translateY(-10px) rotate(0deg) !important;
+    }
+
+    
+
       /* بيخفي تأثير الماوس عشان ملوش لازمة في اللمس وبيوفر بطارية
       #fire-glow {
         display: none;
@@ -687,79 +709,91 @@
     }
 
 
-   .stats-section {
-    padding: 40px 5%;
-    margin: 30px auto;
+.stats-section {
+    padding: 25px 5%; /* ارتفاع نحيف وانسيابي */
+    margin: 20px auto;
     max-width: 1100px;
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
-    border-radius: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    
+   /* الخلطة السرية للمظهر الزجاجي */
+    background: rgba(255, 255, 255, 0.05); /* شفافية عالية جداً */
+    backdrop-filter: blur(15px) saturate(150%); /* التغبيش مع زيادة تشبع الألوان خلف الزجاج */
+    -webkit-backdrop-filter: blur(15px) saturate(150%); /* لدعم متصفح سفاري */
+    
+    /* إضاءة الحواف (بتخليها تبان كأنها حافة لوح زجاج) */
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    
+    /* ظل ناعم جداً يعطي عمق */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 
+                inset 0 0 10px rgba(255, 255, 255, 0.05); /* ظل داخلي خفيف */
+    backdrop-filter: blur(10px); /* تأثير الزجاج المضبب */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    
+    border-radius: 20px; /* حواف ناعمة */
 }
-
 .stats-container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
-    flex-wrap: wrap;
-    text-align: center;
 }
 
 .stat-item {
+    text-align: center;
     flex: 1;
-    min-width: 200px;
-        min-width: 0;
-
 }
 
-.stat-value {
-font-size: clamp(1.2rem, 4vw, 3rem);
-    font-weight: 800;
-    color:#E056A0;
-    margin-bottom: 5px;
-    font-variant-numeric: tabular-nums; /* بيخلي الأرقام ثابتة أثناء العد */
+.counter {
+    font-size: clamp(1.8rem, 5vw, 3.5rem); /* حجم كبير وواضح */
+    font-weight: 700;
+    color: #fff; /* أبيض ناصع */
+}
+
+.stat-item span + span { /* لعلامة الزائد */
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    color: #fff;
 }
 
 .stat-item p {
     color: #fff;
-font-size: clamp(0.6rem, 2vw, 0.9rem);
+    font-size: clamp(0.7rem, 2vw, 0.9rem); /* تصغير حجم الخط قليلاً */
+    margin-top: 8px; /* تقليل المسافة بين الرقم والنص */
+    font-weight: 400;
+    opacity: 0.9;
+}
+/* الخط الفاصل */
+.divider {
+    width: 2px;
+    height: 50px; /* طول الخط */
+    background: linear-gradient(transparent, var(--accent-pink), transparent); /* لون متدرج وردي أو برتقالي زي الصورة */
     opacity: 0.8;
-    text-transform: uppercase;
-    font-weight: 600;
-    margin-top: 5px;
-    letter-spacing: 1px;
 }
 
+/* تعديل الموبايل عشان يفضلوا جنب بعض وشكلهم نظيف */
 @media (max-width: 768px) {
-    .stats-section {
-        padding: 20px 5px; /* تقليل المسافة الرأسية والجانبية */
-        margin: 20px 10px; /* ترك مسافة بسيطة عن حواف الشاشة */
-        border-radius: 20px; /* تنعيم الحواف لتناسب الموبايل */
+   .stats-section {
+        /* إجبار القسم على البقاء داخل حدود الشاشة */
+        width: calc(100% - 30px) !important; 
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding: 15px 5px !important;
+        
+        /* منع أي بروز للخارج */
+        overflow: hidden !important;
+        box-sizing: border-box !important;
+    }
+    .divider {
+        height: 50px; /* تقصير الخط في الموبايل */
+        margin: 0 5px;
     }
 
-    .stats-container {
-        display: flex;
-        flex-wrap: nowrap; /* إجبارهم يفضلوا في صف واحد */
-        justify-content: space-between; /* توزيع متساوي */
-        gap: 5px; /* مسافة صغيرة جداً بين كل رقم والتاني */
-    }
-
-    .stat-item {
-        flex: 1;
-        padding: 0 2px;
-    }
-
-    .stat-value {
-        font-size: 1.1rem !important; /* تصغير الرقم عشان يكفي */
-        font-weight: 800;
+    .counter {
+        font-size: 1.5rem; /* حجم مناسب جداً للموبايل */
     }
 
     .stat-item p {
-        font-size: 0.55rem !important; /* تصغير الكلام التوضيحي */
-        line-height: 1.1;
-        margin-top: 2px;
-        white-space: normal; /* السماح للكلمة تنزل سطرين لو طويلة */
+        font-size: 0.6rem;
+        margin-top: 8px;
     }
 }
     /* ===== FOOTER BASE ===== */
@@ -1188,11 +1222,11 @@ font-size: clamp(0.6rem, 2vw, 0.9rem);
   <section class="about" id="about">
     <div class="about-container">
       <div class="about-image">
-        <img src="photo_2026-04-12_19-56-03.jpg" alt="Habiba Sayed">
+        <img src="/imgs/logo_Habiba.jpg" alt="Habiba Sayed">
       </div>
       <div class="about-text glass-card">
         <h2>About Coach Habiba</h2>
-        <h3>Habiba Sayed Hanafi <br><span>Content Marketer & Coach</span></h3>
+        <h3>Habiba Sayed Hanafi <br><span> Coach & Content Marketer</span></h3>
         <p>أنا كوتش حبيبة… بساعدك تبني محتوى مش بس شكله حلو، لكن فعلاً يبيع ويأثر ويكبر البراند بتاعك.</p>
         <p>هدفي إني أحولك من مجرد كتابة بوستات لسيستم محتوى كامل بيجيب نتائج حقيقية.</p>
         <div class="about-buttons">
@@ -1205,20 +1239,18 @@ font-size: clamp(0.6rem, 2vw, 0.9rem);
  <section class="stats-section">
     <div class="stats-container">
         <div class="stat-item">
-            <div class="stat-value"><span class="counter" data-target="150">0</span>+</div>
+            <span class="counter" data-target="150">0</span>+
             <p>Content Pieces</p>
         </div>
-        <div class="stat-item">
-            <div class="stat-value"><span class="counter" data-target="25">0</span>+</div>
+        
+        <div class="divider"></div> <div class="stat-item">
+            <span class="counter" data-target="25">0</span>+
             <p>Trusted Brands</p>
         </div>
-        <div class="stat-item">
-            <div class="stat-value"><span class="counter" data-target="500">0</span>+</div>
+
+        <div class="divider"></div> <div class="stat-item">
+            <span class="counter" data-target="500">0</span>+
             <p>Students Trained</p>
-        </div>
-        <div class="stat-item">
-            <div class="stat-value"><span class="counter" data-target="10">0</span>+</div>
-            <p>Strategies Built</p>
         </div>
     </div>
 </section>
@@ -1513,22 +1545,38 @@ font-size: clamp(0.6rem, 2vw, 0.9rem);
       });
     });
 
-    // تفعيل عداد الأرقام عند السكرول
-gsap.utils.toArray('.counter').forEach(function(el) {
-    const target = parseInt(el.getAttribute('data-target'));
-    
-    gsap.to(el, {
-        innerText: target,
-        duration: 2.5, // مدة العد بالثواني
-        ease: "power2.out",
-        snap: { innerText: 1 }, // العد بأرقام صحيحة
-        scrollTrigger: {
-            trigger: el,
-            start: "top 90%", // يبدأ العد لما العنصر يوصل لـ 90% من ارتفاع الشاشة
-            toggleActions: "play none none none", // يشتغل مرة واحدة فقط عند النزول
-        }
-    });
+// 1. السطر ده هو "مفتاح التشغيل" الأساسي (أهم إضافة)
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".stat-item", {
+    y: 40,               
+    opacity: 0,          
+    duration: 1,         
+    stagger: 0.2,        
+    // 2. تغيير بسيط في الـ Ease بيخلي الحركة "لذيذة" أكتر (مطاطية خفيفة)
+    ease: "back.out(1.7)", 
+    scrollTrigger: {
+        trigger: ".stats-section", 
+        start: "top 85%",      
+        // 3. إضافة التفعيل العكسي (عشان لو طلع ونزل تاني الأنميشن يشتغل أو يثبت)
+        toggleActions: "play none none none", 
+    },
+    onStart: () => {
+        animateNumbers();
+    }
 });
+
+function animateNumbers() {
+    gsap.utils.toArray('.counter').forEach(function(el) {
+        const target = parseInt(el.getAttribute('data-target'));
+        gsap.to(el, {
+            innerText: target,
+            duration: 2,        
+            snap: { innerText: 1 }, 
+            ease: "power1.inOut"
+        });
+    });
+}
   </script>
 
 
