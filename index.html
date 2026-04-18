@@ -963,6 +963,24 @@
         text-align: center;
         gap: 20px;
       }
+      .view-more-container {
+        display: flex !important;
+        justify-content: center !important; 
+        align-items: center !important;
+        width: 100% !important;
+        margin: 20px 0 !important; /* مسافة فوق وتحت */
+        padding: 0 !important;
+    }
+
+    /* 2. ضبط الزرار نفسه */
+    #show-more-certs {
+        margin: 0 auto !important; /* أهم سطر للتوسيط */
+        display: block !important;
+        width: fit-content !important; /* يخلي الزرار على قد الكلام بس */
+        min-width: 200px; /* اختياري: عشان الزرار ميبقاش صغير أوي */
+        transform: none !important; /* إلغاء أي ميلان أو إزاحة */
+    }
+
     }
 
     /* ===== Screenshots Feedbacks ===== */
@@ -1160,6 +1178,57 @@
       opacity: 1;
       transform: translateY(0);
     }
+
+    .footer-bottom a {
+  color: #25D366;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-bottom a:hover {
+  color: #128C7E;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip .tooltip-text {
+  visibility: hidden;
+  background-color: #25D366;
+  color: #fff;
+  text-align: center;
+  padding: 6px 10px;
+  border-radius: 8px;
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.tooltip:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+.tooltip .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #25D366 transparent transparent transparent;
+}
+
   </style>
 
 </head>
@@ -1179,9 +1248,10 @@
       <div class="menu-toggle" id="menu-toggle">☰</div>
     </div>
   </header>
+      <div id="fire-glow"></div>
+
 
   <section class="hero" id="hero">
-    <div id="fire-glow"></div>
     <div class="bg bg1"></div>
     <div class="bg bg2"></div>
 
@@ -1197,8 +1267,7 @@
 
       <div class="buttons">
         <button class="btn primary">View My Work</button>
-        <button class="btn secondary">Book a Session</button>
-      </div>
+<a href="https://wa.me/201501180309" target="_blank" class="btn secondary">Book a Session</a>      </div>
     </div>
   </section>
 
@@ -1430,19 +1499,19 @@
       <!-- Social Icons -->
       <div class="footer-social">
 
-        <a href="#" target="_blank">
+        <a href="https://www.facebook.com/share/1c21qKUL6o/" target="_blank">
           <i class="fa-brands fa-facebook"></i>
         </a>
 
-        <a href="#" target="_blank">
+        <a href="https://www.instagram.com/habibasaid4414" target="_blank">
           <i class="fa-brands fa-instagram"></i>
         </a>
 
-        <a href="#" target="_blank">
+        <a href="https://www.linkedin.com/in/habiba-sayed-21835b338" target="_blank">
           <i class="fa-brands fa-linkedin"></i>
         </a>
 
-        <a href="https://wa.me/201234567890" target="_blank">
+        <a href="https://wa.me/201501180309" target="_blank"> 
           <i class="fa-brands fa-whatsapp"></i>
         </a>
 
@@ -1454,9 +1523,18 @@
     </button>
 
     <!-- Bottom Text -->
-    <p class="footer-bottom">
-      © 2026 All Rights Reserved | Made with ❤️
-    </p>
+<p class="footer-bottom">
+  © 2026 All Rights Reserved Coach Habiba Sayed | 
+  Prepared by 
+  <span class="tooltip">
+    <a href="https://wa.me/201007359722" target="_blank" style="color:#25D366; font-weight:bold; text-decoration:none;">
+      Eng. Radwa Mohamed
+    </a>
+    <span class="tooltip-text">💬 Click to chat on WhatsApp</span>
+  </span>
+</p>
+
+
 
   </footer>
 
