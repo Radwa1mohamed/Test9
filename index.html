@@ -1229,6 +1229,29 @@
   border-color: #25D366 transparent transparent transparent;
 }
 
+.service-card { position: relative; } /* لضمان ظهور الشارة فوق الكارت */
+
+.discount-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--accent-pink);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(224, 86, 160, 0.3);
+    z-index: 5;
+    animation: pulse 2s infinite; /* أنميشن نبض لجذب الانتباه */
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
   </style>
 
 </head>
@@ -1288,6 +1311,7 @@
     </div>
   </div>
 
+
   <section class="about" id="about">
     <div class="about-container">
       <div class="about-image">
@@ -1323,7 +1347,10 @@
         </div>
     </div>
 </section>
+
+
   <div class="main-card" id="services">
+    
     <h2 class="section-title">الخدمات الإبداعية</h2>
     <div class="services-grid">
       <div class="service-card">
@@ -1332,6 +1359,7 @@
         <p>كتابة محتوى تفاعلي لمنصات فيسبوك، إنستجرام، ولينكد إن لجذب الجمهور.</p>
       </div>
       <div class="service-card">
+        <div class="discount-badge">OFF 25%</div>
         <div class="icon-box"><i class="fa-solid fa-clapperboard"></i></div>
         <h3>سكريبتات ريلز</h3>
         <p>صياغة سكريبتات فيديو قصيرة تخطف الأنظار وتزيد من نسب المشاهدة.</p>

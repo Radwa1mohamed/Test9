@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habiba Sayed | Premium Services</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <style>
+        /* تعريف الألوان الأساسية */
+        :root {
+            --accent-pink-s2: #E056A0;
+            --dark-blue-s2: #0F3345;
+            --primary-blue-s2: #62BEAC;
+        }
+
+        body {
+            background-color: #f0f2f5;
+            font-family: 'Poppins', sans-serif;
+            direction: rtl; 
+            overflow-x: hidden;
+        }
+
+        .consulting-grid-s2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 20px;
+        }
+
+        .main-card-s2 {
+            max-width: 1100px;
+            margin: 50px auto;
+            background: white;
+            border-radius: 40px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            /* تم تعديل الـ opacity هنا ليظهر الكود فوراً */
+            opacity: 1; 
+            transform: translateY(0);
+        }
+
+        .consult-card-s2 {
+            background: #fff;
+            border-radius: 30px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid #eee;
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            /* تم تعديل الـ opacity هنا ليظهر الكود فوراً */
+            opacity: 1;
+            transform: scale(1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .consult-card-s2:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-color: var(--accent-pink-s2);
+        }
+
+        .consult-card-s2:hover .icon-box-large-s2 i {
+            animation: bounceIcon-s2 0.6s ease infinite alternate;
+            color: var(--dark-blue-s2);
+        }
+
+        @keyframes bounceIcon-s2 {
+            from { transform: translateY(0); }
+            to { transform: translateY(-10px); }
+        }
+
+        .premium-wrapper-s2 {
+            background: linear-gradient(135deg, #ffffff 0%, #fff9fc 100%) !important;
+            border: 1px solid rgba(224, 86, 160, 0.1) !important;
+        }
+
+        .featured-card-s2 {
+            transform: scale(1.02);
+            border: 2px solid var(--accent-pink-s2) !important;
+            box-shadow: 0 20px 40px rgba(224, 86, 160, 0.15) !important;
+        }
+
+        .offer-banner-s2 {
+            background: rgba(224, 86, 160, 0.85); 
+            backdrop-filter: blur(10px); 
+            -webkit-backdrop-filter: blur(10px);
+            color: white;
+            padding: 25px;
+            border-radius: 25px;
+            margin-bottom: 30px;
+            text-align: center;
+            /* تم تعديل الـ opacity هنا ليظهر الكود فوراً */
+            opacity: 1;
+            transform: translateY(0);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 18px;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(224, 86, 160, 0.3);
+        }
+        
+        .offer-banner-s2:hover {
+            transform: translateY(-5px) scale(1.01);
+            background: rgba(224, 86, 160, 0.95);
+            box-shadow: 0 12px 40px rgba(224, 86, 160, 0.4);
+        }
+
+        .countdown-wrapper-s2 {
+            display: flex;
+            gap: 15px;
+            direction: ltr;
+        }
+
+        .time-unit-s2 {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(5px);
+            padding: 12px;
+            border-radius: 18px;
+            min-width: 75px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .time-unit-s2:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-3px);
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+
+        .time-unit-s2 span {
+            font-size: 28px;
+            font-weight: 800;
+            display: block;
+            line-height: 1;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .time-unit-s2 p {
+            font-size: 11px;
+            margin: 6px 0 0 0 !important;
+            font-weight: 600;
+            opacity: 0.9;
+            letter-spacing: 0.5px;
+        }
+
+        .time-separator-s2 {
+            font-size: 28px;
+            font-weight: bold;
+            line-height: 50px;
+            animation: blink-s2 1s infinite;
+        }
+
+        @keyframes blink-s2 {
+            50% { opacity: 0.3; }
+        }
+
+        .icon-box-large-s2 {
+            font-size: 45px;
+            color: var(--accent-pink-s2);
+            margin-bottom: 20px;
+        }
+
+        .card-counter-s2 {
+            background: rgba(224, 86, 160, 0.05);
+            padding: 15px;
+            border-radius: 15px;
+            margin: 20px 0;
+        }
+
+        .counter-item-s2 span {
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--dark-blue-s2);
+            display: block;
+        }
+
+        .progress-container-s2 {
+            height: 6px;
+            background: #eee;
+            border-radius: 10px;
+            margin-top: 10px;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill-s2 {
+            height: 100%;
+            width: 0%; 
+            background: #ff4d4d;
+        }
+
+        .progress-bar-fill-s2.success-s2 {
+            background: #2ecc71;
+        }
+
+        .btn-s2 {
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            display: inline-block;
+            font-weight: bold;
+            transition: 0.3s ease;
+        }
+
+        .primary-s2 { background: var(--accent-pink-s2); color: white; }
+        .secondary-s2 { border: 1px solid var(--accent-pink-s2); color: var(--accent-pink-s2); }
+        
+        .btn-s2:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .btn-shine-s2 {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-shine-s2::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 20%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: rotate(30deg);
+            animation: shine-s2 3s infinite;
+        }
+
+        @keyframes shine-s2 {
+            0% { left: -60%; }
+            20% { left: 120%; }
+            100% { left: 120%; }
+        }
+
+        .points-s2 { list-style: none; padding: 0; margin-bottom: 20px; }
+        .points-s2 li { 
+            margin-bottom: 10px; 
+            color: #444; 
+            transition: transform 0.3s ease;
+        }
+        .consult-card-s2:hover .points-s2 li {
+            transform: translateX(-5px);
+        }
+        .points-s2 i { color: #2ecc71; margin-left: 8px; }
+
+        .text-effect-s2 {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .text-effect-s2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, transparent 0%, rgba(224, 86, 160, 0.2) 20%, var(--accent-pink-s2) 50%, rgba(224, 86, 160, 0.2) 80%, transparent 100%);
+            background-size: 200% 100%;
+            animation: moveLine-s2 2s infinite linear;
+        }
+
+        @keyframes moveLine-s2 {
+            0% { background-position: 100% 0; }
+            100% { background-position: -100% 0; }
+        }
+
+        @media (max-width: 768px) {
+            .main-card-s2 {
+                margin: 20px 10px;
+                padding: 25px 15px;
+                border-radius: 30px;
+            }
+            .offer-banner-s2 {
+                padding: 20px 10px;
+                gap: 15px;
+            }
+            .offer-banner-s2 span {
+                font-size: 14px;
+            }
+            .countdown-wrapper-s2 {
+                gap: 8px;
+            }
+            .time-unit-s2 {
+                min-width: 50px;
+                padding: 8px;
+            }
+            .time-unit-s2 span {
+                font-size: 20px;
+            }
+            .time-separator-s2 {
+                font-size: 20px;
+                line-height: 40px;
+            }
+            .consulting-grid-s2 {
+                grid-template-columns: 1fr;
+                gap: 20px;
+                padding: 0;
+            }
+            .featured-card-s2 {
+                transform: scale(1);
+            }
+            h2 .text-effect-s2 {
+                font-size: 22px;
+            }
+            .icon-box-large-s2 {
+                font-size: 35px;
+            }
+            .counter-item-s2 span {
+                font-size: 24px;
+            }
+            .btn-s2 {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<section class="consulting-section-s2" id="training">
+    <div class="main-card-s2 premium-wrapper-s2">
+        <div class="offer-banner-s2">
+            <div>
+                <i class="fa-solid fa-fire-flame-curved" style="margin-left: 8px;"></i>
+                <span class="text-effect-s2">خصم لفترة محدودة: 50% على جلسات الاستشارة الفردية بمناسبة الانطلاق!</span>
+            </div>
+            
+            <div class="countdown-wrapper-s2">
+                <div class="time-unit-s2">
+                    <span id="hours-s2">00</span>
+                    <p>ساعة</p>
+                </div>
+                <div class="time-separator-s2">:</div>
+                <div class="time-unit-s2">
+                    <span id="minutes-s2">00</span>
+                    <p>دقيقة</p>
+                </div>
+                <div class="time-separator-s2">:</div>
+                <div class="time-unit-s2">
+                    <span id="seconds-s2">00</span>
+                    <p>ثانية</p>
+                </div>
+            </div>
+        </div>
+        
+        <h2 style="text-align: center; color: var(--dark-blue-s2); margin-bottom: 30px;">
+            <span class="text-effect-s2 title-special-s2">التدريب والاستشارات</span>
+        </h2>        
+        
+        <div class="consulting-grid-s2">
+            <div class="consult-card-s2 highlight-s2 featured-card-s2">
+                <div class="icon-box-large-s2"><i class="fa-solid fa-comments-dollar"></i></div>
+                <h3>جلسات استشارية (1:1)</h3>
+                <p>ساعة مكثفة نضع فيها يدنا على نقاط الضعف في محتواك.</p>
+                
+                <div class="card-counter-s2">
+                    <div class="counter-item-s2">
+                        <span class="offer-counter-s2" data-target="10">0</span>
+                        <p>مقعد متبقي</p>
+                    </div>
+                    <div class="progress-container-s2">
+                        <div class="progress-bar-fill-s2" id="bar1-s2"></div>
+                    </div>
+                </div>
+
+                <ul class="points-s2">
+                    <li><i class="fa-solid fa-circle-check"></i> تحليل شامل للبروفايل</li>
+                    <li><i class="fa-solid fa-circle-check"></i> استراتيجية محتوى مخصصة</li>
+                </ul>
+                <a href="#" class="btn-s2 primary-s2 btn-shine-s2">احجز جلستك الآن</a>
+            </div>
+
+            <div class="consult-card-s2">
+                <div class="icon-box-large-s2"><i class="fa-solid fa-laptop-code"></i></div>
+                <h3>البرامج التدريبية</h3>
+                <p>كورسات عملية لتعليمك أسرار الكوبي رايتنج من الصفر.</p>
+                
+                <div class="card-counter-s2">
+                    <div class="counter-item-s2">
+                        <span class="offer-counter-s2" data-target="95">0</span>
+                        <p>رضا المتدربين %</p>
+                    </div>
+                    <div class="progress-container-s2">
+                        <div class="progress-bar-fill-s2 success-s2" id="bar2-s2"></div>
+                    </div>
+                </div>
+
+                <ul class="points-s2">
+                    <li><i class="fa-solid fa-circle-check"></i> تدريب عملي وتطبيقي</li>
+                    <li><i class="fa-solid fa-circle-check"></i> شهادة إتمام البرنامج</li>
+                </ul>
+                <a href="#" class="btn-s2 secondary-s2">استفسر عن المواعيد</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    function initPremiumCountersS2() {
+        gsap.to(".main-card-s2", {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: "power2.out"
+        });
+
+        gsap.to(".offer-banner-s2", {
+            opacity: 1,
+            y: 0,
+            duration: 1.2,
+            delay: 0.5,
+            ease: "back.out(1.7)"
+        });
+
+        gsap.to(".consult-card-s2", {
+            opacity: 1,
+            scale: 1,
+            duration: 0.8,
+            stagger: 0.3,
+            ease: "power4.out",
+            scrollTrigger: {
+                trigger: ".consulting-grid-s2",
+                start: "top 80%"
+            }
+        });
+
+        gsap.utils.toArray('.offer-counter-s2').forEach(el => {
+            const target = parseInt(el.getAttribute('data-target'));
+            gsap.to(el, {
+                innerText: target,
+                duration: 2.5,
+                snap: { innerText: 1 },
+                scrollTrigger: {
+                    trigger: el,
+                    start: "top 90%"
+                }
+            });
+        });
+
+        gsap.to("#bar1-s2", {
+            width: "30%",
+            duration: 2,
+            ease: "expo.out",
+            scrollTrigger: { trigger: "#bar1-s2", start: "top 90%" }
+        });
+
+        gsap.to("#bar2-s2", {
+            width: "95%",
+            duration: 2,
+            ease: "expo.out",
+            scrollTrigger: { trigger: "#bar2-s2", start: "top 90%" }
+        });
+
+        function updateTimerS2() {
+            const endTime = new Date().getTime() + (24 * 60 * 60 * 1000);
+            
+            function calculate() {
+                const now = new Date().getTime();
+                const diff = endTime - now;
+
+                if (diff <= 0) {
+                    clearInterval(interval);
+                    return;
+                }
+
+                const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+                document.getElementById("hours-s2").innerText = h < 10 ? "0" + h : h;
+                document.getElementById("minutes-s2").innerText = m < 10 ? "0" + m : m;
+                document.getElementById("seconds-s2").innerText = s < 10 ? "0" + s : s;
+            }
+            
+            const interval = setInterval(calculate, 1000);
+            calculate();
+        }
+        updateTimerS2();
+    }
+
+    window.addEventListener('load', initPremiumCountersS2);
+</script>
+
+</body>
+</html>
