@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title> Habiba Sayed | Coach & Content Marketer </title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <meta name="description" content="كوتش كونتنت ماركتنج لمساعدتك في بناء حضور رقمي قوي. خدماتنا تشمل: خطط محتوى شهرية، سكريبتات ريلز، كتابة محتوى بيعي وإعلاني، وزيادة الـ Organic Reach. احجز سيشنك الآن.">
-  <meta name="keywords" content="كوتش محتوى، كونتنت ماركتنج، كتابة محتوى، سكريبتات ريلز، خطة محتوى، زيادة الأورجانيك ريتش، محتوى بيعي، إعلانات تسويقية، صناعة محتوى إبداعي، كورس كتابة محتوى، استشارات تسويقية، تحليل الجمهور، Content Marketing، Copywriting، Organic Reach.">
+  <meta name="description"
+    content="كوتش كونتنت ماركتنج لمساعدتك في بناء حضور رقمي قوي. خدماتنا تشمل: خطط محتوى شهرية، سكريبتات ريلز، كتابة محتوى بيعي وإعلاني، وزيادة الـ Organic Reach. احجز سيشنك الآن.">
+  <meta name="keywords"
+    content="كوتش محتوى، كونتنت ماركتنج، كتابة محتوى، سكريبتات ريلز، خطة محتوى، زيادة الأورجانيك ريتش، محتوى بيعي، إعلانات تسويقية، صناعة محتوى إبداعي، كورس كتابة محتوى، استشارات تسويقية، تحليل الجمهور، Content Marketing، Copywriting، Organic Reach.">
   <meta name="author" content="ُEng: Radwa Mohamed">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -31,6 +33,12 @@
       --greenish: #28474F;
       --primary-blue: #62BEAC;
       --dark-blue: #0b1f2a;
+
+      /*  #0F33
+         --accent-pink-s2: #E056A0;
+      --dark-blue-s2:45;
+      --primary-blue-s2: #62BEAC;
+       */
     }
 
     h1 {
@@ -38,16 +46,19 @@
     }
 
     body {
-        background:
-          radial-gradient(at 0% 0%, rgba(15, 51, 69, 0.2), transparent 50%),
-          radial-gradient(at 100% 100%, rgba(98, 190, 172, 0.2), transparent 50%),
-          linear-gradient(180deg, #a12a6a 0%, #D9C1D7 100%);
-        color: white;
-        min-height: 100vh;
-        background-attachment: fixed;
-        overflow-y: scroll;
+      background:
+        radial-gradient(at 0% 0%, rgba(15, 51, 69, 0.2), transparent 50%),
+        radial-gradient(at 100% 100%, rgba(98, 190, 172, 0.2), transparent 50%),
+        linear-gradient(180deg, #a12a6a 0%, #D9C1D7 100%);
+      color: white;
+      min-height: 100vh;
+      background-attachment: fixed;
+      overflow-y: scroll;
+      overflow-x: hidden;
+
     }
 
+  
     #fire-glow {
       position: fixed;
       width: 450px;
@@ -233,7 +244,7 @@
     }
 
     .bg2 {
-      background-image: url("imgs/logo_Habiba.jpg");
+      background-image: url("imgs/photo_2026-04-12_19-56-03.jpg");
       z-index: 0;
       opacity: 0;
     }
@@ -681,26 +692,31 @@
       }
 
       /* 1. لضمان توسيط الشبكة بالكامل في منتصف الشاشة */
-    .services-grid {
+      .services-grid {
         display: grid;
-        justify-content: center; /* توسيط الكروت عرضياً */
-        justify-items: center;   /* توسيط محتوى الكروت */
-    }
+        justify-content: center;
+        /* توسيط الكروت عرضياً */
+        justify-items: center;
+        /* توسيط محتوى الكروت */
+      }
 
-    /* 2. إلغاء أي ميلان (Rotation) قد يكون موروثاً في الموبايل */
-    .service-card {
-        transform: rotate(0deg) !important; /* إجبار الكارد على الاستقامة */
-        margin: 0 auto; /* سنترة الكارد */
+      /* 2. إلغاء أي ميلان (Rotation) قد يكون موروثاً في الموبايل */
+      .service-card {
+        transform: rotate(0deg) !important;
+        /* إجبار الكارد على الاستقامة */
+        margin: 0 auto;
+        /* سنترة الكارد */
         width: 100%;
-        max-width: 300px; /* مقاس مناسب للموبايل */
-    }
+        max-width: 300px;
+        /* مقاس مناسب للموبايل */
+      }
 
-    /* 3. التأكد أن الـ Hover في الموبايل لا يسبب ميلان */
-    .service-card:hover {
+      /* 3. التأكد أن الـ Hover في الموبايل لا يسبب ميلان */
+      .service-card:hover {
         transform: translateY(-10px) rotate(0deg) !important;
-    }
+      }
 
-    
+
 
       /* بيخفي تأثير الماوس عشان ملوش لازمة في اللمس وبيوفر بطارية
       #fire-glow {
@@ -709,93 +725,113 @@
     }
 
 
-.stats-section {
-    padding: 25px 5%; /* ارتفاع نحيف وانسيابي */
-    margin: 20px auto;
-    max-width: 1100px;
-    
-   /* الخلطة السرية للمظهر الزجاجي */
-    background: rgba(255, 255, 255, 0.05); /* شفافية عالية جداً */
-    backdrop-filter: blur(15px) saturate(150%); /* التغبيش مع زيادة تشبع الألوان خلف الزجاج */
-    -webkit-backdrop-filter: blur(15px) saturate(150%); /* لدعم متصفح سفاري */
-    
-    /* إضاءة الحواف (بتخليها تبان كأنها حافة لوح زجاج) */
-    border: 1px solid rgba(255, 255, 255, 0.2); 
-    
-    /* ظل ناعم جداً يعطي عمق */
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 
-                inset 0 0 10px rgba(255, 255, 255, 0.05); /* ظل داخلي خفيف */
-    backdrop-filter: blur(10px); /* تأثير الزجاج المضبب */
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    
-    border-radius: 20px; /* حواف ناعمة */
-}
-.stats-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
+    .stats-section {
+      padding: 25px 5%;
+      /* ارتفاع نحيف وانسيابي */
+      margin: 20px auto;
+      max-width: 1100px;
 
-.stat-item {
-    text-align: center;
-    flex: 1;
-}
+      /* الخلطة السرية للمظهر الزجاجي */
+      background: rgba(255, 255, 255, 0.05);
+      /* شفافية عالية جداً */
+      backdrop-filter: blur(15px) saturate(150%);
+      /* التغبيش مع زيادة تشبع الألوان خلف الزجاج */
+      -webkit-backdrop-filter: blur(15px) saturate(150%);
+      /* لدعم متصفح سفاري */
 
-.counter {
-    font-size: clamp(1.8rem, 5vw, 3.5rem); /* حجم كبير وواضح */
-    font-weight: 700;
-    color: #fff; /* أبيض ناصع */
-}
+      /* إضاءة الحواف (بتخليها تبان كأنها حافة لوح زجاج) */
+      border: 1px solid rgba(255, 255, 255, 0.2);
 
-.stat-item span + span { /* لعلامة الزائد */
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
-    color: #fff;
-}
+      /* ظل ناعم جداً يعطي عمق */
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1),
+        inset 0 0 10px rgba(255, 255, 255, 0.05);
+      /* ظل داخلي خفيف */
+      backdrop-filter: blur(10px);
+      /* تأثير الزجاج المضبب */
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(255, 255, 255, 0.08);
 
-.stat-item p {
-    color: #fff;
-    font-size: clamp(0.7rem, 2vw, 0.9rem); /* تصغير حجم الخط قليلاً */
-    margin-top: 8px; /* تقليل المسافة بين الرقم والنص */
-    font-weight: 400;
-    opacity: 0.9;
-}
-/* الخط الفاصل */
-.divider {
-    width: 2px;
-    height: 50px; /* طول الخط */
-    background: linear-gradient(transparent, var(--accent-pink), transparent); /* لون متدرج وردي أو برتقالي زي الصورة */
-    opacity: 0.8;
-}
-
-/* تعديل الموبايل عشان يفضلوا جنب بعض وشكلهم نظيف */
-@media (max-width: 768px) {
-   .stats-section {
-        /* إجبار القسم على البقاء داخل حدود الشاشة */
-        width: calc(100% - 30px) !important; 
-        margin-left: auto !important;
-        margin-right: auto !important;
-        padding: 15px 5px !important;
-        
-        /* منع أي بروز للخارج */
-        overflow: hidden !important;
-        box-sizing: border-box !important;
+      border-radius: 20px;
+      /* حواف ناعمة */
     }
-    .divider {
-        height: 50px; /* تقصير الخط في الموبايل */
-        margin: 0 5px;
+
+    .stats-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .stat-item {
+      text-align: center;
+      flex: 1;
     }
 
     .counter {
-        font-size: 1.5rem; /* حجم مناسب جداً للموبايل */
+      font-size: clamp(1.8rem, 5vw, 3.5rem);
+      /* حجم كبير وواضح */
+      font-weight: 700;
+      color: #fff;
+      /* أبيض ناصع */
+    }
+
+    .stat-item span+span {
+      /* لعلامة الزائد */
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      color: #fff;
     }
 
     .stat-item p {
+      color: #fff;
+      font-size: clamp(0.7rem, 2vw, 0.9rem);
+      /* تصغير حجم الخط قليلاً */
+      margin-top: 8px;
+      /* تقليل المسافة بين الرقم والنص */
+      font-weight: 400;
+      opacity: 0.9;
+    }
+
+    /* الخط الفاصل */
+    .divider {
+      width: 2px;
+      height: 50px;
+      /* طول الخط */
+      background: linear-gradient(transparent, var(--accent-pink), transparent);
+      /* لون متدرج وردي أو برتقالي زي الصورة */
+      opacity: 0.8;
+    }
+
+    /* تعديل الموبايل عشان يفضلوا جنب بعض وشكلهم نظيف */
+    @media (max-width: 768px) {
+      .stats-section {
+        /* إجبار القسم على البقاء داخل حدود الشاشة */
+        width: calc(100% - 30px) !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding: 15px 5px !important;
+
+        /* منع أي بروز للخارج */
+        overflow: hidden !important;
+        box-sizing: border-box !important;
+      }
+
+      .divider {
+        height: 50px;
+        /* تقصير الخط في الموبايل */
+        margin: 0 5px;
+      }
+
+      .counter {
+        font-size: 1.5rem;
+        /* حجم مناسب جداً للموبايل */
+      }
+
+      .stat-item p {
         font-size: 0.6rem;
         margin-top: 8px;
+      }
     }
-}
+
     /* ===== FOOTER BASE ===== */
     .footer {
       width: 100%;
@@ -963,23 +999,29 @@
         text-align: center;
         gap: 20px;
       }
+
       .view-more-container {
         display: flex !important;
-        justify-content: center !important; 
+        justify-content: center !important;
         align-items: center !important;
         width: 100% !important;
-        margin: 20px 0 !important; /* مسافة فوق وتحت */
+        margin: 20px 0 !important;
+        /* مسافة فوق وتحت */
         padding: 0 !important;
-    }
+      }
 
-    /* 2. ضبط الزرار نفسه */
-    #show-more-certs {
-        margin: 0 auto !important; /* أهم سطر للتوسيط */
+      /* 2. ضبط الزرار نفسه */
+      #show-more-certs {
+        margin: 0 auto !important;
+        /* أهم سطر للتوسيط */
         display: block !important;
-        width: fit-content !important; /* يخلي الزرار على قد الكلام بس */
-        min-width: 200px; /* اختياري: عشان الزرار ميبقاش صغير أوي */
-        transform: none !important; /* إلغاء أي ميلان أو إزاحة */
-    }
+        width: fit-content !important;
+        /* يخلي الزرار على قد الكلام بس */
+        min-width: 200px;
+        /* اختياري: عشان الزرار ميبقاش صغير أوي */
+        transform: none !important;
+        /* إلغاء أي ميلان أو إزاحة */
+      }
 
     }
 
@@ -1180,83 +1222,325 @@
     }
 
     .footer-bottom a {
-  color: #25D366;
-  font-weight: bold;
-  text-decoration: none;
-  transition: 0.3s;
-}
+      color: #25D366;
+      font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
 
-.footer-bottom a:hover {
-  color: #128C7E;
-  text-decoration: underline;
-  cursor: pointer;
-}
+    .footer-bottom a:hover {
+      color: #128C7E;
+      text-decoration: underline;
+      cursor: pointer;
+    }
 
-.tooltip {
-  position: relative;
-  display: inline-block;
-}
+    .tooltip {
+      position: relative;
+      display: inline-block;
+    }
 
-.tooltip .tooltip-text {
-  visibility: hidden;
-  background-color: #25D366;
-  color: #fff;
+    .tooltip .tooltip-text {
+      visibility: hidden;
+      background-color: #25D366;
+      color: #fff;
+      text-align: center;
+      padding: 6px 10px;
+      border-radius: 8px;
+      position: absolute;
+      bottom: 125%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 12px;
+      white-space: nowrap;
+      opacity: 0;
+      transition: 0.3s;
+    }
+
+    .tooltip:hover .tooltip-text {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .tooltip .tooltip-text::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #25D366 transparent transparent transparent;
+    }
+
+    .service-card {
+      position: relative;
+    }
+
+    /* لضمان ظهور الشارة فوق الكارت */
+
+    .discount-badge {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: var(--accent-pink);
+      color: white;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(224, 86, 160, 0.3);
+      z-index: 5;
+      animation: pulse 2s infinite;
+      /* أنميشن نبض لجذب الانتباه */
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.1);
+      }
+
+      100% {
+        transform: scale(1);
+      }
+    }
+
+
+    .consulting-section-s2 {
+      padding: 60px 0;
+    }
+
+    .main-card-s2 {
+      max-width: 1100px;
+      margin: 50px auto;
+      background: white;
+      border-radius: 40px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .premium-wrapper-s2 {
+      background: linear-gradient(135deg, #ffffff 0%, #fff9fc 100%) !important;
+      border: 1px solid rgba(224, 86, 160, 0.1) !important;
+    }
+
+
+    .offer-banner-s2 {
+      background: rgba(224, 86, 160, 0.9);
+      backdrop-filter: blur(10px);
+      color: white;
+      padding: 25px;
+      border-radius: 25px;
+      margin-bottom: 30px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      box-shadow: 0 8px 32px rgba(224, 86, 160, 0.3);
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+
+    /* --- أنميشن بوكس العداد --- 
+        --primary-blue-s2 */
+    .countdown-wrapper-s2 {
+      display: flex;
+      gap: 15px;
+      direction: ltr;
+    }
+
+    .time-unit-s2 {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 12px;
+      border-radius: 18px;
+      min-width: 75px;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      transition: all 0.3s ease;
+      /* أنميشن النبض المستمر */
+      animation: pulseGlow 2s infinite ease-in-out;
+    }
+
+    @keyframes pulseGlow {
+      0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+      }
+
+      50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+      }
+
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+      }
+    }
+
+    /* تأخير الأنميشن لكل بوكس ليعطي شكل جمالي تتابعي */
+    .time-unit-s2:nth-child(1) {
+      animation-delay: 0s;
+    }
+
+    .time-unit-s2:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+
+    .time-unit-s2:nth-child(5) {
+      animation-delay: 0.4s;
+    }
+
+    .time-unit-s2 span {
+      font-size: 28px;
+      font-weight: 800;
+      display: block;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .time-unit-s2 p {
+      font-size: 11px;
+      margin: 4px 0 0 0;
+      font-weight: 600;
+      opacity: 0.9;
+    }
+
+    /* --- بقية تنسيقات الكروت --- */
+    .consulting-grid-s2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 20px;
+    }
+
+    .consult-card-s2 {
+      background: #fff;
+  border-radius: 30px;
+  padding: 30px;
   text-align: center;
-  padding: 6px 10px;
-  border-radius: 8px;
-  position: absolute;
-  bottom: 125%;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 12px;
-  white-space: nowrap;
-  opacity: 0;
-  transition: 0.3s;
+  border: 1px solid #eee;
+  transition: all 0.4s ease;
+  
+  /* تعديل هنا: تأكدي أن اللون ليس أبيض على خلفية بيضاء */
+  color: var(--dark-blue); 
+  
+  /* إذا كنتِ تريدين ظهورها فوراً دون انتظار الأنميشن لحل المشكلة مؤقتاً */
+  opacity: 1 !important; 
+  transform: scale(1) !important;
+    }
+    
+    
+    .consult-card-s2 h3 {
+  color: var(--dark); /* أو استخدمي اللون الداكن #0F3345 */
+  margin-bottom: 15px;
 }
 
-.tooltip:hover .tooltip-text {
-  visibility: visible;
-  opacity: 1;
-}
-.tooltip .tooltip-text::after {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #25D366 transparent transparent transparent;
+.consult-card-s2 p {
+  color: #555; /* لون رمادي غامق للنصوص الفرعية */
+  margin-bottom: 20px;
 }
 
-.service-card { position: relative; } /* لضمان ظهور الشارة فوق الكارت */
+    .consult-card-s2:hover {
+      transform: translateY(-10px);
+      border-color: var(--accent-pink);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    }
 
-.discount-badge {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    background: var(--accent-pink);
-    color: white;
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(224, 86, 160, 0.3);
-    z-index: 5;
-    animation: pulse 2s infinite; /* أنميشن نبض لجذب الانتباه */
-}
+    .icon-box-large-s2 {
+      font-size: 45px;
+      color: var(--accent-pink);
+      margin-bottom: 20px;
+      transition: 0.3s;
+    }
 
-@keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); }
-}
+    .consult-card-s2:hover .icon-box-large-s2 i {
+      animation: bounceIcon 0.6s infinite alternate;
+    }
 
+    @keyframes bounceIcon {
+      from {
+        transform: translateY(0);
+      }
+
+      to {
+        transform: translateY(-10px);
+      }
+    }
+
+    .card-counter-s2 {
+      background: rgba(224, 86, 160, 0.05);
+      padding: 15px;
+      border-radius: 15px;
+      margin: 20px 0;
+    }
+
+    .progress-container-s2 {
+      height: 6px;
+      background: #eee;
+      border-radius: 10px;
+      margin-top: 10px;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill-s2 {
+      height: 100%;
+      width: 0%;
+      background: var(--accent-pink);
+    }
+
+    .btn-s2 {
+      padding: 12px 25px;
+      border-radius: 30px;
+      text-decoration: none;
+      display: inline-block;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .primary-s2 {
+      background: var(--accent-pink);
+      color: white;
+    }
+
+    .secondary-s2 {
+      border: 1px solid var(--accent-pink);
+      color: var(--accent-pink);
+    }
+
+    .points-s2 {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 20px;
+      text-align: right;
+    }
+
+    .points-s2 li {
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    .points-s2 i {
+      color: #2ecc71;
+      margin-left: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .consulting-grid-s2 {
+        grid-template-columns: 1fr;
+      }
+    }
   </style>
 
 </head>
 
 <body>
+
   <header class="navbar" id="navbar">
     <div class="nav-container">
       <div class="logo">Habiba Sayed</div>
@@ -1271,7 +1555,7 @@
       <div class="menu-toggle" id="menu-toggle">☰</div>
     </div>
   </header>
-      <div id="fire-glow"></div>
+ 
 
 
   <section class="hero" id="hero">
@@ -1290,7 +1574,8 @@
 
       <div class="buttons">
         <button class="btn primary">View My Work</button>
-<a href="https://wa.me/201501180309" target="_blank" class="btn secondary">Book a Session</a>      </div>
+        <a href="https://wa.me/201501180309" target="_blank" class="btn secondary">Book a Session</a>
+      </div>
     </div>
   </section>
 
@@ -1310,6 +1595,73 @@
       <span><i class="fa-solid fa-wand-magic-sparkles"></i> Content Planning</span>
     </div>
   </div>
+   <div id="fire-glow"></div>
+
+
+  <section class="consulting-section-s2" id="training">
+    <div class="main-card-s2 premium-wrapper-s2">
+      <div class="offer-banner-s2">
+        <div>
+          <i class="fa-solid fa-fire-flame-curved" style="margin-left: 8px;"></i>
+          <span>خصم لفترة محدودة: 50% على جلسات الاستشارة الفردية بمناسبة الانطلاق!</span>
+        </div>
+
+        <div class="countdown-wrapper-s2">
+          <div class="time-unit-s2"><span id="hours-s2">00</span>
+            <p>ساعة</p>
+          </div>
+          <div class="time-separator-s2" style="font-size:28px; font-weight:bold;">:</div>
+          <div class="time-unit-s2"><span id="minutes-s2">00</span>
+            <p>دقيقة</p>
+          </div>
+          <div class="time-separator-s2" style="font-size:28px; font-weight:bold;">:</div>
+          <div class="time-unit-s2"><span id="seconds-s2">00</span>
+            <p>ثانية</p>
+          </div>
+        </div>
+      </div>
+
+      <h2 style="text-align: center; color: var(--dark-blue); margin-bottom: 30px;">التدريب والاستشارات</h2>
+
+      <div class="consulting-grid-s2">
+        <div class="consult-card-s2">
+          <div class="icon-box-large-s2"><i class="fa-solid fa-comments-dollar"></i></div>
+          <h3>جلسات استشارية (1:1)</h3>
+          <p>ساعة مكثفة نضع فيها يدنا على نقاط الضعف في محتواك.</p>
+          <div class="card-counter-s2">
+            <span class="offer-counter-s2" data-target="10" style="font-size:24px; font-weight:800;">0</span>
+            <p>مقعد متبقي</p>
+            <div class="progress-container-s2">
+              <div class="progress-bar-fill-s2" id="bar1-s2"></div>
+            </div>
+          </div>
+          <ul class="points-s2">
+            <li><i class="fa-solid fa-circle-check"></i> تحليل شامل للبروفايل</li>
+            <li><i class="fa-solid fa-circle-check"></i> استراتيجية محتوى مخصصة</li>
+          </ul>
+          <a href="#" class="btn-s2 primary-s2">احجز جلستك الآن</a>
+        </div>
+
+        <div class="consult-card-s2">
+          <div class="icon-box-large-s2"><i class="fa-solid fa-laptop-code"></i></div>
+          <h3>البرامج التدريبية</h3>
+          <p>كورسات عملية لتعليمك أسرار الكوبي رايتنج من الصفر.</p>
+          <div class="card-counter-s2">
+            <span class="offer-counter-s2" data-target="95" style="font-size:24px; font-weight:800;">0</span>
+            <p>رضا المتدربين %</p>
+            <div class="progress-container-s2">
+              <div class="progress-bar-fill-s2" style="background:#2ecc71; width:0%" id="bar2-s2"></div>
+            </div>
+          </div>
+          <ul class="points-s2">
+            <li><i class="fa-solid fa-circle-check"></i> تدريب عملي وتطبيقي</li>
+            <li><i class="fa-solid fa-circle-check"></i> شهادة إتمام البرنامج</li>
+          </ul>
+          <a href="#" class="btn-s2 secondary-s2">استفسر عن المواعيد</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
 
   <section class="about" id="about">
@@ -1329,28 +1681,30 @@
       </div>
     </div>
   </section>
- <section class="stats-section">
+  <section class="stats-section">
     <div class="stats-container">
-        <div class="stat-item">
-            <span class="counter" data-target="150">0</span>+
-            <p>Content Pieces</p>
-        </div>
-        
-        <div class="divider"></div> <div class="stat-item">
-            <span class="counter" data-target="25">0</span>+
-            <p>Trusted Brands</p>
-        </div>
+      <div class="stat-item">
+        <span class="counter" data-target="150">0</span>+
+        <p>Content Pieces</p>
+      </div>
 
-        <div class="divider"></div> <div class="stat-item">
-            <span class="counter" data-target="500">0</span>+
-            <p>Students Trained</p>
-        </div>
+      <div class="divider"></div>
+      <div class="stat-item">
+        <span class="counter" data-target="25">0</span>+
+        <p>Trusted Brands</p>
+      </div>
+
+      <div class="divider"></div>
+      <div class="stat-item">
+        <span class="counter" data-target="500">0</span>+
+        <p>Students Trained</p>
+      </div>
     </div>
-</section>
+  </section>
 
 
   <div class="main-card" id="services">
-    
+
     <h2 class="section-title">الخدمات الإبداعية</h2>
     <div class="services-grid">
       <div class="service-card">
@@ -1500,7 +1854,7 @@
       </div>
     </div>
 
-    
+
 
     <div class="view-more-container">
       <button id="show-more-certs" class="btn secondary">View More Certificates</button>
@@ -1539,7 +1893,7 @@
           <i class="fa-brands fa-linkedin"></i>
         </a>
 
-        <a href="https://wa.me/201501180309" target="_blank"> 
+        <a href="https://wa.me/201501180309" target="_blank">
           <i class="fa-brands fa-whatsapp"></i>
         </a>
 
@@ -1551,16 +1905,17 @@
     </button>
 
     <!-- Bottom Text -->
-<p class="footer-bottom">
-  © 2026 All Rights Reserved Coach Habiba Sayed | 
-  Prepared by 
-  <span class="tooltip">
-    <a href="https://wa.me/201007359722" target="_blank" style="color:#25D366; font-weight:bold; text-decoration:none;">
-      Eng. Radwa Mohamed
-    </a>
-    <span class="tooltip-text">💬 Click to chat on WhatsApp</span>
-  </span>
-</p>
+    <p class="footer-bottom">
+      © 2026 All Rights Reserved Coach Habiba Sayed |
+      Prepared by
+      <span class="tooltip">
+        <a href="https://wa.me/201007359722" target="_blank"
+          style="color:#25D366; font-weight:bold; text-decoration:none;">
+          Eng. Radwa Mohamed
+        </a>
+        <span class="tooltip-text">💬 Click to chat on WhatsApp</span>
+      </span>
+    </p>
 
 
 
@@ -1654,38 +2009,98 @@
       });
     });
 
-// 1. السطر ده هو "مفتاح التشغيل" الأساسي (أهم إضافة)
-gsap.registerPlugin(ScrollTrigger);
+    // 1. السطر ده هو "مفتاح التشغيل" الأساسي (أهم إضافة)
+    gsap.registerPlugin(ScrollTrigger);
 
-gsap.from(".stat-item", {
-    y: 40,               
-    opacity: 0,          
-    duration: 1,         
-    stagger: 0.2,        
-    // 2. تغيير بسيط في الـ Ease بيخلي الحركة "لذيذة" أكتر (مطاطية خفيفة)
-    ease: "back.out(1.7)", 
-    scrollTrigger: {
-        trigger: ".stats-section", 
-        start: "top 85%",      
+    gsap.from(".stat-item", {
+      y: 40,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.2,
+      // 2. تغيير بسيط في الـ Ease بيخلي الحركة "لذيذة" أكتر (مطاطية خفيفة)
+      ease: "back.out(1.7)",
+      scrollTrigger: {
+        trigger: ".stats-section",
+        start: "top 85%",
         // 3. إضافة التفعيل العكسي (عشان لو طلع ونزل تاني الأنميشن يشتغل أو يثبت)
-        toggleActions: "play none none none", 
-    },
-    onStart: () => {
+        toggleActions: "play none none none",
+      },
+      onStart: () => {
         animateNumbers();
-    }
-});
+      }
+    });
 
-function animateNumbers() {
-    gsap.utils.toArray('.counter').forEach(function(el) {
+    function animateNumbers() {
+      gsap.utils.toArray('.counter').forEach(function (el) {
         const target = parseInt(el.getAttribute('data-target'));
         gsap.to(el, {
-            innerText: target,
-            duration: 2,        
-            snap: { innerText: 1 }, 
-            ease: "power1.inOut"
+          innerText: target,
+          duration: 2,
+          snap: { innerText: 1 },
+          ease: "power1.inOut"
         });
-    });
-}
+      });
+    }
+    gsap.registerPlugin(ScrollTrigger);
+
+    function initAnimations() {
+      // ظهور الكارت الرئيسي
+      gsap.to(".main-card-s2", {
+        opacity: 1, y: 0, duration: 1, ease: "power2.out",
+        scrollTrigger: { trigger: ".main-card-s2", start: "top 85%" }
+      });
+
+      // ظهور البانر
+      gsap.to(".offer-banner-s2", {
+        opacity: 1, y: 0, duration: 1, delay: 0.3, ease: "back.out(1.7)",
+        scrollTrigger: { trigger: ".main-card-s2", start: "top 80%" }
+      });
+
+      // ظهور الكروت تتابعياً
+      gsap.to(".consult-card-s2", {
+        opacity: 1, scale: 1, duration: 0.8, stagger: 0.3, ease: "power4.out",
+        scrollTrigger: { trigger: ".consulting-grid-s2", start: "top 80%" }
+      });
+
+      // عداد الأرقام
+      gsap.utils.toArray('.offer-counter-s2').forEach(el => {
+        let target = parseInt(el.getAttribute('data-target'));
+        gsap.to(el, {
+          innerText: target, duration: 2, snap: { innerText: 1 },
+          scrollTrigger: { trigger: el, start: "top 90%" }
+        });
+      });
+
+      // أشرطة التحميل
+      gsap.to("#bar1-s2", { width: "30%", duration: 2, scrollTrigger: { trigger: "#bar1-s2", start: "top 90%" } });
+      gsap.to("#bar2-s2", { width: "95%", duration: 2, scrollTrigger: { trigger: "#bar2-s2", start: "top 90%" } });
+    }
+
+    function startTimer() {
+      const referenceDate = new Date("2026-01-01T00:00:00").getTime();
+      const threeDaysInMs = 3 * 24 * 60 * 60 * 1000;
+
+      function update() {
+        const now = new Date().getTime();
+        const timePassed = now - referenceDate;
+        const remaining = threeDaysInMs - (timePassed % threeDaysInMs);
+
+        const h = Math.floor((remaining / (1000 * 60 * 60)) % 72); // ندمج الأيام في الساعات
+        const m = Math.floor((remaining / (1000 * 60)) % 60);
+        const s = Math.floor((remaining / 1000) % 60);
+
+        document.getElementById("hours-s2").innerText = h.toString().padStart(2, '0');
+        document.getElementById("minutes-s2").innerText = m.toString().padStart(2, '0');
+        document.getElementById("seconds-s2").innerText = s.toString().padStart(2, '0');
+      }
+      setInterval(update, 1000);
+      update();
+    }
+
+    window.onload = () => {
+      initAnimations();
+      startTimer();
+    };
   </script>
 
 
