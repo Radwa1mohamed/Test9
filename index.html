@@ -1530,11 +1530,43 @@
       margin-left: 8px;
     }
 
-    @media (max-width: 768px) {
-      .consulting-grid-s2 {
-        grid-template-columns: 1fr;
-      }
-    }
+   @media (max-width: 768px) {
+
+  .offer-banner-s2 {
+    padding: 15px;
+  }
+
+  .countdown-wrapper-s2 {
+    flex-wrap: wrap; /* يخليهم ينزلوا تحت بعض لو المساحة ضاقت */
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .time-unit-s2 {
+    min-width: 60px; /* تصغير البوكس */
+    padding: 10px;
+  }
+
+  .time-unit-s2 span {
+    font-size: 20px; /* تصغير الأرقام */
+  }
+
+  .time-unit-s2 p {
+    font-size: 10px;
+  }
+
+  .time-separator-s2 {
+    font-size: 20px !important;
+  }
+
+  /* أهم سطر 👇 يمنع أي overflow */
+  .main-card-s2 {
+    width: calc(100% - 20px);
+    padding: 20px;
+  }
+
+}
+
   </style>
 
 </head>
