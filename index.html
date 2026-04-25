@@ -1149,9 +1149,9 @@
 
     .cert-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 30px;
-      margin-top: 40px;
+      grid-template-columns: repeat(3, 1fr); /* 3 أعمدة كما في الصورة */      gap: 30px;
+     gap: 25px;
+      margin-top: 30px;
       align-items: stretch;
     }
 
@@ -1167,6 +1167,7 @@
       flex-direction: column;
       height: 100%;
       opacity: 1;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* ظل ناعم */
       /* التأكد من أن الكروت العادية ظاهرة */
     }
 
@@ -1178,6 +1179,7 @@
 
     .cert-image {
       position: relative;
+      border-radius: 15px;
       width: 100%;
       aspect-ratio: 16 / 9;
       /* توحيد حجم الصور */
@@ -1192,7 +1194,7 @@
 
     .cert-info {
       padding: 20px;
-      text-align: left;
+     text-align: center;
       /* محاذاة النص الإنجليزي لليسار */
       flex-grow: 1;
     }
@@ -1214,6 +1216,19 @@
       opacity: 0;
       transform: translateY(20px);
     }
+
+    @media (max-width: 992px) {
+      .cert-grid {
+        grid-template-columns: repeat(2, 1fr); /* صفين في التابلت */
+      }
+    }
+
+    @media (max-width: 600px) {
+      .cert-grid {
+        grid-template-columns: 1fr; /* صف واحد في الموبايل */
+      }
+    }
+    
 
     .hidden-cert.show {
       display: flex;
@@ -1834,72 +1849,54 @@
 
   <section class="certificates" id="certificates">
     <h2 class="section-title">Certifications & Accreditations</h2>
-
+    
     <div class="cert-grid">
-      <div class="cert-card" onclick="openModal('imgs/C5 (1).jpg')">
-        <div class="cert-image">
-          <img src="imgs/C5 (1).jpg" alt="Digital Marketing">
-          <div class="cert-overlay">
-            <i class="fa-solid fa-eye"></i>
-            <span>View Certificate</span>
-          </div>
+        <div class="cert-card" onclick="openModal('imgs/C5 (1).jpg')">
+            <div class="cert-image"><img src="imgs/C5 (1).jpg" alt="Certificate"></div>
+            <div class="cert-info"><h4>Digital Marketing Expert</h4><p>Google Career Certificates</p></div>
         </div>
-        <div class="cert-info">
-          <h4>Digital Marketing Expert</h4>
-          <p>Google Career Certificates</p>
-        </div>
-      </div>
 
+        <div class="cert-card" onclick="openModal('imgs/C5 (2).jpg')">
+            <div class="cert-image"><img src="imgs/C5 (2).jpg" alt="Certificate"></div>
+            <div class="cert-info"><h4>Content Strategy Specialist</h4><p>HubSpot Academy</p></div>
+        </div>
 
-      <div class="cert-card" onclick="openModal('imgs/C5 (2).jpg')">
-        <div class="cert-image">
-          <img src="imgs/C5 (2).jpg" alt="Content Strategy">
-          <div class="cert-overlay">
-            <i class="fa-solid fa-eye"></i>
-            <span>View Certificate</span>
-          </div>
+        <div class="cert-card" onclick="openModal('imgs/C3.jpg')">
+            <div class="cert-image"><img src="imgs/C3.jpg" alt="Certificate"></div>
+            <div class="cert-info"><h4>Advanced Copywriting</h4><p>Meta / Coursera</p></div>
         </div>
-        <div class="cert-info">
-          <h4>Content Strategy Specialist</h4>
-          <p>HubSpot Academy</p>
-        </div>
-      </div>
 
-      <div class="cert-card" onclick="openModal('imgs/C3.jpg')">
-        <div class="cert-image">
-          <img src="imgs/C3.jpg" alt="Advanced Copywriting">
-          <div class="cert-overlay">
-            <i class="fa-solid fa-eye"></i>
-            <span>View Certificate</span>
-          </div>
+        <div class="cert-card hidden-cert" onclick="openModal('imgs/C2.jpg')">
+            <div class="cert-image"><img src="imgs/C2.jpg" alt="Certificate"></div>
+            <div class="cert-info"><h4>SEO Content Specialist</h4><p>Semrush Academy</p></div>
         </div>
-        <div class="cert-info">
-          <h4>Advanced Copywriting</h4>
-          <p>Meta / Coursera</p>
+        <div class="cert-card hidden-cert" onclick="openModal('imgs/C4.jpg')">
+            <div class="cert-image"><img src="imgs/C4.jpg" alt="Certificate"></div>
+            <div class="cert-info"><h4>Marketing Psychology</h4><p>Online Academy</p></div>
         </div>
-      </div>
+        <div class="cert-card hidden-cert" onclick="openModal('imgs/C5 (3).jpg')">
+            <div class="cert-image"><img src="imgs/C5 (3).jpg" alt="Certificate"></div>
+            <div class="cert-info"><h4>Email Marketing</h4><p>HubSpot</p></div>
+        </div>
 
-      <div class="cert-card hidden-cert" onclick="openModal('imgs/C2.jpg')">
-        <div class="cert-image">
-          <img src="imgs/logo_Habiba.jpg" alt="SEO Expert">
-          <div class="cert-overlay">
-            <i class="fa-solid fa-eye"></i>
-            <span>View Certificate</span>
-          </div>
+        <div class="cert-card hidden-cert" onclick="openModal('imgs/C5 (3).jpg')">
+            <div class="cert-image"><img src="imgs/C5 (3).jpg" alt="Certificate"></div>
+            <div class="cert-info"><h4>Storytelling in Business</h4><p>LinkedIn</p></div>
         </div>
-        <div class="cert-info">
-          <h4>SEO Content Specialist</h4>
-          <p>Semrush Academy</p>
+        <div class="cert-card hidden-cert" onclick="openModal('imgs/C5.jpg')">
+            <div class="cert-image"><img src="imgs/C5.jpg" alt="Certificate"></div>
+            <div class="cert-info"><h4>Ads Management</h4><p>Meta Blueprint</p></div>
         </div>
-      </div>
+        <div class="cert-card hidden-cert" onclick="openModal('imgs/C6.jpg')">
+            <div class="cert-image"><img src="imgs/C6.jpg" alt="Certificate"></div>
+            <div class="cert-info"><h4>Creative Direction</h4><p>Coursera</p></div>
+        </div>
     </div>
-
-
 
     <div class="view-more-container">
-      <button id="show-more-certs" class="btn secondary">View More Certificates</button>
+        <button id="show-more-certs" class="btn secondary">View More Certificates</button>
     </div>
-  </section>
+</section>
   <footer class="footer">
 
     <div class="footer-container">
@@ -2026,28 +2023,46 @@
     }
 
 
+document.getElementById('show-more-certs').addEventListener('click', function () {
+    const hiddenCerts = document.querySelectorAll('.hidden-cert');
+    const isExpanding = this.innerText.trim() === "View More Certificates";
 
-    document.getElementById('show-more-certs').addEventListener('click', function () {
-      const hiddenCerts = document.querySelectorAll('.hidden-cert');
-      // استخدمي trim() لضمان عدم وجود مسافات تعطل الكود
-      const isExpanding = this.innerText.trim() === "View More Certificates";
+   if (isExpanding) {
+        gsap.set(".hidden-cert", { display: "flex" }); 
+        
+        gsap.to(".hidden-cert", {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            stagger: 0.1,
+            ease: "power2.out",
+            // السطر اللي جاي ده هو الحل السحري
+            onComplete: function() {
+                // بنمسح الـ transform اللي GSAP عملته عشان الـ CSS Hover يشتغل بحرية
+                gsap.set(".hidden-cert", { clearProps: "transform" });
+            }
+        });
 
-      hiddenCerts.forEach((cert, index) => {
-        if (isExpanding) {
-          cert.style.display = "flex";
-          setTimeout(() => {
-            cert.classList.add('show');
-          }, index * 100);
-          this.innerText = "Show Less";
-        } else {
-          cert.classList.remove('show');
-          setTimeout(() => {
-            cert.style.display = "none";
-          }, 500);
-          this.innerText = "View More Certificates";
-        }
-      });
-    });
+        this.innerText = "Show Less";
+    
+    } else {
+        // إخفاء الشهادات
+        gsap.to(".hidden-cert", {
+            opacity: 0,
+            y: 30,
+            duration: 0.5,
+            stagger: 0.05,
+            onComplete: () => {
+                gsap.set(".hidden-cert", { display: "none" });
+            }
+        });
+
+        this.innerText = "View More Certificates";
+        
+        // العودة بالسكول لبداية قسم الشهادات
+        document.getElementById('certificates').scrollIntoView({ behavior: 'smooth' });
+    }
+});
 
     // 1. السطر ده هو "مفتاح التشغيل" الأساسي (أهم إضافة)
     gsap.registerPlugin(ScrollTrigger);
