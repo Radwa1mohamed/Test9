@@ -5,196 +5,172 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 <style>
-    /* Contact Premium Section */
-.contact-premium {
-    padding: 80px 5%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: auto; /* عشان مياخدش الشاشة كلها لو مش محتاج */
-}
+    /* Vision & Mission Premium Styling */
+    .vision-mission {
+        padding: 100px 8%;
+        background: transparent;
+        position: relative;
+        overflow: hidden;
+    }
 
-.glass-contact-container {
-    background: #ffffff; /* أبيض صريح عشان يظهر على الخلفية الملونة */
-    border-radius: 40px;
-    padding: 40px;
-    width: 100%;
-    max-width: 550px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-    text-align: center;
-}
+    /* إضافة لمسة تقنية/إشعاع في الخلفية */
+    .vision-mission::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 150%;
+        height: 150%;
+        background: radial-gradient(circle, rgba(224, 86, 160, 0.05) 0%, transparent 60%);
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        pointer-events: none;
+    }
 
-.contact-header-extra { margin-bottom: 30px; }
+    .vision-container {
+        display: flex;
+        gap: 40px;
+        max-width: 1200px;
+        margin: auto;
+        position: relative;
+        z-index: 2;
+    }
 
-.top-label {
-    color: #E056A0; /* اللون الروز بتاعك */
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 1px;
-}
+    .vision-card {
+        flex: 1;
+        text-align: center;
+        padding: 60px 40px;
+        border-radius: 40px;
+        background: rgba(97, 23, 88, 0.8); /* لون الهوية الداكن */
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        position: relative;
+        overflow: hidden;
+        color: white;
+    }
 
-.premium-title {
-    color: #0F3345; /* اللون الكحلي بتاعك */
-    font-size: 2.2rem;
-    margin: 10px 0;
-}
+    /* تأثير اللمعة عند الـ Hover */
+    .vision-card::after {
+        content: '';
+        position: absolute;
+        top: -100%;
+        left: -100%;
+        width: 300%;
+        height: 300%;
+        background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.05), transparent);
+        transition: 0.8s;
+        pointer-events: none;
+    }
 
-.glow-line {
-    width: 50px;
-    height: 4px;
-    background: #E056A0;
-    margin: 0 auto;
-    border-radius: 10px;
-}
+    .vision-card:hover::after {
+        top: 0;
+        left: 0;
+    }
 
-.contact-grid-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
+    .vision-card:hover {
+        transform: translateY(-15px) scale(1.02);
+        border-color: #E056A0; /* var(--accent-pink) */
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+    }
 
-.contact-card-item {
-    display: flex;
-    align-items: center;
-    flex-direction: row-reverse; /* ترتيب لليمين */
-    background: #fdfdfd;
-    padding: 15px 20px;
-    border-radius: 20px;
-    text-decoration: none;
-    border: 1px solid #eee;
-    transition: 0.3s ease;
-}
+    .vision-icon {
+        width: 90px;
+        height: 90px;
+        background: linear-gradient(135deg, #E056A0, #a12a6a);
+        border-radius: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        color: white;
+        margin: 0 auto 35px;
+        box-shadow: 0 15px 35px rgba(224, 86, 160, 0.4);
+        transition: 0.6s ease;
+    }
 
-.contact-card-item:hover {
-    transform: translateX(-10px);
-    border-color: #E056A0;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-}
+    .vision-card:hover .vision-icon {
+        transform: rotateY(180deg); /* حركة احترافية للأيقونة */
+    }
 
-.card-icon-area {
-    width: 50px;
-    height: 50px;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.3rem;
-    color: white;
-    margin-left: 15px;
-}
+    .vision-card h3 {
+        font-size: 32px;
+        margin-bottom: 25px;
+        color: white;
+        font-weight: 700;
+        letter-spacing: 1px;
+    }
 
-.phone-bg { background: linear-gradient(135deg, #62BEAC, #45a08f); }
-.wa-bg { background: linear-gradient(135deg, #2ecc71, #27ae60); }
+    .vision-card p {
+        line-height: 2;
+        font-size: 17px;
+        color: rgba(255, 255, 255, 0.85);
+        direction: rtl;
+        font-weight: 300;
+    }
 
-.card-details { text-align: right; flex-grow: 1; }
-.card-details p { color: #888; font-size: 12px; margin: 0; }
-.card-details span { color: #0F3345; font-weight: 700; font-size: 16px; }
+    /* تمييز الكلمات الهامة بداخل النص */
+    .vision-card p strong {
+        color: #E056A0; /* var(--accent-pink) */
+        font-weight: 600;
+    }
 
-.arrow-hint { color: #eee; font-size: 14px; }
-
-.social-mini-row {
-    display: flex;
-    gap: 12px;
-    justify-content: center;
-    margin: 20px 0;
-}
-
-.mini-social-card {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: white;
-    color: #0F3345;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    transition: 0.3s;
-    border: 1px solid #eee;
-    text-decoration: none;
-}
-
-.mini-social-card:hover {
-    background: #E056A0;
-    color: white;
-    transform: translateY(-5px);
-}
-
-.premium-cv-btn {
-    display: block;
-    background: #0F3345;
-    color: white;
-    text-decoration: none;
-    padding: 18px;
-    border-radius: 15px;
-    font-weight: 600;
-    transition: 0.3s;
-}
-
-.premium-cv-btn:hover {
-    background: #E056A0;
-    transform: scale(1.02);
-}
+    /* تحسين العرض على الشاشات المتوسطة والصغيرة */
+    @media (max-width: 992px) {
+        .vision-container {
+            flex-direction: column;
+            gap: 30px;
+        }
+        .vision-card {
+            padding: 45px 25px;
+        }
+        .vision-card h3 {
+            font-size: 28px;
+        }
+    }
 </style>
-</head>
 
-<body>
-    <section class="contact-premium" id="contact">
-    <div class="glass-contact-container">
-        
-        <div class="contact-header-extra">
-            <span class="top-label">Let's Connect</span>
-            <h2 class="premium-title">تواصل معي</h2>
-            <div class="glow-line"></div>
-        </div>
-
-        <div class="contact-grid-wrapper">
-            <a href="tel:+201062281073" class="contact-card-item">
-                <div class="card-icon-area phone-bg">
-                    <i class="fa-solid fa-phone-volume"></i>
-                </div>
-                <div class="card-details">
-                    <p>رقم الهاتف</p>
-                    <span>+201062281073</span>
-                </div>
-                <i class="fa-solid fa-chevron-left arrow-hint"></i>
-            </a>
-
-            <a href="https://wa.me/201062281073" target="_blank" class="contact-card-item">
-                <div class="card-icon-area wa-bg">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </div>
-                <div class="card-details">
-                    <p>واتساب</p>
-                    <span>أرسل رسالة مباشرة</span>
-                </div>
-                <i class="fa-solid fa-chevron-left arrow-hint"></i>
-            </a>
-
-            <div class="social-mini-row">
-                <a href="https://www.facebook.com/share/1c21qKUL6o/" target="_blank" class="mini-social-card fb">
-                    <i class="fa-brands fa-facebook-f"></i>
-                </a>
-                <a href="https://www.instagram.com/habibasaid4414" target="_blank" class="mini-social-card ig">
-                    <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/habiba-sayed-21835b338" target="_blank" class="mini-social-card li">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </a>
+<section class="vision-mission" id="vision-mission">
+    <div class="vision-container">
+        <div class="vision-card">
+            <div class="vision-icon">
+                <i class="fa-solid fa-eye"></i>
             </div>
+            <h3>رؤيتي</h3>
+            <p>
+                أن أكون الشريك الأول لكل صانع محتوى وبراند طموح يسعى لتحويل حضوره الرقمي من مجرد "نشر بوستات" إلى <strong>منظومة تأثير وبناء مجتمع</strong> حقيقي، ونشر ثقافة المحتوى الذي يجمع بين القيمة العلمية والذكاء البيعي.
+            </p>
         </div>
 
-        <div class="cv-download-wrapper">
-            <a href="#" download class="premium-cv-btn">
-                <div class="btn-content">
-                    <i class="fa-solid fa-cloud-arrow-down"></i>
-                    <span>تحميل السيرة الذاتية (CV)</span>
-                </div>
-            </a>
+        <div class="vision-card">
+            <div class="vision-icon">
+                <i class="fa-solid fa-bullseye"></i>
+            </div>
+            <h3>رسالتي</h3>
+            <p>
+                تمكين <strong>10,000 صانع محتوى</strong> من إتقان مهارات الـ Copywriting والاستراتيجيات التسويقية، وتزويد أصحاب الأعمال بأدوات محتوى فعّالة تضمن لهم <strong>نموًا مستدامًا</strong> وزيادة في المبيعات عبر الكلمة المكتوبة بذكاء.
+            </p>
         </div>
-
     </div>
 </section>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        if (typeof gsap !== "undefined") {
+            gsap.from(".vision-card", {
+                opacity: 0,
+                y: 100,
+                scale: 0.9,
+                duration: 1.5,
+                stagger: 0.4,
+                ease: "expo.out",
+                scrollTrigger: {
+                    trigger: ".vision-mission",
+                    start: "top 80%",
+                }
+            });
+        }
+    });
+</script>
 </body>
 </html>
