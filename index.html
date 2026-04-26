@@ -1587,6 +1587,189 @@
 }
 
     }
+
+    .contact-premium {
+    padding: 100px 5%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+}
+
+.glass-contact-container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    padding: 60px 40px;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* الشيمر أو اللمعة اللي في الخلفية */
+.glass-contact-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(224, 86, 160, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.contact-header-extra {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.top-label {
+    color: var(--accent-pink);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.premium-title {
+    color: var(--dark-blue);
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+.glow-line {
+    width: 60px;
+    height: 5px;
+    background: linear-gradient(90deg, var(--accent-pink), var(--primary-blue));
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.contact-card-item {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse; /* للاتجاه العربي */
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    margin-bottom: 15px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid transparent;
+}
+
+.contact-card-item:hover {
+    transform: translateX(-10px);
+    background: white;
+    border-color: var(--accent-pink);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+}
+
+.card-icon-area {
+    width: 55px;
+    height: 55px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    margin-left: 20px;
+}
+
+.phone-bg { background: linear-gradient(135deg, #6c5ce7, #a29bfe); }
+.wa-bg { background: linear-gradient(135deg, #2ecc71, #27ae60); }
+
+.card-details p { color: #888; font-size: 0.8rem; margin: 0; }
+.card-details span { color: var(--dark-blue); font-weight: 700; font-size: 1.1rem; }
+
+.arrow-hint {
+    margin-right: auto;
+    color: #ddd;
+    transition: 0.3s;
+}
+
+.contact-card-item:hover .arrow-hint {
+    color: var(--accent-pink);
+    transform: translateX(-5px);
+}
+
+/* Social Row */
+.social-mini-row {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.mini-social-card {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: var(--dark-blue);
+    font-size: 1.2rem;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
+    border: 1px solid #eee;
+}
+
+.mini-social-card:hover {
+    background: var(--accent-pink);
+    color: white;
+    transform: translateY(-5px) rotate(10deg);
+}
+
+/* Premium CV Button */
+.premium-cv-btn {
+    position: relative;
+    display: block;
+    background: var(--dark-blue);
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.btn-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-weight: 600;
+}
+
+.btn-shimmer {
+    position: absolute;
+    top: 0; left: -100%;
+    width: 100%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    transition: 0.5s;
+}
+
+.premium-cv-btn:hover .btn-shimmer {
+    left: 100%;
+}
+
+.premium-cv-btn:hover {
+    background: var(--accent-pink);
+    box-shadow: 0 20px 40px rgba(224, 86, 160, 0.4);
+}
+
+@media (max-width: 768px) {
+    .glass-contact-container { border-radius: 30px; padding: 40px 20px; }
+}
   </style>
 
 </head>
@@ -1897,6 +2080,70 @@
         <button id="show-more-certs" class="btn secondary">View More Certificates</button>
     </div>
 </section>
+
+<section class="contact-premium" id="contact">
+    <div class="glass-contact-container">
+        <div class="contact-header-extra">
+            <span class="top-label">Get In Touch</span>
+            <h2 class="premium-title">تواصل معي</h2>
+            <div class="glow-line"></div>
+        </div>
+
+        <div class="contact-grid-wrapper">
+            <div class="contact-cards-stack">
+                
+                <a href="tel:+201501180309" class="contact-card-item">
+                    <div class="card-icon-area phone-bg">
+                        <i class="fa-solid fa-phone-volume"></i>
+                    </div>
+                    <div class="card-details">
+                        <p>رقم الهاتف</p>
+                        <span>+201501180309</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-left arrow-hint"></i>
+                </a>
+
+                <a href="https://wa.me/201501180309" target="_blank" class="contact-card-item">
+                    <div class="card-icon-area wa-bg">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                    <div class="card-details">
+                        <p>واتساب</p>
+                        <span>أرسل رسالة مباشرة</span>
+                    </div>
+                    <i class="fa-solid fa-chevron-left arrow-hint"></i>
+                </a>
+
+                <div class="social-mini-row">
+                    <a href="https://www.facebook.com/share/1c21qKUL6o/" target="_blank" class="mini-social-card fb" title="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/habibasaid4414" target="_blank" class="mini-social-card ig" title="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/habiba-sayed-21835b338" target="_blank" class="mini-social-card li" title="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="#" target="_blank" class="mini-social-card tt" title="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="cv-download-wrapper">
+            <a href="#" download class="premium-cv-btn">
+                <div class="btn-content">
+                    <i class="fa-solid fa-cloud-arrow-down"></i>
+                    <span>تحميل السيرة الذاتية (CV)</span>
+                </div>
+                <div class="btn-shimmer"></div>
+            </a>
+        </div>
+    </div>
+</section>
+
   <footer class="footer">
 
     <div class="footer-container">
@@ -2156,6 +2403,7 @@ document.getElementById('show-more-certs').addEventListener('click', function ()
       initAnimations();
       startTimer();
     };
+    
   </script>
 
 

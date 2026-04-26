@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    /* Contact Premium Section */
+.contact-premium {
+    padding: 80px 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: auto; /* عشان مياخدش الشاشة كلها لو مش محتاج */
+}
+
+.glass-contact-container {
+    background: #ffffff; /* أبيض صريح عشان يظهر على الخلفية الملونة */
+    border-radius: 40px;
+    padding: 40px;
+    width: 100%;
+    max-width: 550px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    text-align: center;
+}
+
+.contact-header-extra { margin-bottom: 30px; }
+
+.top-label {
+    color: #E056A0; /* اللون الروز بتاعك */
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.premium-title {
+    color: #0F3345; /* اللون الكحلي بتاعك */
+    font-size: 2.2rem;
+    margin: 10px 0;
+}
+
+.glow-line {
+    width: 50px;
+    height: 4px;
+    background: #E056A0;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.contact-grid-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-card-item {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse; /* ترتيب لليمين */
+    background: #fdfdfd;
+    padding: 15px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    border: 1px solid #eee;
+    transition: 0.3s ease;
+}
+
+.contact-card-item:hover {
+    transform: translateX(-10px);
+    border-color: #E056A0;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.card-icon-area {
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    color: white;
+    margin-left: 15px;
+}
+
+.phone-bg { background: linear-gradient(135deg, #62BEAC, #45a08f); }
+.wa-bg { background: linear-gradient(135deg, #2ecc71, #27ae60); }
+
+.card-details { text-align: right; flex-grow: 1; }
+.card-details p { color: #888; font-size: 12px; margin: 0; }
+.card-details span { color: #0F3345; font-weight: 700; font-size: 16px; }
+
+.arrow-hint { color: #eee; font-size: 14px; }
+
+.social-mini-row {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.mini-social-card {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: #0F3345;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    border: 1px solid #eee;
+    text-decoration: none;
+}
+
+.mini-social-card:hover {
+    background: #E056A0;
+    color: white;
+    transform: translateY(-5px);
+}
+
+.premium-cv-btn {
+    display: block;
+    background: #0F3345;
+    color: white;
+    text-decoration: none;
+    padding: 18px;
+    border-radius: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.premium-cv-btn:hover {
+    background: #E056A0;
+    transform: scale(1.02);
+}
+</style>
+</head>
+
+<body>
+    <section class="contact-premium" id="contact">
+    <div class="glass-contact-container">
+        
+        <div class="contact-header-extra">
+            <span class="top-label">Let's Connect</span>
+            <h2 class="premium-title">تواصل معي</h2>
+            <div class="glow-line"></div>
+        </div>
+
+        <div class="contact-grid-wrapper">
+            <a href="tel:+201062281073" class="contact-card-item">
+                <div class="card-icon-area phone-bg">
+                    <i class="fa-solid fa-phone-volume"></i>
+                </div>
+                <div class="card-details">
+                    <p>رقم الهاتف</p>
+                    <span>+201062281073</span>
+                </div>
+                <i class="fa-solid fa-chevron-left arrow-hint"></i>
+            </a>
+
+            <a href="https://wa.me/201062281073" target="_blank" class="contact-card-item">
+                <div class="card-icon-area wa-bg">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="card-details">
+                    <p>واتساب</p>
+                    <span>أرسل رسالة مباشرة</span>
+                </div>
+                <i class="fa-solid fa-chevron-left arrow-hint"></i>
+            </a>
+
+            <div class="social-mini-row">
+                <a href="https://www.facebook.com/share/1c21qKUL6o/" target="_blank" class="mini-social-card fb">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/habibasaid4414" target="_blank" class="mini-social-card ig">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/habiba-sayed-21835b338" target="_blank" class="mini-social-card li">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="cv-download-wrapper">
+            <a href="#" download class="premium-cv-btn">
+                <div class="btn-content">
+                    <i class="fa-solid fa-cloud-arrow-down"></i>
+                    <span>تحميل السيرة الذاتية (CV)</span>
+                </div>
+            </a>
+        </div>
+
+    </div>
+</section>
+</body>
+</html>
