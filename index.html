@@ -34,11 +34,6 @@
       --primary-blue: #62BEAC;
       --dark-blue: #0b1f2a;
 
-      /*  #0F33
-         --accent-pink-s2: #E056A0;
-      --dark-blue-s2:45;
-      --primary-blue-s2: #62BEAC;
-       */
     }
 
     h1 {
@@ -436,7 +431,7 @@
 
     /* About Section */
     .about {
-      padding: 120px 8%;
+      padding: 60px 8%;
       background: transparent;
     }
 
@@ -453,6 +448,7 @@
 
     .about-image img {
       width: 320px;
+
       height: 320px;
       object-fit: cover;
       border-radius: 50%;
@@ -460,6 +456,7 @@
       box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35), 0 0 25px rgba(224, 86, 160, 0.25);
       animation: floatImg 7s ease-in-out infinite;
     }
+
 
     @keyframes floatImg {
 
@@ -507,12 +504,26 @@
       opacity: 0.9;
     }
 
+    /* ابحثي عن هذا السطر وضيفي التعديل بداخله */
+@media (max-width: 768px) {
+    /* ... الأكواد القديمة ... */
+
+    .about-buttons {
+        display: flex;
+        flex-direction: column; /* ترتيب الأزرار تحت بعض */
+        gap: 15px;              /* المسافة السحرية اللي كانت ناقصة */
+        align-items: center;
+        margin-top: 25px;
+    }
+}
+
+    
     /* Main Card (Original Style) */
     .main-card {
       background: #ffffff;
       max-width: 1100px;
       width: calc(100% - 40px);
-      margin: 20px auto;
+      margin: 10px auto;
       /* تقليل الهامش الخارجي */
       padding: 40px;
       border-radius: 40px;
@@ -1232,6 +1243,16 @@
         grid-template-columns: 1fr;
         /* صف واحد في الموبايل */
       }
+
+      .view-more-container {
+        margin-top: 30px !important; /* هيبعد الزرار عن الكروت اللي فوقيه مسافة كافية */
+        margin-bottom: 20px !important;
+    }
+
+    #show-more-certs {
+        width: 80%; /* عشان يبقا شكله متناسق مع بقية أزرار الموبايل */
+        padding: 15px;
+    }
     }
 
 
@@ -1330,12 +1351,12 @@
 
 
     .consulting-section-s2 {
-      padding: 60px 0;
+      padding: 40px 0;
     }
 
     .main-card-s2 {
       max-width: 1100px;
-      margin: 50px auto;
+      margin: 20px auto;
       background: white;
       border-radius: 40px;
       padding: 40px;
@@ -1600,7 +1621,7 @@
     }
 
     .contact-premium {
-      padding: 100px 5%;
+      padding: 20px 5%;
       background: transparent;
       display: flex;
       justify-content: center;
@@ -1746,12 +1767,37 @@
       border: 1px solid #eee;
     }
 
-    .mini-social-card:hover {
-      background: var(--accent-pink);
-      color: white;
-      transform: translateY(-5px) rotate(10deg);
-    }
+   /* فيسبوك - أزرق */
+.mini-social-card.fb:hover {
+    background: #1877F2 !important;
+    color: white !important;
+    border-color: #1877F2 !important;
+    box-shadow: 0 10px 20px rgba(24, 119, 242, 0.4);
+}
 
+/* إنستجرام - وردي/أرجواني */
+.mini-social-card.ig:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important;
+    color: white !important;
+    border-color: transparent !important;
+    box-shadow: 0 10px 20px rgba(220, 39, 67, 0.4);
+}
+
+/* لينكد إن - أزرق غامق */
+.mini-social-card.li:hover {
+    background: #0077b5 !important;
+    color: white !important;
+    border-color: #0077b5 !important;
+    box-shadow: 0 10px 20px rgba(0, 119, 181, 0.4);
+}
+
+/* تيك توك - أسود/نيون */
+.mini-social-card.tt:hover {
+    background: #000000 !important;
+    color: white !important;
+    border-color: #000000 !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
     /* Premium CV Button */
     .premium-cv-btn {
       position: relative;
@@ -1804,7 +1850,7 @@
 
     /* Vision & Mission Premium Styling - Fixed Colors */
     .vision-mission {
-      padding: 100px 8%;
+      padding: 40px 8%;
       background: transparent;
       position: relative;
       overflow: hidden;
@@ -1896,11 +1942,103 @@
     }
 
     @media (max-width: 992px) {
+      .vision-mission {
+    padding: 40px 8%; /* بدل 100px */
+}
       .vision-container {
         flex-direction: column;
         gap: 30px;
       }
     }
+
+    /* الاعمال */
+    .portfolio-section {
+  padding: 60px 8%;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.portfolio-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 25px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: 0.4s;
+  will-change: transform, opacity;
+}
+
+.portfolio-img {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.portfolio-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.portfolio-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 51, 69, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.portfolio-card:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+.portfolio-card:hover .portfolio-img img {
+  transform: scale(1.1);
+}
+
+.view-project {
+  color: white;
+  text-decoration: none;
+  border: 1px solid var(--accent-pink);
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.view-project:hover {
+  background: var(--accent-pink);
+}
+
+.portfolio-info {
+  padding: 20px;
+  text-align: right;
+}
+
+.portfolio-info span {
+  color: var(--accent-pink);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.portfolio-info h4 {
+  color: white;
+  margin-top: 8px;
+  font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}
   </style>
 
 </head>
@@ -1914,14 +2052,13 @@
         <a href="#" class="active">Home</a>
         <a href="#about">About</a>
         <a href="#services">Services</a>
-        <a href="#ً">Work</a>
-        <a href="#">Contact</a>
+        <a href="#work">Work</a>
+        <a href="#contact">Contact</a>
       </nav>
       <a href="#" class="btn primary nav-btn">Book Session</a>
       <div class="menu-toggle" id="menu-toggle">☰</div>
     </div>
   </header>
-
 
 
   <section class="hero" id="hero">
@@ -1961,7 +2098,53 @@
       <span><i class="fa-solid fa-wand-magic-sparkles"></i> Content Planning</span>
     </div>
   </div>
-  <div id="fire-glow"></div>
+  <!-- <div id="fire-glow"></div> -->
+    <section class="about" id="about">
+    <div class="about-container">
+      <div class="about-image">
+        <img src="imgs/logo_Habiba.jpg" alt="Habiba Sayed">
+      </div>
+      <div class="about-text glass-card">
+        <h2>About Coach Habiba</h2>
+        <h3>Habiba Sayed Hanafi <br><span> Coach & Content Marketer</span></h3>
+        <p>أنا كوتش حبيبة… بساعدك تبني محتوى مش بس شكله حلو، لكن فعلاً يبيع ويأثر ويكبر البراند بتاعك.</p>
+        <p>هدفي إني أحولك من مجرد كتابة بوستات لسيستم محتوى كامل بيجيب نتائج حقيقية.</p>
+        <div class="about-buttons">
+          <button class="btn primary">Start Your Journey</button>
+          <button class="btn secondary">View My Work</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="vision-mission" id="vision-mission">
+    <div class="vision-container">
+      <div class="vision-card">
+        <div class="vision-icon">
+          <i class="fa-solid fa-eye"></i>
+        </div>
+        <h3>رؤيتي</h3>
+        <p>
+          أن أكون الشريك الأول لكل صانع محتوى وبراند طموح يسعى لتحويل حضوره الرقمي من مجرد "نشر بوستات" إلى
+          <strong>منظومة تأثير وبناء مجتمع</strong> حقيقي، ونشر ثقافة المحتوى الذي يجمع بين القيمة العلمية والذكاء
+          البيعي.
+        </p>
+      </div>
+
+      <div class="vision-card">
+        <div class="vision-icon">
+          <i class="fa-solid fa-bullseye"></i>
+        </div>
+        <h3>رسالتي</h3>
+        <p>
+          تمكين <strong>10,000 صانع محتوى</strong> من إتقان مهارات الـ Copywriting والاستراتيجيات التسويقية، وتزويد
+          أصحاب الأعمال بأدوات محتوى فعّالة تضمن لهم <strong>نموًا مستدامًا</strong> وزيادة في المبيعات عبر الكلمة
+          المكتوبة بذكاء.
+        </p>
+      </div>
+    </div>
+  </section>
+
 
 
   <section class="consulting-section-s2" id="training">
@@ -2050,57 +2233,6 @@
     </div>
   </section>
 
-
-
-  <section class="about" id="about">
-    <div class="about-container">
-      <div class="about-image">
-        <img src="imgs/logo_Habiba.jpg" alt="Habiba Sayed">
-      </div>
-      <div class="about-text glass-card">
-        <h2>About Coach Habiba</h2>
-        <h3>Habiba Sayed Hanafi <br><span> Coach & Content Marketer</span></h3>
-        <p>أنا كوتش حبيبة… بساعدك تبني محتوى مش بس شكله حلو، لكن فعلاً يبيع ويأثر ويكبر البراند بتاعك.</p>
-        <p>هدفي إني أحولك من مجرد كتابة بوستات لسيستم محتوى كامل بيجيب نتائج حقيقية.</p>
-        <div class="about-buttons">
-          <button class="btn primary">Start Your Journey</button>
-          <button class="btn secondary">View My Work</button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-  <section class="vision-mission" id="vision-mission">
-    <div class="vision-container">
-      <div class="vision-card">
-        <div class="vision-icon">
-          <i class="fa-solid fa-eye"></i>
-        </div>
-        <h3>رؤيتي</h3>
-        <p>
-          أن أكون الشريك الأول لكل صانع محتوى وبراند طموح يسعى لتحويل حضوره الرقمي من مجرد "نشر بوستات" إلى
-          <strong>منظومة تأثير وبناء مجتمع</strong> حقيقي، ونشر ثقافة المحتوى الذي يجمع بين القيمة العلمية والذكاء
-          البيعي.
-        </p>
-      </div>
-
-      <div class="vision-card">
-        <div class="vision-icon">
-          <i class="fa-solid fa-bullseye"></i>
-        </div>
-        <h3>رسالتي</h3>
-        <p>
-          تمكين <strong>10,000 صانع محتوى</strong> من إتقان مهارات الـ Copywriting والاستراتيجيات التسويقية، وتزويد
-          أصحاب الأعمال بأدوات محتوى فعّالة تضمن لهم <strong>نموًا مستدامًا</strong> وزيادة في المبيعات عبر الكلمة
-          المكتوبة بذكاء.
-        </p>
-      </div>
-    </div>
-  </section>
-
-
   <div class="main-card" id="services">
 
     <h2 class="section-title">الخدمات الإبداعية</h2>
@@ -2156,6 +2288,51 @@
       <div class="skill-item soft-skill">حل المشكلات</div>
     </div>
   </div>
+<section class="portfolio-section" id="work">
+  <h2 class="section-title">معرض الأعمال</h2>
+  <div class="portfolio-grid">
+    
+    <div class="portfolio-card">
+      <div class="portfolio-img">
+        <img src="imgs/C3.jpg" alt="Content Strategy">
+        <div class="portfolio-overlay">
+          <a href="#" class="view-project">مشاهدة التفاصيل</a>
+        </div>
+      </div>
+      <div class="portfolio-info">
+        <span>كتابة محتوى</span>
+        <h4>استراتيجية محتوى لبراند تجميل</h4>
+      </div>
+    </div>
+
+    <div class="portfolio-card">
+      <div class="portfolio-img">
+        <img src="imgs/C3.jpg" alt="Script Writing">
+        <div class="portfolio-overlay">
+          <a href="#" class="view-project">مشاهدة التفاصيل</a>
+        </div>
+      </div>
+      <div class="portfolio-info">
+        <span>سكريبتات</span>
+        <h4>سلسلة ريلز تعليمية (Viral)</h4>
+      </div>
+    </div>
+
+    <div class="portfolio-card">
+      <div class="portfolio-img">
+        <img src="imgs/C6.jpg" alt="Copywriting">
+        <div class="portfolio-overlay">
+          <a href="#" class="view-project">مشاهدة التفاصيل</a>
+        </div>
+      </div>
+      <div class="portfolio-info">
+        <span>إعلانات</span>
+        <h4>حملة إعلانية لمنتج رقمي</h4>
+      </div>
+    </div>
+
+  </div>
+</section>
 
   <section class="testimonials" id="testimonials">
     <h2 class="section-title">Success Stories</h2>
@@ -2390,9 +2567,6 @@
         <span class="tooltip-text">💬 Click to chat on WhatsApp</span>
       </span>
     </p>
-
-
-
   </footer>
 
 
@@ -2619,6 +2793,24 @@
       initVisionAnimation(); // أنميشن الرؤية الجديد
     });
 
+    // ضيفي ده قبل الـ gsap.from
+gsap.set(".portfolio-card", { opacity: 1 }); 
+
+// وبعدين استبدلي .from بـ .fromTo
+gsap.fromTo(".portfolio-card", 
+    { opacity: 0, y: 50 }, 
+    { 
+        opacity: 1, 
+        y: 0, 
+        duration: 1, 
+        stagger: 0.2,
+        scrollTrigger: {
+            trigger: ".portfolio-section",
+            start: "top 85%"
+        }
+    }
+);
+    
   </script>
 
 
