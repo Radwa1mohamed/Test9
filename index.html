@@ -2143,6 +2143,30 @@
         transform: translateY(0);
     }
 }
+@media (max-width: 768px) {
+    .social-proof-container {
+      margin: 30px 0;
+        padding: 15px 20px; /* تقليل الـ padding */
+        width: 90%; /* عشان ميبقاش لازق في حواف الشاشة */
+    }
+
+    .avatars-stack img, .more-clients {
+        width: 45px;  /* تصغير قطر الدوائر */
+        height: 45px;
+        margin-left: -12px; /* تقليل التداخل ليناسب الحجم الأصغر */
+        border-width: 3px; /* تصغير السمك */
+    }
+
+    .proof-text p {
+        font-size: 13px; /* تصغير الخط عشان يكفي سطرين */
+        max-width: 250px;
+    }
+
+    .proof-text .stars {
+        font-size: 14px; /* تصغير حجم النجوم */
+    }
+    
+}
   </style>
 
 </head>
