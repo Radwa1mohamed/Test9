@@ -239,7 +239,7 @@
     }
 
     .bg2 {
-      background-image: url("imgs/photo_2026-04-28_22-17-45.jpg");
+      background-image: url("imgs/Log3.jpg");
       z-index: 0;
       opacity: 0;
     }
@@ -505,19 +505,21 @@
     }
 
     /* ابحثي عن هذا السطر وضيفي التعديل بداخله */
-@media (max-width: 768px) {
-    /* ... الأكواد القديمة ... */
+    @media (max-width: 768px) {
+      /* ... الأكواد القديمة ... */
 
-    .about-buttons {
+      .about-buttons {
         display: flex;
-        flex-direction: column; /* ترتيب الأزرار تحت بعض */
-        gap: 15px;              /* المسافة السحرية اللي كانت ناقصة */
+        flex-direction: column;
+        /* ترتيب الأزرار تحت بعض */
+        gap: 15px;
+        /* المسافة السحرية اللي كانت ناقصة */
         align-items: center;
         margin-top: 25px;
+      }
     }
-}
 
-    
+
     /* Main Card (Original Style) */
     .main-card {
       background: #ffffff;
@@ -842,6 +844,7 @@
         margin-top: 8px;
       }
     }
+
     /* 
     <button id="scrollTopBtn" class="scroll-top">
       <i class="fa-solid fa-arrow-up"></i>
@@ -951,7 +954,7 @@
       color: white;
     }
 
-   
+
 
     /* شكل اللوجو */
     .footer-logo img {
@@ -1212,14 +1215,16 @@
       }
 
       .view-more-container {
-        margin-top: 30px !important; /* هيبعد الزرار عن الكروت اللي فوقيه مسافة كافية */
+        margin-top: 30px !important;
+        /* هيبعد الزرار عن الكروت اللي فوقيه مسافة كافية */
         margin-bottom: 20px !important;
-    }
+      }
 
-    #show-more-certs {
-        width: 80%; /* عشان يبقا شكله متناسق مع بقية أزرار الموبايل */
+      #show-more-certs {
+        width: 80%;
+        /* عشان يبقا شكله متناسق مع بقية أزرار الموبايل */
         padding: 15px;
-    }
+      }
     }
 
 
@@ -1734,37 +1739,38 @@
       border: 1px solid #eee;
     }
 
-   /* فيسبوك - أزرق */
-.mini-social-card.fb:hover {
-    background: #1877F2 !important;
-    color: white !important;
-    border-color: #1877F2 !important;
-    box-shadow: 0 10px 20px rgba(24, 119, 242, 0.4);
-}
+    /* فيسبوك - أزرق */
+    .mini-social-card.fb:hover {
+      background: #1877F2 !important;
+      color: white !important;
+      border-color: #1877F2 !important;
+      box-shadow: 0 10px 20px rgba(24, 119, 242, 0.4);
+    }
 
-/* إنستجرام - وردي/أرجواني */
-.mini-social-card.ig:hover {
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important;
-    color: white !important;
-    border-color: transparent !important;
-    box-shadow: 0 10px 20px rgba(220, 39, 67, 0.4);
-}
+    /* إنستجرام - وردي/أرجواني */
+    .mini-social-card.ig:hover {
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important;
+      color: white !important;
+      border-color: transparent !important;
+      box-shadow: 0 10px 20px rgba(220, 39, 67, 0.4);
+    }
 
-/* لينكد إن - أزرق غامق */
-.mini-social-card.li:hover {
-    background: #0077b5 !important;
-    color: white !important;
-    border-color: #0077b5 !important;
-    box-shadow: 0 10px 20px rgba(0, 119, 181, 0.4);
-}
+    /* لينكد إن - أزرق غامق */
+    .mini-social-card.li:hover {
+      background: #0077b5 !important;
+      color: white !important;
+      border-color: #0077b5 !important;
+      box-shadow: 0 10px 20px rgba(0, 119, 181, 0.4);
+    }
 
-/* تيك توك - أسود/نيون */
-.mini-social-card.tt:hover {
-    background: #000000 !important;
-    color: white !important;
-    border-color: #000000 !important;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-}
+    /* تيك توك - أسود/نيون */
+    .mini-social-card.tt:hover {
+      background: #000000 !important;
+      color: white !important;
+      border-color: #000000 !important;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    }
+
     /* Premium CV Button */
     .premium-cv-btn {
       position: relative;
@@ -1910,8 +1916,10 @@
 
     @media (max-width: 992px) {
       .vision-mission {
-    padding: 40px 8%; /* بدل 100px */
-}
+        padding: 40px 8%;
+        /* بدل 100px */
+      }
+
       .vision-container {
         flex-direction: column;
         gap: 30px;
@@ -1920,253 +1928,289 @@
 
     /* الاعمال */
     .portfolio-section {
-  padding: 60px 8%;
-}
-
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 25px;
-  margin-top: 40px;
-}
-
-.portfolio-card {
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 25px;
-  overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: 0.4s;
-  will-change: transform, opacity;
-}
-
-.portfolio-img {
-  position: relative;
-  height: 220px;
-  overflow: hidden;
-}
-
-.portfolio-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: 0.5s;
-}
-
-.portfolio-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(15, 51, 69, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: 0.4s;
-}
-
-.portfolio-card:hover .portfolio-overlay {
-  opacity: 1;
-}
-
-.portfolio-card:hover .portfolio-img img {
-  transform: scale(1.1);
-}
-
-.view-project {
-  color: white;
-  text-decoration: none;
-  border: 1px solid var(--accent-pink);
-  padding: 10px 20px;
-  border-radius: 20px;
-  font-size: 14px;
-}
-
-.view-project:hover {
-  background: var(--accent-pink);
-}
-
-.portfolio-info {
-  padding: 20px;
-  text-align: right;
-}
-
-.portfolio-info span {
-  color: var(--accent-pink);
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.portfolio-info h4 {
-  color: white;
-  margin-top: 8px;
-  font-size: 18px;
-}
-
-@media (max-width: 768px) {
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-  }
-}
-/* تصميم زرار العودة للأعلى */
-.scroll-top {
-    position: fixed;
-    bottom: 30px; /* المسافة من تحت */
-    right: 30px;  /* المسافة من اليمين */
-    width: 45px;
-    height: 45px;
-    background: #0F3345; /* نفس لون براند حبيبة الداكن */
-    color: #62beac;      /* لون التيفاني اللي مستخدماه */
-    border: 2px solid #62beac;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    z-index: 9999;
-    
-    /* حالة الإخفاء الافتراضية */
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(20px);
-    transition: all 0.4s ease;
-}
-
-/* حالة الظهور لما نعمل سكرول */
-.scroll-top.show {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-/* تأثير عند تمرير الماوس */
-.scroll-top:hover {
-    background: #e056a0; /* لون الـ Accent Pink بتاعك */
-    border-color: #e056a0;
-    color: white;
-    transform: scale(1.1);
-}
-
-/* الحاوية الكبيرة لتوسيط القسم */
-.social-proof-section {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    margin: 60px 0; /* مسافة أكبر فوق وتحت */
-    opacity: 0; /* للأنميشن عند التحميل */
-    animation: fadeInUpProof 1s ease-out forwards;
-    animation-delay: 0.5s; /* يظهر بعد الـ Hero بشوية */
-}
-
-.social-proof-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.03); /* خلفية زجاجية خفيفة جداً */
-    padding: 20px 40px;
-    border-radius: 50px;
-    backdrop-filter: blur(5px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-/* --- الأفاتارز (Stacked) --- */
-.avatars-stack {
-    display: flex;
-    align-items: center;
-    direction: ltr; /* مهم لترتيب الطبقات صح */
-    margin-bottom: 15px;
-}
-
-.avatars-stack img, .more-clients {
-    width: 70px; /* تكبير الحجم */
-    height: 70px; /* تكبير الحجم */
-    border-radius: 50%;
-    border: 4px solid #0F3345; /* حدود أتخن للاحترافية */
-    margin-left: -25px; /* تداخل أقوى */
-    object-fit: cover;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* حركة أنعم */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* ظل ناعم */
-}
-
-.avatars-stack img:first-child {
-    margin-left: 0;
-}
-
-/* تأثير عند تمرير الماوس */
-.avatars-stack img:hover {
-    transform: translateY(-10px) scale(1.1); /* يطلع لفوق ويكبر شوية */
-    z-index: 10;
-    border-color: var(--accent-pink); /* يلون الحدود */
-}
-
-/* دائرة الرقم */
-.more-clients {
-    background: linear-gradient(45deg, var(--accent-pink), #ff85c0); /* تدرج لوني */
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
-    font-weight: 700;
-    z-index: 1;
-    position: relative;
-    border-color: #0F3345;
-}
-
-/* --- النص والنجوم --- */
-.proof-text {
-    text-align: center;
-}
-
-.proof-text .stars {
-    color: #FFD700;
-    font-size: 24px;; /* نجوم أكبر */
-    margin-bottom: 8px;
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5); /* لمعان للنجوم */
-}
-
-.proof-text p {
-    font-size: 18px; /* خط أكبر قبيلاً */
-    color: rgba(255, 255, 255, 0.9);
-    font-weight: 400;
-    max-width: 300px; /* عشان الكلام ينزل على سطرين ويبقى شكله أشيك */
-    line-height: 1.5;
-}
-
-/* أنميشن ظهور القسم */
-@keyframes fadeInUpProof {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
+      padding: 60px 8%;
     }
-    to {
-        opacity: 1;
-        transform: translateY(0);
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 25px;
+      margin-top: 40px;
     }
-}
-@media (max-width: 768px) {
+
+    .portfolio-card {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 25px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: 0.4s;
+      will-change: transform, opacity;
+    }
+
+    .portfolio-img {
+      position: relative;
+      height: 220px;
+      overflow: hidden;
+    }
+
+    .portfolio-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.5s;
+    }
+
+    .portfolio-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(15, 51, 69, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: 0.4s;
+    }
+
+    .portfolio-card:hover .portfolio-overlay {
+      opacity: 1;
+    }
+
+    .portfolio-card:hover .portfolio-img img {
+      transform: scale(1.1);
+    }
+
+    .view-project {
+      color: white;
+      text-decoration: none;
+      border: 1px solid var(--accent-pink);
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    .view-project:hover {
+      background: var(--accent-pink);
+    }
+
+    .portfolio-info {
+      padding: 20px;
+      text-align: right;
+    }
+
+    .portfolio-info span {
+      color: var(--accent-pink);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .portfolio-info h4 {
+      color: white;
+      margin-top: 8px;
+      font-size: 18px;
+    }
+
+    @media (max-width: 768px) {
+      .portfolio-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* تصميم زرار العودة للأعلى */
+    .scroll-top {
+      position: fixed;
+      bottom: 30px;
+      /* المسافة من تحت */
+      right: 30px;
+      /* المسافة من اليمين */
+      width: 45px;
+      height: 45px;
+      background: #0F3345;
+      /* نفس لون براند حبيبة الداكن */
+      color: #62beac;
+      /* لون التيفاني اللي مستخدماه */
+      border: 2px solid #62beac;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      z-index: 9999;
+
+      /* حالة الإخفاء الافتراضية */
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+      transition: all 0.4s ease;
+    }
+
+    /* حالة الظهور لما نعمل سكرول */
+    .scroll-top.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    /* تأثير عند تمرير الماوس */
+    .scroll-top:hover {
+      background: #e056a0;
+      /* لون الـ Accent Pink بتاعك */
+      border-color: #e056a0;
+      color: white;
+      transform: scale(1.1);
+    }
+
+    /* الحاوية الكبيرة لتوسيط القسم */
+    .social-proof-section {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 60px 0;
+      /* مسافة أكبر فوق وتحت */
+      opacity: 0;
+      /* للأنميشن عند التحميل */
+      animation: fadeInUpProof 1s ease-out forwards;
+      animation-delay: 0.5s;
+      /* يظهر بعد الـ Hero بشوية */
+    }
+
     .social-proof-container {
-      margin: 30px 0;
-        padding: 15px 20px; /* تقليل الـ padding */
-        width: 90%; /* عشان ميبقاش لازق في حواف الشاشة */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.03);
+      /* خلفية زجاجية خفيفة جداً */
+      padding: 20px 40px;
+      border-radius: 50px;
+      backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
     }
 
-    .avatars-stack img, .more-clients {
-        width: 45px;  /* تصغير قطر الدوائر */
-        height: 45px;
-        margin-left: -12px; /* تقليل التداخل ليناسب الحجم الأصغر */
-        border-width: 3px; /* تصغير السمك */
+    /* --- الأفاتارز (Stacked) --- */
+    .avatars-stack {
+      display: flex;
+      align-items: center;
+      direction: ltr;
+      /* مهم لترتيب الطبقات صح */
+      margin-bottom: 15px;
     }
 
-    .proof-text p {
-        font-size: 13px; /* تصغير الخط عشان يكفي سطرين */
-        max-width: 250px;
+    .avatars-stack img,
+    .more-clients {
+      width: 70px;
+      /* تكبير الحجم */
+      height: 70px;
+      /* تكبير الحجم */
+      border-radius: 50%;
+      border: 4px solid #0F3345;
+      /* حدود أتخن للاحترافية */
+      margin-left: -25px;
+      /* تداخل أقوى */
+      object-fit: cover;
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      /* حركة أنعم */
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      /* ظل ناعم */
+    }
+
+    .avatars-stack img:first-child {
+      margin-left: 0;
+    }
+
+    /* تأثير عند تمرير الماوس */
+    .avatars-stack img:hover {
+      transform: translateY(-10px) scale(1.1);
+      /* يطلع لفوق ويكبر شوية */
+      z-index: 10;
+      border-color: var(--accent-pink);
+      /* يلون الحدود */
+    }
+
+    /* دائرة الرقم */
+    .more-clients {
+      background: linear-gradient(45deg, var(--accent-pink), #ff85c0);
+      /* تدرج لوني */
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 700;
+      z-index: 1;
+      position: relative;
+      border-color: #0F3345;
+    }
+
+    /* --- النص والنجوم --- */
+    .proof-text {
+      text-align: center;
     }
 
     .proof-text .stars {
-        font-size: 14px; /* تصغير حجم النجوم */
+      color: #FFD700;
+      font-size: 24px;
+      ;
+      /* نجوم أكبر */
+      margin-bottom: 8px;
+      text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+      /* لمعان للنجوم */
     }
-    
-}
+
+    .proof-text p {
+      font-size: 18px;
+      /* خط أكبر قبيلاً */
+      color: rgba(255, 255, 255, 0.9);
+      font-weight: 400;
+      max-width: 300px;
+      /* عشان الكلام ينزل على سطرين ويبقى شكله أشيك */
+      line-height: 1.5;
+    }
+
+    /* أنميشن ظهور القسم */
+    @keyframes fadeInUpProof {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .social-proof-container {
+        margin: 30px 0;
+        padding: 15px 20px;
+        /* تقليل الـ padding */
+        width: 90%;
+        /* عشان ميبقاش لازق في حواف الشاشة */
+      }
+
+      .avatars-stack img,
+      .more-clients {
+        width: 45px;
+        /* تصغير قطر الدوائر */
+        height: 45px;
+        margin-left: -12px;
+        /* تقليل التداخل ليناسب الحجم الأصغر */
+        border-width: 3px;
+        /* تصغير السمك */
+      }
+
+      .proof-text p {
+        font-size: 13px;
+        /* تصغير الخط عشان يكفي سطرين */
+        max-width: 250px;
+      }
+
+      .proof-text .stars {
+        font-size: 14px;
+        /* تصغير حجم النجوم */
+      }
+
+    }
   </style>
 
 </head>
@@ -2227,29 +2271,29 @@
     </div>
   </div>
   <!-- <div id="fire-glow"></div> -->
-   <div class="social-proof-section">
-  <div class="social-proof-container">
-    <div class="avatars-stack">
-      <img src="imgs/Cl2.jpg" alt="Client">
-      <img src="imgs/Cl5.jpg" alt="Client">
-      <img src="imgs/Cl4.jpg" alt="Client">
-      <img src="imgs/Cl3.jpg" alt="Client">
-      <img src="imgs/Cl1.jpg" alt="Client">
-      <div class="more-clients">+150</div>
-    </div>
-    <div class="proof-text">
-      <div class="stars">
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
-        <i class="fa-solid fa-star"></i>
+  <div class="social-proof-section">
+    <div class="social-proof-container">
+      <div class="avatars-stack">
+        <img src="imgs/Cl2.jpg" alt="Client">
+        <img src="imgs/Cl5.jpg" alt="Client">
+        <img src="imgs/Cl4.jpg" alt="Client">
+        <img src="imgs/Cl3.jpg" alt="Client">
+        <img src="imgs/Cl1.jpg" alt="Client">
+        <div class="more-clients">+150</div>
       </div>
-      <p>وثق بنا أكثر من 150 صانع محتوى وبراند طموح</p>
+      <div class="proof-text">
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p>وثق بنا أكثر من 150 صانع محتوى وبراند طموح</p>
+      </div>
     </div>
   </div>
-</div>
-    <section class="about" id="about">
+  <section class="about" id="about">
     <div class="about-container">
       <div class="about-image">
         <img src="imgs/logo_Habiba.jpg" alt="Habiba Sayed">
@@ -2275,8 +2319,6 @@
         </div>
         <h3>رؤيتي</h3>
         <p>
-          
-          
 
           أن أكون الشريك الأول لكل صانع محتوى وبراند طموح يسعى لتحويل حضوره الرقمي من مجرد "نشر بوستات" إلى
           <strong>منظومة تأثير وبناء مجتمع</strong> حقيقي، ونشر ثقافة المحتوى الذي يجمع بين القيمة العلمية والذكاء
@@ -2305,7 +2347,7 @@
       <div class="offer-banner-s2">
         <div>
           <i class="fa-solid fa-fire-flame-curved" style="margin-left: 8px;"></i>
-          <span>خصم لفترة محدودة: 50% على جلسات الاستشارة الفردية بمناسبة الانطلاق!</span>
+          <span> خصم لفترة محدودة: 50% على جلسات الاستشارة الفردية بمناسبة الانطلاق الويب سايت</span>
         </div>
 
         <div class="countdown-wrapper-s2">
@@ -2327,6 +2369,7 @@
 
       <div class="consulting-grid-s2">
         <div class="consult-card-s2">
+            <div class="discount-badge">OFF 50%</div>
           <div class="icon-box-large-s2"><i class="fa-solid fa-comments-dollar"></i></div>
           <h3>جلسات استشارية (1:1)</h3>
           <p>ساعة مكثفة نضع فيها يدنا على نقاط الضعف في محتواك.</p>
@@ -2341,10 +2384,12 @@
             <li><i class="fa-solid fa-circle-check"></i> تحليل شامل للبروفايل</li>
             <li><i class="fa-solid fa-circle-check"></i> استراتيجية محتوى مخصصة</li>
           </ul>
-          <a href="#" class="btn-s2 primary-s2">احجز جلستك الآن</a>
+          <a href="https://wa.me/01501180309" class="btn-s2 primary-s2">احجز جلستك الآن</a>
         </div>
 
         <div class="consult-card-s2">
+                      <div class="discount-badge">OFF 50%</div>
+
           <div class="icon-box-large-s2"><i class="fa-solid fa-laptop-code"></i></div>
           <h3>البرامج التدريبية</h3>
           <p>كورسات عملية لتعليمك أسرار الكوبي رايتنج من الصفر.</p>
@@ -2359,7 +2404,7 @@
             <li><i class="fa-solid fa-circle-check"></i> تدريب عملي وتطبيقي</li>
             <li><i class="fa-solid fa-circle-check"></i> شهادة إتمام البرنامج</li>
           </ul>
-          <a href="#" class="btn-s2 secondary-s2">استفسر عن المواعيد</a>
+          <a href="https://wa.me/01501180309" class="btn-s2 secondary-s2">استفسر عن المواعيد</a>
         </div>
       </div>
     </div>
@@ -2393,33 +2438,47 @@
       <div class="service-card">
         <div class="icon-box"><i class="fa-solid fa-share-nodes"></i></div>
         <h3>سوشيال ميديا</h3>
-        <p>كتابة محتوى تفاعلي لمنصات فيسبوك، إنستجرام، ولينكد إن لجذب الجمهور.</p>
+
+        <p>كتابة محتوى تفاعلي مخصص لمنصات فيسبوك، إنستجرام، ولينكد إن لجذب الجمهور</p>
       </div>
       <div class="service-card">
         <div class="discount-badge">OFF 25%</div>
         <div class="icon-box"><i class="fa-solid fa-clapperboard"></i></div>
         <h3>سكريبتات ريلز</h3>
-        <p>صياغة سكريبتات فيديو قصيرة تخطف الأنظار وتزيد من نسب المشاهدة.</p>
+        <p>صياغة سكريبتات فيديو قصيرة ومتسلسل بسيط يساعد على جذب الانتباه وتحقيق تفاعل سريع
+
+        </p>
       </div>
       <div class="service-card">
         <div class="icon-box"><i class="fa-solid fa-lightbulb"></i></div>
-        <h3>أفكار وHooks</h3>
-        <p>توليد أفكار خارج الصندوق وعناوين جذابة تضمن بقاء المتابع.</p>
+        <h3> Hooks & Ideas</h3>
+        <p> توليد أفكار إبداعية وهوك قوية تجذب الانتباه من أول لحظة وتساعد على زيادة التفاعل ووصول المحتوى للجمهور
+          المناسب</p>
+
       </div>
+
       <div class="service-card">
-        <div class="icon-box"><i class="fa-solid fa-calendar-days"></i></div>
-        <h3>خطط محتوى</h3>
-        <p>إعداد استراتيجيات وخطط محتوى شهرية منظمة لنمو علامتك التجارية.</p>
-      </div>
-      <div class="service-card">
+        <div class="discount-badge">OFF 10%</div>
+
         <div class="icon-box"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
         <h3>تحليل ودراسة</h3>
-        <p>دراسة الجمهور والمنافسين لتحديد الرسالة التسويقية الأكثر تأثيراً.</p>
+        <p>  إعداد استراتيجيات وخطط محتوى شهرية منظمة لنمو علامتك التجارية و
+
+          تحليل الجمهور والمحتوى الحالي لاستخلاص نقاط القوة والفرص، وبناء رؤية واضحة تساعد على تحسين الأداء وتحقيق نتائج
+          أفضل </p>
       </div>
       <div class="service-card">
+
         <div class="icon-box"><i class="fa-solid fa-cart-shopping"></i></div>
         <h3>محتوى بيعي</h3>
-        <p>نصوص إعلانية محفزة على الشراء وتحقيق الأهداف التسويقية بذكاء.</p>
+        <p> كتابة محتوى يركز على إبراز القيمة وتحفيز القرار، بأسلوب واضح ومقنع يحول المتابع لعميل </p>
+      </div>
+      <div class="service-card">
+          <div class="discount-badge">OFF 5%</div>
+        <div class="icon-box"><i class="fa-solid fa-cart-shopping"></i></div>
+        <h3>  إعلانات تسويق بالمحتوى</h3>
+        <p> كتابة محتوى تسويقي يروج للخدمة أو المنتج بشكل غير مباشر، من خلال تقديم قيمة حقيقية تبني ثقة وتدفع الجمهور
+          للتفاعل والاهتمام</p>
       </div>
     </div>
 
@@ -2438,54 +2497,93 @@
       <div class="skill-item soft-skill">التفكير الإبداعي</div>
       <div class="skill-item soft-skill">إدارة الوقت</div>
       <div class="skill-item soft-skill">التواصل الفعال</div>
-      <div class="skill-item soft-skill">حل المشكلات</div>
+      <div class="skill-item soft-skill">حل المشكلات واتخاذ القرار</div>
+      <div class="skill-item soft-skill">العمل ضمن فريق</div>
     </div>
   </div>
-<section class="portfolio-section" id="work">
-  <h2 class="section-title">معرض الأعمال</h2>
-  <div class="portfolio-grid">
-    
-    <div class="portfolio-card">
-      <div class="portfolio-img">
-        <img src="imgs/C3.jpg" alt="Content Strategy">
-        <div class="portfolio-overlay">
-          <a href="#" class="view-project">مشاهدة التفاصيل</a>
+
+  <section class="portfolio-section" id="work">
+    <h2 class="section-title">معرض الأعمال</h2>
+    <div class="portfolio-grid">
+      <div class="portfolio-card">
+        <div class="portfolio-img">
+          <img src="imgs/Cl1.jpg" alt="Content Strategy">
+          <div class="portfolio-overlay">
+            <a href="#" class="view-project">مشاهدة التفاصيل</a>
+          </div>
+        </div>
+
+        <div class="portfolio-info">
+          <span>كتابة محتوى</span>
+          <h4>استراتيجية محتوى لبراند تجميل</h4>
         </div>
       </div>
-      <div class="portfolio-info">
-        <span>كتابة محتوى</span>
-        <h4>استراتيجية محتوى لبراند تجميل</h4>
-      </div>
-    </div>
-
-    <div class="portfolio-card">
-      <div class="portfolio-img">
-        <img src="imgs/C3.jpg" alt="Script Writing">
-        <div class="portfolio-overlay">
-          <a href="#" class="view-project">مشاهدة التفاصيل</a>
+      <div class="portfolio-card">
+        <div class="portfolio-img">
+          <img src="imgs/Cl2.jpg" alt="Script Writing">
+          <div class="portfolio-overlay">
+            <a href="#" class="view-project">مشاهدة التفاصيل</a>
+          </div>
+        </div>
+        
+        <div class="portfolio-info">
+          <span>كتابة محتوى</span>
+          <h4>استراتيجية محتوى لبراند تجميل</h4>
         </div>
       </div>
-      <div class="portfolio-info">
-        <span>سكريبتات</span>
-        <h4>سلسلة ريلز تعليمية (Viral)</h4>
-      </div>
-    </div>
-
-    <div class="portfolio-card">
-      <div class="portfolio-img">
-        <img src="imgs/C6.jpg" alt="Copywriting">
-        <div class="portfolio-overlay">
-          <a href="#" class="view-project">مشاهدة التفاصيل</a>
+      <div class="portfolio-card">
+        <div class="portfolio-img">
+          <img src="imgs/Cl2.jpg" alt="Script Writing">
+          <div class="portfolio-overlay">
+            <a href="#" class="view-project">مشاهدة التفاصيل</a>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <span>كتابة محتوى</span>
+          <h4>استراتيجية محتوى لبراند تجميل</h4>
         </div>
       </div>
-      <div class="portfolio-info">
-        <span>إعلانات</span>
-        <h4>حملة إعلانية لمنتج رقمي</h4>
+      <div class="portfolio-card">
+        <div class="portfolio-img">
+          <img src="imgs/Cl6.jpg" alt="Script Writing">
+          <div class="portfolio-overlay">
+            <a href="#" class="view-project">مشاهدة التفاصيل</a>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <span>كتابة محتوى</span>
+          <h4>استراتيجية محتوى لبراند تجميل</h4>
+        </div>
       </div>
-    </div>
+      <div class="portfolio-card">
+        <div class="portfolio-img">
+          <img src="imgs/Cl6.jpg" alt="Script Writing">
+          <div class="portfolio-overlay">
+            <a href="#" class="view-project">مشاهدة التفاصيل</a>
+          </div>
+        </div>
 
-  </div>
-</section>
+        <div class="portfolio-info">
+          <span>سكريبتات</span>
+          <h4>سلسلة ريلز تعليمية (Viral)</h4>
+        </div>
+      </div>
+
+      <div class="portfolio-card">
+        <div class="portfolio-img">
+          <img src="imgs/Cl3.jpg" alt="Copywriting">
+          <div class="portfolio-overlay">
+            <a href="#" class="view-project">مشاهدة التفاصيل</a>
+          </div>
+        </div>
+        <div class="portfolio-info">
+          <span>إعلانات</span>
+          <h4>حملة إعلانية لمنتج رقمي</h4>
+        </div>
+      </div>
+
+    </div>
+  </section>
 
   <section class="testimonials" id="testimonials">
     <h2 class="section-title">Success Stories</h2>
@@ -2665,8 +2763,8 @@
   </section>
 
   <button id="scrollTopBtn" class="scroll-top">
-  <i class="fa-solid fa-chevron-up"></i>
-</button>
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
 
   <footer class="footer">
 
@@ -2680,10 +2778,10 @@
 
       <!-- Links -->
       <div class="footer-links">
-        <a href="#">Home</a>
+        <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#services">Services</a>
-        <a href="#">Contact</a>
+        <a href="#contact">Contact</a>
       </div>
 
       <!-- Social Icons -->
@@ -2930,39 +3028,39 @@
     });
 
     // ضيفي ده قبل الـ gsap.from
-gsap.set(".portfolio-card", { opacity: 1 }); 
+    gsap.set(".portfolio-card", { opacity: 1 });
 
-// وبعدين استبدلي .from بـ .fromTo
-gsap.fromTo(".portfolio-card", 
-    { opacity: 0, y: 50 }, 
-    { 
-        opacity: 1, 
-        y: 0, 
-        duration: 1, 
+    // وبعدين استبدلي .from بـ .fromTo
+    gsap.fromTo(".portfolio-card",
+      { opacity: 0, y: 50 },
+      {
+        opacity: 1,
+        y: 0,
+        duration: 1,
         stagger: 0.2,
         scrollTrigger: {
-            trigger: ".portfolio-section",
-            start: "top 85%"
+          trigger: ".portfolio-section",
+          start: "top 85%"
         }
-    }
-);
+      }
+    );
 
-{
-  // الكود الجديد بالكامل جوه القوسين دول
-  const scrollBtn = document.getElementById("scrollTopBtn");
-  
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      scrollBtn.classList.add("show");
-    } else {
-      scrollBtn.classList.remove("show");
-    }
-  });
+    {
+      // الكود الجديد بالكامل جوه القوسين دول
+      const scrollBtn = document.getElementById("scrollTopBtn");
 
-  scrollBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-}
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+          scrollBtn.classList.add("show");
+        } else {
+          scrollBtn.classList.remove("show");
+        }
+      });
+
+      scrollBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+    }
   </script>
 
 
