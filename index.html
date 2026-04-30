@@ -1926,129 +1926,135 @@
       }
     }
 
-   /* --- Portfolio Modern Style --- */
-.portfolio-section {
-    padding: 60px 8%;
-    text-align: center;
-}
+    /* --- Portfolio Modern Style --- */
+    .portfolio-section {
+      padding: 60px 8%;
+      text-align: center;
+    }
 
-.portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-    margin-top: 50px;
-}
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      margin-top: 50px;
+    }
 
-.portfolio-card {
-    background: rgba(15, 51, 69, 0.7); /* لون داكن شفاف */
-    backdrop-filter: blur(10px);
-    border-radius: 20px;
-    overflow: hidden;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: 0.4s;
-    text-align: right; /* للغة العربية */
-    display: flex;
-    flex-direction: column;
-}
+    .portfolio-card {
+      background: rgba(15, 51, 69, 0.7);
+      /* لون داكن شفاف */
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      transition: 0.4s;
+      text-align: right;
+      /* للغة العربية */
+      display: flex;
+      flex-direction: column;
+    }
 
-.portfolio-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--accent-pink);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-}
+    .portfolio-card:hover {
+      transform: translateY(-10px);
+      border-color: var(--accent-pink);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
 
-.portfolio-img {
-    width: 100%;
-    height: 200px;
-    overflow: hidden;
-    position: relative;
-}
+    .portfolio-img {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+    }
 
-.portfolio-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+    .portfolio-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-.portfolio-info {
-    padding: 25px;
-    flex-grow: 1;
-}
+    .portfolio-info {
+      padding: 25px;
+      flex-grow: 1;
+    }
 
-.portfolio-info h4 {
-    color: white;
-    font-size: 1.4rem;
-    margin-bottom: 12px;
-}
+    .portfolio-info h4 {
+      color: white;
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+    }
 
-.portfolio-info p {
-    color: #ccc;
-    font-size: 0.9rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
+    .portfolio-info p {
+      color: #ccc;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
 
-/* أزرار التقنيات (Tags) */
-.project-tags {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-bottom: 25px;
-}
+    /* أزرار التقنيات (Tags) */
+    .project-tags {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+    }
 
-.tag {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: #62BEAC; /* لون التيفاني */
-    padding: 5px 12px;
-    border-radius: 8px;
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-}
+    .tag {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #62BEAC;
+      /* لون التيفاني */
+      padding: 5px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
 
-/* أزرار الروابط بالأسفل */
-.project-links {
-    display: flex;
-justify-content: center; 
-   align-items: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 15px;
-    margin-top: auto;
-}
+    /* أزرار الروابط بالأسفل */
+    .project-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 15px;
+      margin-top: auto;
+    }
 
-.read-more {
-   display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 10px 25px;
-    background: rgba(224, 86, 160, 0.1); /* لون وردي خفيف جداً */
-    color: white;
-    text-decoration: none;
-    border: 1px solid var(--accent-pink);
-    border-radius: 12px;
-    font-size: 14px;
-    font-weight: 600;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    width: 100%; /* الزر يأخذ عرض الكارت بالكامل لشكل أكثر عصرية */
-}
+    .read-more {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px 25px;
+      background: rgba(224, 86, 160, 0.1);
+      /* لون وردي خفيف جداً */
+      color: white;
+      text-decoration: none;
+      border: 1px solid var(--accent-pink);
+      border-radius: 12px;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      width: 100%;
+      /* الزر يأخذ عرض الكارت بالكامل لشكل أكثر عصرية */
+    }
 
-.read-more:hover {
-    background: var(--accent-pink);
-    box-shadow: 0 10px 20px rgba(224, 86, 160, 0.3);
-    transform: translateY(-3px);
-    color: white;
-}
+    .read-more:hover {
+      background: var(--accent-pink);
+      box-shadow: 0 10px 20px rgba(224, 86, 160, 0.3);
+      transform: translateY(-3px);
+      color: white;
+    }
 
-.read-more i {
-    transition: transform 0.3s ease;
-}
+    .read-more i {
+      transition: transform 0.3s ease;
+    }
 
-.read-more:hover i {
-    transform: translateX(-5px); /* تحريك السهم لليمين بما أن اللغة عربية */
-}
+    .read-more:hover i {
+      transform: translateX(-5px);
+      /* تحريك السهم لليمين بما أن اللغة عربية */
+    }
 
     /* تصميم زرار العودة للأعلى */
     .scroll-top {
@@ -2246,6 +2252,109 @@ justify-content: center;
       }
 
     }
+
+/* Container & Alignment */
+.results-slider-section {
+    width: 100%;
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* سنترة العنوان */
+    overflow: hidden;
+}
+
+.slider-header-centered {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Track Settings */
+.infinite-results-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+}
+
+.infinite-results-track {
+    display: flex;
+    gap: 25px;
+    width: max-content;
+    animation: autoScrollLoop 50s linear infinite; /* سرعة هادئة للنتائج */
+    will-change: transform;
+}
+
+/* Infinite Loop Logic */
+@keyframes autoScrollLoop {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* الحركة بمقدار نصف طول التراك (لأنه مكرر) */
+        transform: translateX(calc(-50%));
+    }
+}
+
+/* Card Styling */
+.res-card {
+    flex: 0 0 320px; /* عرض الكارت */
+    height: 480px;
+    border-radius: 40px;
+    position: relative;
+    overflow: hidden;
+    background: #0F3345;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.res-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.85;
+}
+
+.res-card:hover {
+    transform: scale(1.02);
+    border-color: var(--accent-pink);
+}
+
+/* Result Info Overlay */
+.res-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px 20px;
+    background: linear-gradient(to top, rgba(15, 51, 69, 0.95), transparent);
+    backdrop-filter: blur(5px);
+    text-align: right;
+    direction: rtl;
+}
+
+.res-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--accent-pink);
+    color: white;
+    border-radius: 10px;
+    font-size: 10px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.res-overlay h4 {
+    color: white;
+    font-size: 1.1rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Pause on hover for easier reading */
+.infinite-results-track:hover {
+    animation-play-state: paused;
+}
   </style>
 
 </head>
@@ -2404,7 +2513,7 @@ justify-content: center;
 
       <div class="consulting-grid-s2">
         <div class="consult-card-s2">
-            <div class="discount-badge">OFF 50%</div>
+          <div class="discount-badge">OFF 50%</div>
           <div class="icon-box-large-s2"><i class="fa-solid fa-comments-dollar"></i></div>
           <h3>جلسات استشارية (1:1)</h3>
           <p>ساعة مكثفة نضع فيها يدنا على نقاط الضعف في محتواك.</p>
@@ -2423,7 +2532,7 @@ justify-content: center;
         </div>
 
         <div class="consult-card-s2">
-                      <div class="discount-badge">OFF 15%</div>
+          <div class="discount-badge">OFF 15%</div>
 
           <div class="icon-box-large-s2"><i class="fa-solid fa-laptop-code"></i></div>
           <h3>البرامج التدريبية</h3>
@@ -2497,7 +2606,7 @@ justify-content: center;
 
         <div class="icon-box"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
         <h3>تحليل ودراسة</h3>
-        <p>  إعداد استراتيجيات وخطط محتوى شهرية منظمة لنمو علامتك التجارية و
+        <p> إعداد استراتيجيات وخطط محتوى شهرية منظمة لنمو علامتك التجارية و
 
           تحليل الجمهور والمحتوى الحالي لاستخلاص نقاط القوة والفرص، وبناء رؤية واضحة تساعد على تحسين الأداء وتحقيق نتائج
           أفضل </p>
@@ -2509,9 +2618,9 @@ justify-content: center;
         <p> كتابة محتوى يركز على إبراز القيمة وتحفيز القرار، بأسلوب واضح ومقنع يحول المتابع لعميل </p>
       </div>
       <div class="service-card">
-          <div class="discount-badge">OFF 5%</div>
+        <div class="discount-badge">OFF 5%</div>
         <div class="icon-box"><i class="fa-solid fa-cart-shopping"></i></div>
-        <h3>  إعلانات تسويق بالمحتوى</h3>
+        <h3> إعلانات تسويق بالمحتوى</h3>
         <p> كتابة محتوى تسويقي يروج للخدمة أو المنتج بشكل غير مباشر، من خلال تقديم قيمة حقيقية تبني ثقة وتدفع الجمهور
           للتفاعل والاهتمام</p>
       </div>
@@ -2540,131 +2649,166 @@ justify-content: center;
   <section class="portfolio-section" id="work">
     <h2 class="section-title">معرض الأعمال</h2>
     <div class="portfolio-grid">
-        
-        <!-- كارد مشروع 1 -->
-        <div class="portfolio-card">
-            <div class="portfolio-img">
-                <img src="imgs/Cl3.jpg" alt="Project 1">
-            </div>
-            <div class="portfolio-info">
-                <h4>استراتيجية محتوى متكاملة</h4>
-                <p>بناء نظام محتوى لبراند تجميل يهدف لزيادة الوعي بالعلامة التجارية وتحويل المتابعين إلى عملاء دائمين.</p>
-                
-                <div class="project-tags">
-                    <span class="tag"><i class="fa-solid fa-code"></i> Strategy</span>
-                    <span class="tag"><i class="fa-solid fa-pen"></i> Copywriting</span>
-                    <span class="tag"><i class="fa-solid fa-chart-simple"></i> Analytics</span>
-                </div>
 
-                <!-- الربط باستخدام المجلد الفرعي -->
-
-
-                <div class="project-links">
-                    <a href="project/Project-Muhmmed.html" class="read-more">تفاصيل المشروع ←</a>
-                </div>
-            </div>
+      <!-- كارد مشروع 1 -->
+      <div class="portfolio-card">
+        <div class="portfolio-img">
+          <img src="imgs/Cl3.jpg" alt="Project 1">
         </div>
-        <!-- 2 -->
-        <div class="portfolio-card">
-            <div class="portfolio-img">
-                <img src="imgs/Cl1.jpg" alt="Project 1">
-            </div>
-            <div class="portfolio-info">
-                <h4>استراتيجية محتوى متكاملة</h4>
-                <p>بناء نظام محتوى لبراند تجميل يهدف لزيادة الوعي بالعلامة التجارية وتحويل المتابعين إلى عملاء دائمين.</p>
-                
-                <div class="project-tags">
-                    <span class="tag"><i class="fa-solid fa-code"></i> Strategy</span>
-                    <span class="tag"><i class="fa-solid fa-pen"></i> Copywriting</span>
-                    <span class="tag"><i class="fa-solid fa-chart-simple"></i> Analytics</span>
-                </div>
+        <div class="portfolio-info">
+          <h4>استراتيجية محتوى متكاملة</h4>
+          <p>بناء نظام محتوى لبراند تجميل يهدف لزيادة الوعي بالعلامة التجارية وتحويل المتابعين إلى عملاء دائمين.</p>
 
-                <div class="project-links">
-                    <a href="project/project-Wafe.html" class="read-more">تفاصيل المشروع ←</a>
-                </div>
-            </div>
+          <div class="project-tags">
+            <span class="tag"><i class="fa-solid fa-code"></i> Strategy</span>
+            <span class="tag"><i class="fa-solid fa-pen"></i> Copywriting</span>
+            <span class="tag"><i class="fa-solid fa-chart-simple"></i> Analytics</span>
+          </div>
+
+          <!-- الربط باستخدام المجلد الفرعي -->
+
+
+          <div class="project-links">
+            <a href="project/Project-Muhmmed.html" class="read-more">تفاصيل المشروع ←</a>
+          </div>
         </div>
-
-        
-        <!-- كارد مشروع 2 -->
-        <div class="portfolio-card">
-            <div class="portfolio-img">
-                <img src="imgs/Cl2.jpg" alt="Project 2">
-            </div>
-            <div class="portfolio-info">
-                <h4>سيناريوهات ريلز إبداعية</h4>
-                <p>كتابة سلسلة من الفيديوهات القصيرة التي حققت أكثر من 100 ألف مشاهدة أورجانيك في أقل من أسبوع.</p>
-                
-                <div class="project-tags">
-                    <span class="tag"><i class="fa-solid fa-video"></i> Scripting</span>
-                    <span class="tag"><i class="fa-solid fa-bolt"></i> Viral Ideas</span>
-                </div>
-
-                <div class="project-links">
-                    <a href="project/Project_W copy/index.html" class="read-more">تفاصيل المشروع ←</a>
-                </div>
-            </div>
+      </div>
+      <!-- 2 -->
+      <div class="portfolio-card">
+        <div class="portfolio-img">
+          <img src="imgs/Cl1.jpg" alt="Project 1">
         </div>
-        <!-- كارد مشروع 2 -->
-        <div class="portfolio-card">
-            <div class="portfolio-img">
-                <img src="imgs/Cl2.jpg" alt="Project 2">
-            </div>
-            <div class="portfolio-info">
-                <h4>سيناريوهات ريلز إبداعية</h4>
-                <p>كتابة سلسلة من الفيديوهات القصيرة التي حققت أكثر من 100 ألف مشاهدة أورجانيك في أقل من أسبوع.</p>
-                
-                <div class="project-tags">
-                    <span class="tag"><i class="fa-solid fa-video"></i> Scripting</span>
-                    <span class="tag"><i class="fa-solid fa-bolt"></i> Viral Ideas</span>
-                </div>
+        <div class="portfolio-info">
+          <h4>استراتيجية محتوى متكاملة</h4>
+          <p>بناء نظام محتوى لبراند تجميل يهدف لزيادة الوعي بالعلامة التجارية وتحويل المتابعين إلى عملاء دائمين.</p>
 
-                <div class="project-links">
-                    <a href="/project/Project-Yesser.html" class="read-more">تفاصيل المشروع ←</a>
-                </div>
-            </div>
+          <div class="project-tags">
+            <span class="tag"><i class="fa-solid fa-code"></i> Strategy</span>
+            <span class="tag"><i class="fa-solid fa-pen"></i> Copywriting</span>
+            <span class="tag"><i class="fa-solid fa-chart-simple"></i> Analytics</span>
+          </div>
+
+          <div class="project-links">
+            <a href="project/project-Wafe.html" class="read-more">تفاصيل المشروع ←</a>
+          </div>
         </div>
-        
-        <!-- كارد مشروع 2 -->
-        <div class="portfolio-card">
-            <div class="portfolio-img">
-                <img src="imgs/Cl2.jpg" alt="Project 2">
-            </div>
-            <div class="portfolio-info">
-                <h4>سيناريوهات ريلز إبداعية</h4>
-                <p>كتابة سلسلة من الفيديوهات القصيرة التي حققت أكثر من 100 ألف مشاهدة أورجانيك في أقل من أسبوع.</p>
-                
-                <div class="project-tags">
-                    <span class="tag"><i class="fa-solid fa-video"></i> Scripting</span>
-                    <span class="tag"><i class="fa-solid fa-bolt"></i> Viral Ideas</span>
-                </div>
+      </div>
 
-                <div class="project-links">
-                    <a href="project/Project-Muhmmed.html" class="read-more">تفاصيل المشروع ←</a>
-                </div>
-            </div>
+
+      <!-- كارد مشروع 2 -->
+      <div class="portfolio-card">
+        <div class="portfolio-img">
+          <img src="imgs/Cl2.jpg" alt="Project 2">
         </div>
+        <div class="portfolio-info">
+          <h4>سيناريوهات ريلز إبداعية</h4>
+          <p>كتابة سلسلة من الفيديوهات القصيرة التي حققت أكثر من 100 ألف مشاهدة أورجانيك في أقل من أسبوع.</p>
 
-        <!-- كارد مشروع 3 -->
-        <div class="portfolio-card">
-            <div class="portfolio-img">
-                <img src="imgs/Cl3.jpg" alt="Project 3">
-            </div>
-            <div class="portfolio-info">
-                <h4>إعلانات محتوى بيعي</h4>
-                <p>حملة إعلانية لمنتج رقمي ركزت على علم النفس التسويقي لتحقيق أعلى معدل تحويل (Conversion Rate).</p>
-                
-                <div class="project-tags">
-                    <span class="tag"><i class="fa-solid fa-dollar-sign"></i> Sales Ads</span>
-                    <span class="tag"><i class="fa-solid fa-brain"></i> Psychology</span>
-                </div>
+          <div class="project-tags">
+            <span class="tag"><i class="fa-solid fa-video"></i> Scripting</span>
+            <span class="tag"><i class="fa-solid fa-bolt"></i> Viral Ideas</span>
+          </div>
 
-                <div class="project-links">
-                    <a href="project/Project-Muhmmed.html" class="read-more">تفاصيل المشروع ←</a>
-                </div>
-            </div>
+          <div class="project-links">
+            <a href="project/Project_W copy/index.html" class="read-more">تفاصيل المشروع ←</a>
+          </div>
         </div>
+      </div>
+      <!-- كارد مشروع 2 -->
+      <div class="portfolio-card">
+        <div class="portfolio-img">
+          <img src="imgs/Cl2.jpg" alt="Project 2">
+        </div>
+        <div class="portfolio-info">
+          <h4>سيناريوهات ريلز إبداعية</h4>
+          <p>كتابة سلسلة من الفيديوهات القصيرة التي حققت أكثر من 100 ألف مشاهدة أورجانيك في أقل من أسبوع.</p>
 
+          <div class="project-tags">
+            <span class="tag"><i class="fa-solid fa-video"></i> Scripting</span>
+            <span class="tag"><i class="fa-solid fa-bolt"></i> Viral Ideas</span>
+          </div>
+
+          <div class="project-links">
+            <a href="/project/Project-Yesser.html" class="read-more">تفاصيل المشروع ←</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- كارد مشروع 2 -->
+      <div class="portfolio-card">
+        <div class="portfolio-img">
+          <img src="imgs/Cl2.jpg" alt="Project 2">
+        </div>
+        <div class="portfolio-info">
+          <h4>سيناريوهات ريلز إبداعية</h4>
+          <p>كتابة سلسلة من الفيديوهات القصيرة التي حققت أكثر من 100 ألف مشاهدة أورجانيك في أقل من أسبوع.</p>
+
+          <div class="project-tags">
+            <span class="tag"><i class="fa-solid fa-video"></i> Scripting</span>
+            <span class="tag"><i class="fa-solid fa-bolt"></i> Viral Ideas</span>
+          </div>
+
+          <div class="project-links">
+            <a href="project/Project-Muhmmed.html" class="read-more">تفاصيل المشروع ←</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- كارد مشروع 3 -->
+      <div class="portfolio-card">
+        <div class="portfolio-img">
+          <img src="imgs/Cl3.jpg" alt="Project 3">
+        </div>
+        <div class="portfolio-info">
+          <h4>إعلانات محتوى بيعي</h4>
+          <p>حملة إعلانية لمنتج رقمي ركزت على علم النفس التسويقي لتحقيق أعلى معدل تحويل (Conversion Rate).</p>
+
+          <div class="project-tags">
+            <span class="tag"><i class="fa-solid fa-dollar-sign"></i> Sales Ads</span>
+            <span class="tag"><i class="fa-solid fa-brain"></i> Psychology</span>
+          </div>
+
+          <div class="project-links">
+            <a href="project/Project-Muhmmed.html" class="read-more">تفاصيل المشروع ←</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+<section class="results-slider-section">
+    <div class="slider-header-centered">
+        <h2 class="section-title">نتائج حقيقية لعملائنا</h2>
+        <p>أرقام تعكس قوة الاستراتيجية والنمو المستدام</p>
+    </div>
+
+    <div class="infinite-results-container">
+        <div class="infinite-results-track">
+            <!-- الكروت الـ 10 (المجموعة الأولى) -->
+            <div class="res-card"><img src="imgs/results/1.jpg"> <div class="res-overlay"><span class="res-badge">نمو</span><h4>+150% وصول</h4></div></div>
+            <div class="res-card"><img src="imgs/results/2.jpg"> <div class="res-overlay"><span class="res-badge">مبيعات</span><h4>10x عائد استثمار</h4></div></div>
+            <div class="res-card"><img src="imgs/results/3.jpg"> <div class="res-overlay"><span class="res-badge">تفاعل</span><h4>50K تفاعل أورجانيك</h4></div></div>
+            <div class="res-card"><img src="imgs/results/4.jpg"> <div class="res-overlay"><span class="res-badge">ريلز</span><h4>2M+ مشاهدات</h4></div></div>
+            <div class="res-card"><img src="imgs/results/5.jpg"> <div class="res-overlay"><span class="res-badge">عملاء</span><h4>زيادة 40% في التحويل</h4></div></div>
+            <div class="res-card"><img src="imgs/results/6.jpg"> <div class="res-overlay"><span class="res-badge">استراتيجية</span><h4>بناء مجتمع متفاعل</h4></div></div>
+            <div class="res-card"><img src="imgs/results/1.jpg"> <div class="res-overlay"><span class="res-badge">وصول</span><h4>تخطي المنافسين</h4></div></div>
+            <div class="res-card"><img src="imgs/results/2.jpg"> <div class="res-overlay"><span class="res-badge">نمو</span><h4>تضاعف المتابعين</h4></div></div>
+            <div class="res-card"><img src="imgs/results/3.jpg"> <div class="res-overlay"><span class="res-badge">بيزنس</span><h4>تحسين جودة المحتوى</h4></div></div>
+            <div class="res-card"><img src="imgs/results/4.jpg"><div class="res-overlay"><span class="res-badge">نجاح</span><h4>تأثير رقمي ملموس</h4></div></div>
+
+            <!-- الكروت الـ 10 (المجموعة الثانية - تكرار إلزامي للأنيميشن) -->
+            <div class="res-card"><img src="imgs/results/1.jpg"> <div class="res-overlay"><span class="res-badge">نمو</span><h4>+150% وصول</h4></div></div>
+            <div class="res-card"><img src="imgs/results/2.jpg"> <div class="res-overlay"><span class="res-badge">مبيعات</span><h4>10x عائد استثمار</h4></div></div>
+            <div class="res-card"><img src="imgs/results/3.jpg"> <div class="res-overlay"><span class="res-badge">تفاعل</span><h4>50K تفاعل أورجانيك</h4></div></div>
+            <div class="res-card"><img src="imgs/C4.jpg"> <div class="res-overlay"><span class="res-badge">ريلز</span><h4>2M+ مشاهدات</h4></div></div>
+            <div class="res-card"><img src="imgs/C5.jpg"> <div class="res-overlay"><span class="res-badge">عملاء</span><h4>زيادة 40% في التحويل</h4></div></div>
+            <div class="res-card"><img src="imgs/C6.jpg"> <div class="res-overlay"><span class="res-badge">استراتيجية</span><h4>بناء مجتمع متفاعل</h4></div></div>
+            <div class="res-card"><img src="imgs/C7.jpg"> <div class="res-overlay"><span class="res-badge">وصول</span><h4>تخطي المنافسين</h4></div></div>
+            <div class="res-card"><img src="imgs/C8.jpg"> <div class="res-overlay"><span class="res-badge">نمو</span><h4>تضاعف المتابعين</h4></div></div>
+            <div class="res-card"><img src="imgs/C9.jpg"> <div class="res-overlay"><span class="res-badge">بيزنس</span><h4>تحسين جودة المحتوى</h4></div></div>
+            <div class="res-card"><img src="imgs/C10.jpg"><div class="res-overlay"><span class="res-badge">نجاح</span><h4>تأثير رقمي ملموس</h4></div></div>
+        </div>
     </div>
 </section>
 
