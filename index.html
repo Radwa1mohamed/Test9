@@ -1926,94 +1926,129 @@
       }
     }
 
-    /* الاعمال */
-    .portfolio-section {
-      padding: 60px 8%;
-    }
+   /* --- Portfolio Modern Style --- */
+.portfolio-section {
+    padding: 60px 8%;
+    text-align: center;
+}
 
-    .portfolio-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 25px;
-      margin-top: 40px;
-    }
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
 
-    .portfolio-card {
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 25px;
-      overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      transition: 0.4s;
-      will-change: transform, opacity;
-    }
+.portfolio-card {
+    background: rgba(15, 51, 69, 0.7); /* لون داكن شفاف */
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: 0.4s;
+    text-align: right; /* للغة العربية */
+    display: flex;
+    flex-direction: column;
+}
 
-    .portfolio-img {
-      position: relative;
-      height: 220px;
-      overflow: hidden;
-    }
+.portfolio-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent-pink);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
 
-    .portfolio-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: 0.5s;
-    }
+.portfolio-img {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+}
 
-    .portfolio-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(15, 51, 69, 0.8);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      transition: 0.4s;
-    }
+.portfolio-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-    .portfolio-card:hover .portfolio-overlay {
-      opacity: 1;
-    }
+.portfolio-info {
+    padding: 25px;
+    flex-grow: 1;
+}
 
-    .portfolio-card:hover .portfolio-img img {
-      transform: scale(1.1);
-    }
+.portfolio-info h4 {
+    color: white;
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
 
-    .view-project {
-      color: white;
-      text-decoration: none;
-      border: 1px solid var(--accent-pink);
-      padding: 10px 20px;
-      border-radius: 20px;
-      font-size: 14px;
-    }
+.portfolio-info p {
+    color: #ccc;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
 
-    .view-project:hover {
-      background: var(--accent-pink);
-    }
+/* أزرار التقنيات (Tags) */
+.project-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
 
-    .portfolio-info {
-      padding: 20px;
-      text-align: right;
-    }
+.tag {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #62BEAC; /* لون التيفاني */
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
 
-    .portfolio-info span {
-      color: var(--accent-pink);
-      font-size: 12px;
-      font-weight: 600;
-    }
+/* أزرار الروابط بالأسفل */
+.project-links {
+    display: flex;
+justify-content: center; 
+   align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 15px;
+    margin-top: auto;
+}
 
-    .portfolio-info h4 {
-      color: white;
-      margin-top: 8px;
-      font-size: 18px;
-    }
+.read-more {
+   display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px 25px;
+    background: rgba(224, 86, 160, 0.1); /* لون وردي خفيف جداً */
+    color: white;
+    text-decoration: none;
+    border: 1px solid var(--accent-pink);
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    width: 100%; /* الزر يأخذ عرض الكارت بالكامل لشكل أكثر عصرية */
+}
 
-    @media (max-width: 768px) {
-      .portfolio-grid {
-        grid-template-columns: 1fr;
-      }
-    }
+.read-more:hover {
+    background: var(--accent-pink);
+    box-shadow: 0 10px 20px rgba(224, 86, 160, 0.3);
+    transform: translateY(-3px);
+    color: white;
+}
+
+.read-more i {
+    transition: transform 0.3s ease;
+}
+
+.read-more:hover i {
+    transform: translateX(-5px); /* تحريك السهم لليمين بما أن اللغة عربية */
+}
 
     /* تصميم زرار العودة للأعلى */
     .scroll-top {
@@ -2388,7 +2423,7 @@
         </div>
 
         <div class="consult-card-s2">
-                      <div class="discount-badge">OFF 50%</div>
+                      <div class="discount-badge">OFF 15%</div>
 
           <div class="icon-box-large-s2"><i class="fa-solid fa-laptop-code"></i></div>
           <h3>البرامج التدريبية</h3>
@@ -2505,85 +2540,133 @@
   <section class="portfolio-section" id="work">
     <h2 class="section-title">معرض الأعمال</h2>
     <div class="portfolio-grid">
-      <div class="portfolio-card">
-        <div class="portfolio-img">
-          <img src="imgs/Cl1.jpg" alt="Content Strategy">
-          <div class="portfolio-overlay">
-            <a href="#" class="view-project">مشاهدة التفاصيل</a>
-          </div>
+        
+        <!-- كارد مشروع 1 -->
+        <div class="portfolio-card">
+            <div class="portfolio-img">
+                <img src="imgs/Cl3.jpg" alt="Project 1">
+            </div>
+            <div class="portfolio-info">
+                <h4>استراتيجية محتوى متكاملة</h4>
+                <p>بناء نظام محتوى لبراند تجميل يهدف لزيادة الوعي بالعلامة التجارية وتحويل المتابعين إلى عملاء دائمين.</p>
+                
+                <div class="project-tags">
+                    <span class="tag"><i class="fa-solid fa-code"></i> Strategy</span>
+                    <span class="tag"><i class="fa-solid fa-pen"></i> Copywriting</span>
+                    <span class="tag"><i class="fa-solid fa-chart-simple"></i> Analytics</span>
+                </div>
+
+                <!-- الربط باستخدام المجلد الفرعي -->
+
+
+                <div class="project-links">
+                    <a href="/project/Project_Muhmmed/index.html" class="read-more">تفاصيل المشروع ←</a>
+                </div>
+            </div>
+        </div>
+        <!-- 2 -->
+        <div class="portfolio-card">
+            <div class="portfolio-img">
+                <img src="imgs/Cl1.jpg" alt="Project 1">
+            </div>
+            <div class="portfolio-info">
+                <h4>استراتيجية محتوى متكاملة</h4>
+                <p>بناء نظام محتوى لبراند تجميل يهدف لزيادة الوعي بالعلامة التجارية وتحويل المتابعين إلى عملاء دائمين.</p>
+                
+                <div class="project-tags">
+                    <span class="tag"><i class="fa-solid fa-code"></i> Strategy</span>
+                    <span class="tag"><i class="fa-solid fa-pen"></i> Copywriting</span>
+                    <span class="tag"><i class="fa-solid fa-chart-simple"></i> Analytics</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="/project/Project_Yesser/index.html" class="read-more">تفاصيل المشروع ←</a>
+                </div>
+            </div>
         </div>
 
-        <div class="portfolio-info">
-          <span>كتابة محتوى</span>
-          <h4>استراتيجية محتوى لبراند تجميل</h4>
+        
+        <!-- كارد مشروع 2 -->
+        <div class="portfolio-card">
+            <div class="portfolio-img">
+                <img src="imgs/Cl2.jpg" alt="Project 2">
+            </div>
+            <div class="portfolio-info">
+                <h4>سيناريوهات ريلز إبداعية</h4>
+                <p>كتابة سلسلة من الفيديوهات القصيرة التي حققت أكثر من 100 ألف مشاهدة أورجانيك في أقل من أسبوع.</p>
+                
+                <div class="project-tags">
+                    <span class="tag"><i class="fa-solid fa-video"></i> Scripting</span>
+                    <span class="tag"><i class="fa-solid fa-bolt"></i> Viral Ideas</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="/project/Project_W copy/index.html" class="read-more">تفاصيل المشروع ←</a>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="portfolio-card">
-        <div class="portfolio-img">
-          <img src="imgs/Cl2.jpg" alt="Script Writing">
-          <div class="portfolio-overlay">
-            <a href="#" class="view-project">مشاهدة التفاصيل</a>
-          </div>
+        <!-- كارد مشروع 2 -->
+        <div class="portfolio-card">
+            <div class="portfolio-img">
+                <img src="imgs/Cl2.jpg" alt="Project 2">
+            </div>
+            <div class="portfolio-info">
+                <h4>سيناريوهات ريلز إبداعية</h4>
+                <p>كتابة سلسلة من الفيديوهات القصيرة التي حققت أكثر من 100 ألف مشاهدة أورجانيك في أقل من أسبوع.</p>
+                
+                <div class="project-tags">
+                    <span class="tag"><i class="fa-solid fa-video"></i> Scripting</span>
+                    <span class="tag"><i class="fa-solid fa-bolt"></i> Viral Ideas</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="/project/Project_W copy/index.html" class="read-more">تفاصيل المشروع ←</a>
+                </div>
+            </div>
         </div>
         
-        <div class="portfolio-info">
-          <span>كتابة محتوى</span>
-          <h4>استراتيجية محتوى لبراند تجميل</h4>
-        </div>
-      </div>
-      <div class="portfolio-card">
-        <div class="portfolio-img">
-          <img src="imgs/Cl2.jpg" alt="Script Writing">
-          <div class="portfolio-overlay">
-            <a href="#" class="view-project">مشاهدة التفاصيل</a>
-          </div>
-        </div>
-        <div class="portfolio-info">
-          <span>كتابة محتوى</span>
-          <h4>استراتيجية محتوى لبراند تجميل</h4>
-        </div>
-      </div>
-      <div class="portfolio-card">
-        <div class="portfolio-img">
-          <img src="imgs/Cl6.jpg" alt="Script Writing">
-          <div class="portfolio-overlay">
-            <a href="#" class="view-project">مشاهدة التفاصيل</a>
-          </div>
-        </div>
-        <div class="portfolio-info">
-          <span>كتابة محتوى</span>
-          <h4>استراتيجية محتوى لبراند تجميل</h4>
-        </div>
-      </div>
-      <div class="portfolio-card">
-        <div class="portfolio-img">
-          <img src="imgs/Cl6.jpg" alt="Script Writing">
-          <div class="portfolio-overlay">
-            <a href="#" class="view-project">مشاهدة التفاصيل</a>
-          </div>
+        <!-- كارد مشروع 2 -->
+        <div class="portfolio-card">
+            <div class="portfolio-img">
+                <img src="imgs/Cl2.jpg" alt="Project 2">
+            </div>
+            <div class="portfolio-info">
+                <h4>سيناريوهات ريلز إبداعية</h4>
+                <p>كتابة سلسلة من الفيديوهات القصيرة التي حققت أكثر من 100 ألف مشاهدة أورجانيك في أقل من أسبوع.</p>
+                
+                <div class="project-tags">
+                    <span class="tag"><i class="fa-solid fa-video"></i> Scripting</span>
+                    <span class="tag"><i class="fa-solid fa-bolt"></i> Viral Ideas</span>
+                </div>
+
+                <div class="project-links">
+                    <a href="#" class="read-more">تفاصيل المشروع ←</a>
+                </div>
+            </div>
         </div>
 
-        <div class="portfolio-info">
-          <span>سكريبتات</span>
-          <h4>سلسلة ريلز تعليمية (Viral)</h4>
-        </div>
-      </div>
+        <!-- كارد مشروع 3 -->
+        <div class="portfolio-card">
+            <div class="portfolio-img">
+                <img src="imgs/Cl3.jpg" alt="Project 3">
+            </div>
+            <div class="portfolio-info">
+                <h4>إعلانات محتوى بيعي</h4>
+                <p>حملة إعلانية لمنتج رقمي ركزت على علم النفس التسويقي لتحقيق أعلى معدل تحويل (Conversion Rate).</p>
+                
+                <div class="project-tags">
+                    <span class="tag"><i class="fa-solid fa-dollar-sign"></i> Sales Ads</span>
+                    <span class="tag"><i class="fa-solid fa-brain"></i> Psychology</span>
+                </div>
 
-      <div class="portfolio-card">
-        <div class="portfolio-img">
-          <img src="imgs/Cl3.jpg" alt="Copywriting">
-          <div class="portfolio-overlay">
-            <a href="#" class="view-project">مشاهدة التفاصيل</a>
-          </div>
+                <div class="project-links">
+                    <a href="#" class="read-more">تفاصيل المشروع ←</a>
+                </div>
+            </div>
         </div>
-        <div class="portfolio-info">
-          <span>إعلانات</span>
-          <h4>حملة إعلانية لمنتج رقمي</h4>
-        </div>
-      </div>
 
     </div>
-  </section>
+</section>
 
   <section class="testimonials" id="testimonials">
     <h2 class="section-title">Success Stories</h2>
@@ -2823,6 +2906,7 @@
 
 
   <script>
+    //تبديل الصور
     const navbar = document.getElementById("navbar");
     const toggle = document.getElementById("menu-toggle");
     const navLinks = document.getElementById("nav-links");
@@ -2858,7 +2942,7 @@
 
       setTimeout(() => {
         canToggle = true;
-      }, 400); // كل 200ms تغيير صورة
+      }, 400); //تغيير صورة
     });
 
 
@@ -3027,23 +3111,6 @@
       initVisionAnimation(); // أنميشن الرؤية الجديد
     });
 
-    // ضيفي ده قبل الـ gsap.from
-    gsap.set(".portfolio-card", { opacity: 1 });
-
-    // وبعدين استبدلي .from بـ .fromTo
-    gsap.fromTo(".portfolio-card",
-      { opacity: 0, y: 50 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        stagger: 0.2,
-        scrollTrigger: {
-          trigger: ".portfolio-section",
-          start: "top 85%"
-        }
-      }
-    );
 
     {
       // الكود الجديد بالكامل جوه القوسين دول

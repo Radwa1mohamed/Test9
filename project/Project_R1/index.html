@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل المشروع | Habiba Sayed</title>
+    <!-- استدعاء الأيقونات والخطوط -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --dark-bg: #0F3345;
+            --accent-pink: #E056A0;
+            --soft-pink: #D9C1D7;
+            --text-white: #ffffff;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --primary-blue: #62BEAC;
+        }
+
+        body {
+            font-family: 'Poppins', 'Segoe UI', Tahoma, sans-serif;
+            margin: 0;
+            background: radial-gradient(at 0% 0%, rgba(15, 51, 69, 0.2), transparent 50%),
+                        radial-gradient(at 100% 100%, rgba(98, 190, 172, 0.2), transparent 50%),
+                        linear-gradient(180deg, #a12a6a 0%, #0F3345 100%);
+            background-attachment: fixed;
+            color: var(--text-white);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .project-header {
+            padding: 20px 0;
+            background: rgba(15, 51, 69, 0.85);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .project-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .back-link {
+            text-decoration: none;
+            color: var(--primary-blue);
+            font-weight: 600;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .back-link:hover {
+            color: var(--accent-pink);
+            transform: translateX(-5px);
+        }
+
+        .project-logo {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: white;
+            letter-spacing: 1px;
+        }
+
+        /* Hero Section */
+        .project-hero {
+            padding: 80px 0 40px;
+            text-align: center;
+        }
+
+        .category-tag {
+            background: rgba(224, 86, 160, 0.2);
+            color: var(--accent-pink);
+            padding: 6px 20px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border: 1px solid var(--accent-pink);
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+
+        .project-hero h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin: 0 0 20px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .project-description {
+            max-width: 850px;
+            margin: 0 auto;
+            line-height: 1.8;
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        /* Content Title */
+        .content-title {
+            text-align: center;
+            margin: 60px 0 40px;
+            font-size: 2rem;
+            position: relative;
+        }
+
+        .content-title::after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 4px;
+            background: var(--primary-blue);
+            border-radius: 10px;
+        }
+
+        /* Posts Grid */
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        .post-item {
+            background: rgba(15, 51, 69, 0.6);
+            backdrop-filter: blur(15px);
+            border-radius: 25px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: 0.4s ease;
+        }
+
+        .post-item:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-pink);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .post-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: 0.5s;
+        }
+
+        .post-text {
+            padding: 30px;
+        }
+
+        .post-text h3 {
+            color: var(--primary-blue);
+            margin: 0 0 15px;
+            font-size: 1.4rem;
+        }
+
+        .post-text p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .post-text ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .post-text li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .post-text li i {
+            color: var(--accent-pink);
+        }
+
+        /* Bottom Actions */
+        .bottom-actions {
+            text-align: center;
+            padding-bottom: 100px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(45deg, var(--accent-pink), #ff85c0);
+            color: white;
+            padding: 16px 45px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            transition: 0.3s;
+            box-shadow: 0 10px 25px rgba(224, 86, 160, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 35px rgba(224, 86, 160, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .posts-grid { grid-template-columns: 1fr; }
+            .project-hero h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="project-header">
+        <div class="container">
+            <a href="../../index.html#work" class="back-link">
+                <i class="fa-solid fa-arrow-right"></i> العودة للأعمال
+            </a>
+            <div class="project-logo">Habiba Sayed</div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="project-hero">
+        <div class="container">
+            <!-- غيّري التاج حسب نوع المشروع -->
+            <span class="category-tag">كتابة محتوى إبداعي</span>
+            <h1>محتوى صفحة تعليمية | إيمان عاطف</h1>
+            <p class="project-description">
+                هذا المشروع يركز على تحويل المعلومات التعليمية الجافة إلى محتوى تفاعلي وجذاب. قمت ببناء استراتيجية تعتمد على "Marketing Psychology" لجذب الطلاب وزيادة ثقتهم في المنتج التعليمي من خلال القصص والتحفيز البصري.
+            </p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="project-content">
+        <div class="container">
+            <h2 class="content-title">البوستات والمحتوى المنشور</h2>
+            
+            <div class="posts-grid">
+                
+                <!-- كارد المنشور الأول (غيّري الصورة والنص) -->
+                <div class="post-item">
+                    <div class="post-image">
+                        <!-- ضعي رابط صورتك هنا -->
+                        <img src="../imgs/Cl6.jpg" alt="لماذا تختار باسبور العربي">
+                    </div>
+                    <div class="post-text">
+                        <h3>استراتيجية "باسبور العربي"</h3>
+                        <p>ركزنا في هذا المنشور على خلق حاجة ملحة للمنتج من خلال توضيح القيمة المضافة بطريقة مبسطة.</p>
+                        <ul>
+                            <li><i class="fa-solid fa-circle-check"></i> استهداف علم النفس التسويقي</li>
+                            <li><i class="fa-solid fa-circle-check"></i> زيادة التفاعل بنسبة 40%</li>
+                            <li><i class="fa-solid fa-circle-check"></i> محتوى بصري متوافق مع الهوية</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- كارد المنشور الأول (غيّري الصورة والنص) -->
+                <div class="post-item">
+                    <div class="post-image">
+                        <!-- ضعي رابط صورتك هنا -->
+                        <img src="../imgs/Cl6.jpg" alt="لماذا تختار باسبور العربي">
+                    </div>
+                    <div class="post-text">
+                        <h3>استراتيجية "باسبور العربي"</h3>
+                        <p>ركزنا في هذا المنشور على خلق حاجة ملحة للمنتج من خلال توضيح القيمة المضافة بطريقة مبسطة.</p>
+                        <ul>
+                            <li><i class="fa-solid fa-circle-check"></i> استهداف علم النفس التسويقي</li>
+                            <li><i class="fa-solid fa-circle-check"></i> زيادة التفاعل بنسبة 40%</li>
+                            <li><i class="fa-solid fa-circle-check"></i> محتوى بصري متوافق مع الهوية</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- كارد المنشور الأول (غيّري الصورة والنص) -->
+                <div class="post-item">
+                    <div class="post-image">
+                        <!-- ضعي رابط صورتك هنا -->
+                        <img src="../imgs/Cl6.jpg" alt="لماذا تختار باسبور العربي">
+                    </div>
+                    <div class="post-text">
+                        <h3>استراتيجية "باسبور العربي"</h3>
+                        <p>ركزنا في هذا المنشور على خلق حاجة ملحة للمنتج من خلال توضيح القيمة المضافة بطريقة مبسطة.</p>
+                        <ul>
+                            <li><i class="fa-solid fa-circle-check"></i> استهداف علم النفس التسويقي</li>
+                            <li><i class="fa-solid fa-circle-check"></i> زيادة التفاعل بنسبة 40%</li>
+                            <li><i class="fa-solid fa-circle-check"></i> محتوى بصري متوافق مع الهوية</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- كارد المنشور الثاني -->
+                <div class="post-item">
+                    <div class="post-image">
+                        <!-- ضعي رابط صورتك هنا -->
+                        <img src="imgs/project1_post2.jpg" alt="ربط الأحزمة">
+                    </div>
+                    <div class="post-text">
+                        <h3>حملة "ربط الأحزمة"</h3>
+                        <p>استخدام الـ Storytelling في بداية الرحلة التعليمية لكسر حاجز الخوف لدى الطلاب من مادة النحو.</p>
+                        <ul>
+                            <li><i class="fa-solid fa-circle-check"></i> بناء رابط عاطفي مع المتابعين</li>
+                            <li><i class="fa-solid fa-circle-check"></i> أكثر من 100 ألف مشاهدة أورجانيك</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- زر العودة النهائي -->
+            <div class="bottom-actions">
+                <a href="../../index.html#work" class="btn-primary">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    العودة لكل الأعمال
+                </a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
