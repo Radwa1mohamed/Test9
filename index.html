@@ -2312,6 +2312,7 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    background: #0b1f2a;
     opacity: 0.85;
 }
 
@@ -2353,8 +2354,32 @@
 
 /* Pause on hover for easier reading */
 .infinite-results-track:hover {
+
     animation-play-state: paused;
 }
+@media (max-width: 768px) {
+  .infinite-results-track {
+        gap: 12px;
+        /* سرعة الأنميشن في الموبايل */
+        animation-duration: 25s; 
+    }
+    .res-card {
+        flex: 0 0 220px; /* حجم أصغر لشاشات الموبايل الصغيرة */
+        height: 330px;
+        user-select: none;
+        -webkit-user-drag: none;
+    }
+    
+    .infinite-results-track {
+        gap: 10px;
+        animation-duration: 30s; /* سرعة أنسب للموبايل */
+    }
+
+    .res-overlay h4 {
+        font-size: 0.9rem; /* تصغير الخط */
+    }
+}
+
   </style>
 
 </head>
