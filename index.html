@@ -2021,6 +2021,18 @@
       margin-top: auto;
     }
 
+    @media (max-width: 768px) {
+    /* تعديل كروت معرض الأعمال لتكون مستقيمة */
+    .portfolio-card {
+        transform: rotate(0deg) !important; /* إجبار الكارد على الاستقامة */
+        margin-bottom: 20px; /* إضافة مسافة بين الكروت */
+        width: 100%;
+        max-width: 100%;
+        border-radius: 20px; /* الحفاظ على نعومة الحواف */
+    }
+
+}
+
     .read-more {
       display: inline-flex;
       align-items: center;
@@ -2352,12 +2364,17 @@
     font-weight: 600;
 }
 
+infinite-results-track {
+    animation-play-state: running; /* الحالة الافتراضية */
+}
+
 /* Pause on hover for easier reading */
 .infinite-results-track:hover {
 
     animation-play-state: paused;
 }
 @media (max-width: 768px) {
+
 
     .res-card {
         flex: 0 0 220px; /* حجم أصغر لشاشات الموبايل الصغيرة */
@@ -2367,7 +2384,14 @@
     .infinite-results-track {
         gap: 10px;
         animation-duration: 30s; /* سرعة أنسب للموبايل */
-    }
+    
+    animation-play-state: running; /* الحالة الافتراضية */
+}
+
+/* إيقاف الأنميشن في اللابتوب عند مرور الماوس */
+.infinite-results-track:hover {
+    animation-play-state: paused;
+}
 
     .res-overlay h4 {
         font-size: 0.9rem; /* تصغير الخط */
@@ -3291,6 +3315,26 @@
         window.scrollTo({ top: 0, behavior: "smooth" });
       });
     }
+
+    // كود التحكم في سلايدر النتائج للموبايل
+const resultsTrack = document.querySelector('.infinite-results-track');
+
+if (resultsTrack) {
+    // عند لمس الشاشة (Mobile Touch Start)
+    resultsTrack.addEventListener('touchstart', () => {
+        resultsTrack.style.animationPlayState = 'paused';
+    }, { passive: true });
+
+    // عند رفع الإصبع عن الشاشة (Mobile Touch End)
+    resultsTrack.addEventListener('touchend', () => {
+        resultsTrack.style.animationPlayState = 'running';
+    }, { passive: true });
+    
+    // لضمان استمرارية العمل إذا خرج الإصبع خارج الحاوية
+    resultsTrack.addEventListener('touchcancel', () => {
+        resultsTrack.style.animationPlayState = 'running';
+    }, { passive: true });
+}
   </script>
 
 
