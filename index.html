@@ -2021,16 +2021,32 @@
       margin-top: auto;
     }
 
-    @media (max-width: 768px) {
-    /* تعديل كروت معرض الأعمال لتكون مستقيمة */
-    .portfolio-card {
-        transform: rotate(0deg) !important; /* إجبار الكارد على الاستقامة */
-        margin-bottom: 20px; /* إضافة مسافة بين الكروت */
-        width: 100%;
-        max-width: 100%;
-        border-radius: 20px; /* الحفاظ على نعومة الحواف */
-    }
+      @media (max-width: 768px) {
+  /* توسيط شبكة معرض الأعمال بالكامل */
+  .portfolio-grid {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important; /* هذا السطر يضمن توسيط الكروت أفقياً */
+    justify-content: center !important;
+    gap: 30px !important;
+    width: 100% !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
 
+  /* ضبط شكل الكارد الفردي ليكون متناسقاً في المنتصف */
+  .portfolio-card {
+    width: 90% !important; /* لضمان وجود مسافة بسيطة عن حواف الشاشة */
+    max-width: 350px !important; /* لمنع الكارد من التمدد بشكل مبالغ فيه */
+    margin: 0 auto !important; /* تأكيد التوسيط التلقائي */
+    text-align: right !important; /* الحفاظ على اتجاه النص العربي */
+    transform: none !important; /* إلغاء أي ميلان قد يؤثر على التوسيط */
+  }
+
+  /* تأكيد توسيط الصور والروابط داخل الكارد */
+  .portfolio-img, .portfolio-info {
+    width: 100% !important;
+  }
 }
 
     .read-more {
@@ -2696,7 +2712,7 @@ infinite-results-track {
       <!-- كارد مشروع 1 -->
       <div class="portfolio-card">
         <div class="portfolio-img">
-          <img src="imgs/Cl3.jpg" alt="Project 1">
+          <img src="imgs/C1.jpg" alt="Project 1">
         </div>
         <div class="portfolio-info">
           <h4>استراتيجية محتوى متكاملة</h4>
@@ -2712,14 +2728,14 @@ infinite-results-track {
 
 
           <div class="project-links">
-            <a href="project/Project-Muhmmed.html" class="read-more">تفاصيل المشروع ←</a>
+            <a href="project/Project_Muhammed/Project-Muhmmed.html" class="read-more">تفاصيل المشروع ←</a>
           </div>
         </div>
       </div>
       <!-- 2 -->
       <div class="portfolio-card">
         <div class="portfolio-img">
-          <img src="imgs/Cl1.jpg" alt="Project 1">
+          <img src="imgs/C2.jpg" alt="Project 1">
         </div>
         <div class="portfolio-info">
           <h4>استراتيجية محتوى متكاملة</h4>
@@ -2732,7 +2748,7 @@ infinite-results-track {
           </div>
 
           <div class="project-links">
-            <a href="project/project-Wafe.html" class="read-more">تفاصيل المشروع ←</a>
+            <a href="project/Project_Yesser/Project_Yesser.html" class="read-more">تفاصيل المشروع ←</a>
           </div>
         </div>
       </div>
@@ -2753,7 +2769,7 @@ infinite-results-track {
           </div>
 
           <div class="project-links">
-            <a href="project/Project_W copy/index.html" class="read-more">تفاصيل المشروع ←</a>
+            <a href="project/Project_Yesser/index.html" class="read-more">تفاصيل المشروع ←</a>
           </div>
         </div>
       </div>
@@ -2772,7 +2788,7 @@ infinite-results-track {
           </div>
 
           <div class="project-links">
-            <a href="/project/Project-Yesser.html" class="read-more">تفاصيل المشروع ←</a>
+            <a href="project/Project_Yesser/Project_Yesser.html" class="read-more">تفاصيل المشروع ←</a>
           </div>
         </div>
       </div>
@@ -2792,7 +2808,7 @@ infinite-results-track {
           </div>
 
           <div class="project-links">
-            <a href="project/Project-Muhmmed.html" class="read-more">تفاصيل المشروع ←</a>
+            <a href="project/Project_Yesser/Project_Yesser.html" class="read-more">تفاصيل المشروع ←</a>
           </div>
         </div>
       </div>
