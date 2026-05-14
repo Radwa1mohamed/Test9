@@ -501,6 +501,8 @@ h1 span {
 }
 
 
+
+
 /* Main Card (Original Style) */
 .main-card {
   background: #ffffff;
@@ -836,7 +838,7 @@ h1 span {
 .footer {
   width: 100%;
   margin: 0;
-  padding: 30px 8%;
+  padding: 60px 8%;
 
   background: rgba(15, 51, 69, 0.85);
   backdrop-filter: blur(10px);
@@ -956,6 +958,10 @@ h1 span {
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+  .footer {
+    padding: 60px 8%;
+  }
+  
   .footer-container {
     flex-direction: column;
     text-align: center;
