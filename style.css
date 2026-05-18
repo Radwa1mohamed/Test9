@@ -5,7 +5,6 @@
   font-family: 'Poppins', sans-serif;
 }
 
-/* Colors */
 :root {
   --dark: #0F3345;
   --blue: #62BEAC;
@@ -46,7 +45,6 @@ body {
   mix-blend-mode: screen;
 }
 
-/* Navbar */
 .navbar {
    position: fixed;
   top: 15px;
@@ -94,7 +92,7 @@ body {
 }
 /* 3. تأثير على النص عند الهفر */
 .logo-wrapper:hover .logo-text {
-    color: var(--primary); /* يتغير اللون للون البراند الأخضر */
+    color: var(--primary); 
     text-shadow: 0 0 10px rgba(98, 190, 172, 0.3);
 }
 
@@ -111,7 +109,7 @@ body {
 }
 
 .logo-wrapper:hover .logo-text::after {
-    width: 100%; /* الخط يمتد تحت الاسم عند الهفر */
+    width: 100%; 
 }
 
 .nav-links a::after {
@@ -158,13 +156,76 @@ body {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
     background-color: #0F3345; 
-    border: 1.5px solid #00d4ff;
+    border: 1.5px solid #62BEAC;
     box-shadow: 0 0 15px rgba(0, 212, 255, 0.5);
     border-radius: 100px;
     z-index: -1;
 }
 
+/* 1. إخفاء الأيقونة في الوضع الافتراضي (شاشات الكمبيوتر) */
+.nav-btn .btn-icon {
+    display: none;
+}
+
+/* 2. التحكم في العرض على شاشات الموبايل */
 @media (max-width: 768px) {
+    /* إخفاء النص */
+    .nav-btn .btn-text {
+        display: none;
+    }
+
+    /* إظهار الأيقونة وتوسيطها */
+    .nav-btn .btn-icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* إعادة ضبط أبعاد الزرار ليصبح دائري ومتناسق في الموبايل */
+    .nav-btn {
+        width: 40px;
+        height: 40px;
+        padding: 0 !important; /* إلغاء الـ padding القديم عشان يحافظ على أبعاد الدائرة */
+        border-radius: 50% !important; /* تحويل الزرار لدائرة */
+        display: inline-flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+
+   nav {
+    padding: 5px 5px;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 75px;
+    right: -100%;
+    background: rgba(15, 51, 69, 0.98);
+    flex-direction: column;
+    width: 250px;
+    padding: 30px;
+    border-radius: 20px;
+    transition: 0.4s ease-in-out;
+  }
+
+  .navbar:hover {
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .btn {
+    margin-right: 30px;
+  }
     .glow-title {
         /* تكبير "سنة" ليكون 1.2rem - مقاس مثالي وواضح */
         font-size: 1.5rem !important; 
@@ -239,41 +300,6 @@ body {
   box-shadow: 0 5px 15px rgba(224, 86, 160, 0.4);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-  nav {
-    padding: 5px 5px;
-  }
-
-
-  .nav-links {
-    position: absolute;
-    top: 75px;
-    right: -100%;
-    background: rgba(15, 51, 69, 0.98);
-    flex-direction: column;
-    width: 250px;
-    padding: 30px;
-    border-radius: 20px;
-    transition: 0.4s ease-in-out;
-  }
-
-  .navbar:hover {
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
-  }
-
-  .nav-links.active {
-    right: 0;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .btn {
-    margin-right: 30px;
-  }
-}
 
 /* Hero Section */
 .hero {

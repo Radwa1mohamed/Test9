@@ -31,7 +31,20 @@
         <a href="#work">Work</a>
         <a href="#contact">Contact</a>
       </nav>
-      <a href="#" class="btn primary nav-btn">Book Session</a>
+
+      <a href="#" class="btn primary nav-btn">
+        <span class="btn-text">Book Session</span>
+        <span class="btn-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+          </svg>
+        </span>
+      </a>
+
       <div class="menu-toggle" id="menu-toggle">☰</div>
     </div>
   </header>
@@ -145,7 +158,7 @@
     </div>
   </section>
 
-<!-- التدريب والاستشارات -->
+  <!-- التدريب والاستشارات -->
   <section class="consulting-section-s2" id="training">
     <div class="main-card-s2 premium-wrapper-s2">
       <div class="offer-banner-s2">
@@ -312,7 +325,7 @@
 
       <!-- كارد مشروع 1 -->
       <div class="portfolio-card" id="project-Yesser">
-          <div class="portfolio-img">
+        <div class="portfolio-img">
           <img src="imgs/Clients/Client1-yesser.jpg" alt="Project 1">
         </div>
         <div class="portfolio-info">
@@ -326,7 +339,6 @@
           <div class="project-tags">
             <span class="tag"><i class="fa-solid fa-code"></i> Strategy</span>
             <span class="tag"><i class="fa-solid fa-pen"></i> Copywriting</span>
-            <span class="tag"><i class="fa-solid fa-chart-simple"></i> Analytics</span>
           </div>
 
 
@@ -347,7 +359,6 @@
           <p>بناء نظام محتوى لبراند تجميل يهدف لزيادة الوعي بالعلامة التجارية وتحويل المتابعين إلى عملاء دائمين.</p>
 
           <div class="project-tags">
-            <span class="tag"><i class="fa-solid fa-code"></i> Strategy</span>
             <span class="tag"><i class="fa-solid fa-pen"></i> Copywriting</span>
             <span class="tag"><i class="fa-solid fa-chart-simple"></i> Analytics</span>
           </div>
@@ -418,28 +429,35 @@
         </div>
       </div>
 
-      <!-- كارد مشروع 4 -->
-      <div class="portfolio-card">
+
+      <div class="portfolio-card challenge-main-card">
         <div class="portfolio-img">
-          <img src="imgs/Clients/Client6.jpg" alt="Project 3">
+          <img src="imgs/Clients/Cell.jpg" alt="تحديات متنوعة شاركت بها">
+          <div class="challenge-badge-tag">تحدي إعلاني</div>
         </div>
         <div class="portfolio-info">
-          <h4>إعلانات محتوى بيعي</h4>
-          <p>حملة إعلانية لمنتج رقمي ركزت على علم النفس التسويقي لتحقيق أعلى معدل تحويل (Conversion Rate).</p>
+          <h4>تحديات متنوعة شاركت بها</h4>
+          <p class="premium-text-block">
+            تفكيك وصياغة زوايا إعلانية ونفسية مبتكرة لـ 4 براندات مختلفة (تحدي OnTrack)، بالتركيز على السرد القصصي وعلم
+            نفس المستهلك لتحويل القراء لعملاء.
+          </p>
 
           <div class="project-tags">
-            <span class="tag"><i class="fa-solid fa-dollar-sign"></i> Sales Ads</span>
-            <span class="tag"><i class="fa-solid fa-brain"></i> Psychology</span>
+            <span class="tag"><i class="fa-solid fa-trophy"></i> OnTrack Challenge</span>
+            <span class="tag"><i class="fa-solid fa-layer-group"></i> 4 Brands</span>
           </div>
 
           <div class="project-links">
-            <a href="project/Project-Muhmmed.html" class="read-more">تفاصيل المشروع ←</a>
+            <a href="project/ontrack-challenge-details.html" class="read-more">تصفح محتوى التحدي الكامل ←</a>
           </div>
         </div>
       </div>
 
     </div>
   </section>
+
+
+
 
   <section class="results-slider-section">
     <div class="slider-header-centered">
@@ -555,7 +573,7 @@
   </section>
 
   <section class="testimonials" id="testimonials">
-    <h2 class="section-title glow-title" >Success Stories</h2>
+    <h2 class="section-title glow-title">Success Stories</h2>
 
     <div class="feedback-grid">
       <div class="screenshot-card">
@@ -588,7 +606,7 @@
   </div>
 
   <section class="certificates" id="certificates">
-    <h2 class="section-title glow-title" >Certifications </h2>
+    <h2 class="section-title glow-title">Certifications </h2>
 
     <div class="cert-grid">
       <div class="cert-card" onclick="openModal('imgs/Certification/C00.jpg')">
@@ -661,7 +679,7 @@
     </div>
 
     <div class="view-more-container">
-      <button id="show-more-certs" class="btn secondary" >View More Certificates</button>
+      <button id="show-more-certs" class="btn secondary">View More Certificates</button>
     </div>
   </section>
 
